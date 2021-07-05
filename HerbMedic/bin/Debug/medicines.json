@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "name": "aspirin",
+    "status": "WAITING",
+    "description": "weg",
+    "ingredients": [
+      "weg"
+    ],
+    "alternatives": [
+      "weggw"
+    ],
+    "reason": null
+  },
+  {
+    "id": 2,
+    "name": "lanosprazol",
+    "status": "WAITING",
+    "description": "This medicine can be used anytime",
+    "ingredients": [
+      "malatin"
+    ],
+    "alternatives": [
+      "malatin"
+    ],
+    "reason": null
+  },
+  {
+    "id": 3,
+    "name": "menilotonin",
+    "status": "VALIDATED",
+    "description": "slobodna upotreba",
+    "ingredients": [
+      "adrenalin",
+      "scandonest",
+      "mediapan"
+    ],
+    "alternatives": [
+      "kardiopirin",
+      "brufen"
+    ],
+    "reason": "fwefgw"
+  },
+  {
+    "id": 4,
+    "name": "tauroninsin",
+    "status": "VALIDATED",
+    "description": "za pankreas",
+    "ingredients": [
+      "iseotinska kiselina",
+      "cistein",
+      "hipotaurin"
+    ],
+    "alternatives": [
+      "blister",
+      "aspirin"
+    ],
+    "reason": null
+  },
+  {
+    "id": 5,
+    "name": "digoxicor",
+    "status": "VALIDATED",
+    "description": "za slepo crevo",
+    "ingredients": [
+      "monosan",
+      "molicor",
+      "brufen",
+      "aspirin"
+    ],
+    "alternatives": [
+      "blister",
+      "abasaglar"
+    ],
+    "reason": null
+  },
+  {
+    "id": 6,
+    "name": "mediokroksin",
+    "status": "VALIDATED",
+    "description": "izuzetno opasan lek za samostalno koricenje",
+    "ingredients": [
+      "perodaksil",
+      "mamonit",
+      "diaruaksin"
+    ],
+    "alternatives": [
+      "penicilin",
+      "bensedin",
+      "bromazepam"
+    ],
+    "reason": "Ime nije dobro napisano, i za alternativu dodati da postoji i vitamin C"
+  }
+]

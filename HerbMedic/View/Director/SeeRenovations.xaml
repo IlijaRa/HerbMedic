@@ -1,0 +1,23 @@
+﻿<Window x:Class="HerbMedic.View.SeeRenovations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HerbMedic.View"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Title="SeeRenovations" Height="400" Width="500">
+    <Window.Background>
+        <ImageBrush ImageSource="/images/templates/NewRoomInfo.png"/>
+    </Window.Background>
+    <Grid>
+        <Button HorizontalAlignment="Left" Height="30" Margin="44,0,0,0" VerticalAlignment="Top" Width="39" Background="#FF209E67" BorderBrush="#FF00182D" Click="ButtonGoBack">
+            <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
+        </Button>
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_renovations" HorizontalAlignment="Left" Height="320" Margin="78,42,0,0" VerticalAlignment="Top" Width="377" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#FF209E67"/>
+            </DataGrid.Resources>
+        </DataGrid>
+    </Grid>
+</Window>

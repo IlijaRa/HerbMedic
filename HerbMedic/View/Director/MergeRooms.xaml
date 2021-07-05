@@ -1,0 +1,51 @@
+﻿<Window x:Class="HerbMedic.View.MergeRooms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HerbMedic.View"
+        mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Title="MergeRooms" Height="600" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/images/templates/Home.png"/>
+    </Window.Background>
+    <Grid>
+        <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#FF209E67" BorderBrush="#FF00182D" Click="ButtonGoBack">
+            <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
+        </Button>
+        <DataGrid IsReadOnly="True" x:Name="dg_rooms" HorizontalAlignment="Left" Height="100" Margin="183,32,0,0" VerticalAlignment="Top" Width="584" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC" SelectionChanged="dg_rooms_SelectionChanged">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#FF209E67"/>
+            </DataGrid.Resources>
+        </DataGrid>
+        
+        <Label Content="Select rooms:" HorizontalAlignment="Left" Margin="54,68,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Selected rooms:" HorizontalAlignment="Left" Margin="54,180,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Start time:" HorizontalAlignment="Left" Margin="54,322,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="End time:" HorizontalAlignment="Left" Margin="54,382,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="54,448,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Enter date:" HorizontalAlignment="Left" Margin="54,262,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="80" Margin="188,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="188,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <DatePicker x:Name="Datepicker1" HorizontalAlignment="Left" Height="28" Margin="188,267,0,0" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox3" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="188,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox4" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="188,448,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="325,510,0,0" VerticalAlignment="Top" Width="166" Height="50" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonCreate"/>
+        <Button Content="Read renovations" HorizontalAlignment="Left" Margin="612,540,0,0" VerticalAlignment="Top" Width="155" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonLoadRenovations"/>
+
+        <Label Content="All equipment will be placed in new room" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px" Margin="448,180,0,0" Width="334"/>
+        <Label Content="New room name:" HorizontalAlignment="Left" Margin="457,260,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="New room type:" HorizontalAlignment="Left" Margin="457,322,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Floor:" HorizontalAlignment="Left" Margin="457,382,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Room description:" HorizontalAlignment="Left" Margin="457,448,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox6" HorizontalAlignment="Left" Height="28" Margin="599,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px" RenderTransformOrigin="0.492,0.536"/>
+        <ComboBox x:Name="Combobox1" HorizontalAlignment="Left" Height="28" Margin="599,327,0,0" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px">
+            <ComboBoxItem>OperatingRoom</ComboBoxItem>
+            <ComboBoxItem>Ordination</ComboBoxItem>
+            <ComboBoxItem>IntensiveCare</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="Textbox7" HorizontalAlignment="Left" Height="28" Margin="599,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox8" HorizontalAlignment="Left" Height="28" Margin="599,448,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px"/>
+    </Grid>
+</Window>

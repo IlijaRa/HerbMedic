@@ -1,0 +1,300 @@
+[
+{
+    "id": 1,
+    "name": "33-LG",
+    "type": "Ordination",
+    "floor": 4,
+    "description": "Waiting for operations",
+    "staticEquipment": [
+      {
+        "roomName": "33-LG",
+        "id": 1,
+        "name": "benches",
+        "quantity": 3
+      },
+      {
+        "roomName": "33-LG",
+        "id": 2,
+        "name": "chairs",
+        "quantity": 20
+      },
+      {
+        "roomName": "33-LG",
+        "id": 14,
+        "name": "lockers",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "29-UK",
+    "type": "Ordination",
+    "floor": 3,
+    "description": "For the treatment of children",
+    "staticEquipment": [
+      {
+        "roomName": "29-UK",
+        "id": 1,
+        "name": "tables",
+        "quantity": 8
+      },
+      {
+        "roomName": "29-UK",
+        "id": 2,
+        "name": "lockers",
+        "quantity": 2
+      },
+      {
+        "roomName": "29-UK",
+        "id": 3,
+        "name": "respirators",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "18-OG",
+    "type": "OperatingRoom",
+    "floor": 1,
+    "description": "For the treatment of adults",
+    "staticEquipment": [
+      {
+        "roomName": "18-OG",
+        "id": 4,
+        "name": "benches",
+        "quantity": 3
+      },
+      {
+        "roomName": "18-OG",
+        "id": 5,
+        "name": "chairs",
+        "quantity": 2
+      },
+      {
+        "roomName": "18-OG",
+        "id": 6,
+        "name": "lasers",
+        "quantity": 10
+      },
+      {
+        "roomName": "18-OG",
+        "id": 7,
+        "name": "respirators",
+        "quantity": 7
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "04-RT",
+    "type": "IntensiveCare",
+    "floor": 4,
+    "description": "Intensive care for children",
+    "staticEquipment": [
+      {
+        "roomName": "04-RT",
+        "id": 8,
+        "name": "lasers",
+        "quantity": 10
+      },
+      {
+        "roomName": "04-RT",
+        "id": 9,
+        "name": "respirators",
+        "quantity": 7
+      },
+      {
+        "roomName": "04-RT",
+        "id": 16,
+        "name": "chairs",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "107-TA",
+    "type": "IntensiveCare",
+    "floor": 3,
+    "description": "Room made for older clients",
+    "staticEquipment": [
+      {
+        "roomName": "107-TA",
+        "id": 10,
+        "name": "lasers",
+        "quantity": 3
+      },
+      {
+        "roomName": "107-TA",
+        "id": 11,
+        "name": "lockers",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "11-BG",
+    "type": "OperatingRoom",
+    "floor": 1,
+    "description": "Operating room for emergency situations",
+    "staticEquipment": [
+      {
+        "roomName": "11-BG",
+        "id": 12,
+        "name": "pump",
+        "quantity": 3
+      },
+      {
+        "roomName": "11-BG",
+        "id": 13,
+        "name": "chairs",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "1-AR",
+    "type": "Ordination",
+    "floor": 11,
+    "description": "Odrinacija za primanje starijih lica",
+    "staticEquipment": [
+      {
+        "roomName": "1-AR",
+        "id": 5,
+        "typeOdStaticEquipment": "stolovi",
+        "quantity": 5
+      },
+      {
+        "roomName": "1-AR",
+        "id": 5,
+        "typeOdStaticEquipment": "majice",
+        "quantity": 5
+      },
+      {
+        "roomName": "1-AR",
+        "id": 2,
+        "typeOdStaticEquipment": "stolice",
+        "quantity": 44
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "17-LL",
+    "type": "IntensiveCare",
+    "floor": 4,
+    "description": "Intenzivna nega standardno",
+    "staticEquipment": [
+      {
+        "roomName": "17-LL",
+        "id": 1,
+        "typeOdStaticEquipment": "laseri",
+        "quantity": 15
+      },
+      {
+        "roomName": "17-LL",
+        "id": 2,
+        "typeOdStaticEquipment": "stolice",
+        "quantity": 44
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "80-TRA",
+    "type": "Ordination",
+    "floor": 1,
+    "description": "Ordinacija za ljude srednjih godina",
+    "staticEquipment": []
+  },
+  {
+    "id": 10,
+    "name": "8-GT",
+    "type": "Ordination",
+    "floor": 2,
+    "description": "Obavlja se svakodnevni pregled",
+    "staticEquipment": []
+  },
+  {
+    "id": 11,
+    "name": "GB-44",
+    "type": "Ordination",
+    "floor": 3,
+    "description": "Soba koja sluzi za pokazivanje staticke opreme",
+    "staticEquipment": [
+      {
+        "roomName": "GB-44",
+        "id": 1,
+        "typeOdStaticEquipment": "stolice",
+        "quantity": 500
+      },
+      {
+        "roomName": "GB-44",
+        "id": 19,
+        "typeOdStaticEquipment": "ormari",
+        "quantity": 400
+      },
+      {
+        "roomName": "GB-44",
+        "id": 112,
+        "typeOdStaticEquipment": "skeneri",
+        "quantity": 54
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "105-FR",
+    "type": "Ordination",
+    "floor": 2,
+    "description": "Soba koja sluzi za pokazivanje staticke opreme",
+    "staticEquipment": [
+      {
+        "roomName": "105-FR",
+        "id": 22,
+        "typeOdStaticEquipment": "stolovi",
+        "quantity": 40
+      },
+      {
+        "roomName": "105-FR",
+        "id": 5,
+        "typeOdStaticEquipment": "klupe",
+        "quantity": 170
+      },
+      {
+        "roomName": "105-FR",
+        "id": 15,
+        "typeOdStaticEquipment": "aparati",
+        "quantity": 4
+      },
+      {
+        "roomName": "105-FR",
+        "id": 3,
+        "typeOdStaticEquipment": "solarni",
+        "quantity": 3
+      },
+      {
+        "roomName": "105-FR",
+        "id": 1,
+        "typeOdStaticEquipment": "stolice",
+        "quantity": 500
+      },
+      {
+        "roomName": "105-FR",
+        "id": 19,
+        "typeOdStaticEquipment": "ormari",
+        "quantity": 350
+      },
+      {
+        "roomName": "105-FR",
+        "id": 112,
+        "typeOdStaticEquipment": "skeneri",
+        "quantity": 450
+      }
+    ]
+  }
+]

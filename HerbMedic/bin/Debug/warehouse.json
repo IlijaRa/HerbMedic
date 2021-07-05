@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "flasteri",
+    "quantity": 400
+  },
+  {
+    "id": 2,
+    "name": "hanzaplasti",
+    "quantity": 500
+  },
+  {
+    "id": 3,
+    "name": "zavoji",
+    "quantity": 500
+  },
+  {
+    "id": 4,
+    "name": "marame",
+    "quantity": 500
+  },
+  {
+    "id": 5,
+    "name": "spricevi",
+    "quantity": 1400
+  },
+  {
+    "id": 6,
+    "name": "metle",
+    "quantity": 500
+  },
+  {
+    "id": 7,
+    "name": "krpe",
+    "quantity": 406
+  },
+  {
+    "id": 8,
+    "name": "vakcine",
+    "quantity": 9100
+  },
+  {
+    "id": 9,
+    "name": "pokrivaci",
+    "quantity": 367
+  },
+  {
+    "id": 10,
+    "name": "sajlice",
+    "quantity": 385
+  },
+  {
+    "id": 11,
+    "name": "mast",
+    "quantity": 12
+  }
+]

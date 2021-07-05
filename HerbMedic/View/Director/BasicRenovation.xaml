@@ -1,0 +1,39 @@
+﻿<Window x:Class="HerbMedic.View.BasicRenovation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HerbMedic.View"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Title="BasicRenovation" Height="600" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/images/templates/Home.png"/>
+    </Window.Background>
+    <Grid>
+        <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#FF209E67" BorderBrush="#FF00182D" Click="ButtonGoBack">
+            <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
+        </Button>
+        <Label Content="BASIC RENOVATION:" HorizontalAlignment="Center" Margin="278,-2,268,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="246"/>
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_renovations" HorizontalAlignment="Left" Height="279" Margin="68,281,0,0" VerticalAlignment="Top" Width="520" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#FF209E67"/>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="Room name:" HorizontalAlignment="Left" Margin="68,60,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Enter date:" HorizontalAlignment="Left" Margin="68,98,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Start time:" HorizontalAlignment="Left" Margin="68,139,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="End time:" HorizontalAlignment="Left" Margin="68,180,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="68,222,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="(M/dd/yyyy)" HorizontalAlignment="Left" Margin="661,98,0,0" VerticalAlignment="Top" Height="37" Foreground="#FF00182D" FontSize="17px"/>
+        <ComboBox x:Name="Combobox1" HorizontalAlignment="Left" Height="28" Margin="204,63,0,0" VerticalAlignment="Top" Width="554" Foreground="#FF00182D" FontSize="17px"/>
+        <DatePicker x:Name="Datepicker1" HorizontalAlignment="Left" Height="28" Margin="204,102,0,0" VerticalAlignment="Top" Width="452" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="204,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="477" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox3" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="204,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="477" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox4" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="204,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554" Foreground="#FF00182D" FontSize="17px"/>
+        <Button Content="Load renovations" HorizontalAlignment="Left" Margin="608,451,0,0" VerticalAlignment="Top" Width="150" Height="40px" Background="#209e67" Foreground="#FF00182D" FontSize="17px" Click="ButtonLoadRenovations"/>
+        <Button Content="Create renovation" HorizontalAlignment="Left" Margin="608,368,0,0" VerticalAlignment="Top" Width="150" Height="40px" Background="#209e67" Foreground="#FF00182D" FontSize="17px" Click="ButtonCreateRenovation"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="686,140,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="686,181,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+    </Grid>
+</Window>
