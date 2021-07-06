@@ -13,7 +13,7 @@
         <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#FF209E67" BorderBrush="#FF00182D" Click="ButtonGoBack">
             <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
         </Button>
-        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_rooms" HorizontalAlignment="Left" Height="100" Margin="183,32,0,0" VerticalAlignment="Top" Width="584" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC" SelectionChanged="dg_rooms_SelectionChanged">
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_rooms" HorizontalAlignment="Left" Height="100" Margin="183,32,0,0" VerticalAlignment="Top" Width="584" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#FF209E67"/>
@@ -21,18 +21,21 @@
         </DataGrid>
 
         <Label Content="Select room:" HorizontalAlignment="Left" Margin="54,68,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Selected room:" HorizontalAlignment="Left" Margin="54,180,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1" Text="{Binding ElementName=dg_rooms, Path=SelectedItem.name}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="183,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
-        <Label Content="Split into" HorizontalAlignment="Left" Margin="54,246,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="rooms!" HorizontalAlignment="Left" Margin="315,246,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="133,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Start time:" HorizontalAlignment="Left" Margin="54,375,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="End time:" HorizontalAlignment="Left" Margin="54,441,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Description:" HorizontalAlignment="Left" Margin="54,503,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Enter date:" HorizontalAlignment="Left" Margin="54,311,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox3" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="194,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
-        <DatePicker x:Name="Datepicker1" HorizontalAlignment="Left" Height="28" Margin="194,315,0,0" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox4" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="194,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox5" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="194,505,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Selected room:" HorizontalAlignment="Left" Margin="114,180,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1" Text="{Binding ElementName=dg_rooms, Path=SelectedItem.name}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="243,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <Label Content="Split into" HorizontalAlignment="Left" Margin="114,246,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="rooms!" HorizontalAlignment="Left" Margin="375,246,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="193,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Start time:" HorizontalAlignment="Left" Margin="114,375,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="End time:" HorizontalAlignment="Left" Margin="114,441,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="114,503,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Enter date:" HorizontalAlignment="Left" Margin="114,311,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox3" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="243,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Foreground="#FF00182D" FontSize="17px"/>
+        <DatePicker x:Name="Datepicker1" HorizontalAlignment="Left" Height="28" Margin="243,316,0,0" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox4" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="243,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox5" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="243,508,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="360,375,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px" Width="78"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="360,441,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px" Width="78"/>
+        <Button Content="Schedule renovation" HorizontalAlignment="Left" Margin="490,329,0,0" VerticalAlignment="Top" Width="200" Height="50" FontSize="17px" Foreground="#FF00182D" Background="#FF209E67" Click="ButtonScheduleRenovation"/>
     </Grid>
 </Window>

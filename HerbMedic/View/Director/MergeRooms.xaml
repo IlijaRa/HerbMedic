@@ -19,7 +19,7 @@
                    Color="#FF209E67"/>
             </DataGrid.Resources>
         </DataGrid>
-        
+
         <Label Content="Select rooms:" HorizontalAlignment="Left" Margin="54,68,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Selected rooms:" HorizontalAlignment="Left" Margin="54,180,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Start time:" HorizontalAlignment="Left" Margin="54,322,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
@@ -27,9 +27,9 @@
         <Label Content="Description:" HorizontalAlignment="Left" Margin="54,448,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Enter date:" HorizontalAlignment="Left" Margin="54,262,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox1" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="80" Margin="188,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
-        <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="188,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="188,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Foreground="#FF00182D" FontSize="17px"/>
         <DatePicker x:Name="Datepicker1" HorizontalAlignment="Left" Height="28" Margin="188,267,0,0" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox3" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="188,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox3" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="188,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox4" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="188,448,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Foreground="#FF00182D" FontSize="17px"/>
         <Button Content="Create" HorizontalAlignment="Left" Margin="325,510,0,0" VerticalAlignment="Top" Width="166" Height="50" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonCreate"/>
         <Button Content="Read renovations" HorizontalAlignment="Left" Margin="612,540,0,0" VerticalAlignment="Top" Width="155" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonLoadRenovations"/>
@@ -47,5 +47,7 @@
         </ComboBox>
         <TextBox x:Name="Textbox7" HorizontalAlignment="Left" Height="28" Margin="599,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
         <TextBox x:Name="Textbox8" HorizontalAlignment="Left" Height="28" Margin="599,448,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="294,322,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px" Width="78"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="294,382,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px" Width="78"/>
     </Grid>
 </Window>

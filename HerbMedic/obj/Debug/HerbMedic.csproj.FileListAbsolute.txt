@@ -128,3 +128,5 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\HerbMedic.Properties.Resources.
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\HerbMedic.csproj.GenerateResource.cache
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\HerbMedic.csproj.CoreCompileInputs.cache
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\HerbMedic.csproj.CopyComplete
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Director\InfoAboutSplitRooms.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Director\InfoAboutSplitRooms.baml

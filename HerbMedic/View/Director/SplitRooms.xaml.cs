@@ -80,9 +80,14 @@ namespace HerbMedic.View
             this.Hide();
         }
 
-        private void dg_rooms_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ButtonScheduleRenovation(object sender, RoutedEventArgs e)
         {
-
+            InfoAboutSplitRooms info = new InfoAboutSplitRooms();
+            info.Show();
+            Room room = (Room)dg_rooms.SelectedItem;
+            info.transferData(Textbox1.Text, Textbox2.Text, room.floor);
+            this.Hide();
+            
         }
     }
 }

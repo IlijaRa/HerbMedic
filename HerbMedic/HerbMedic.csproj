@@ -232,6 +232,9 @@
     <Compile Include="View\Director\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Director\InfoAboutSplitRooms.xaml.cs">
+      <DependentUpon>InfoAboutSplitRooms.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Director\MedicineCRUD.xaml.cs">
       <DependentUpon>MedicineCRUD.xaml</DependentUpon>
     </Compile>
@@ -289,6 +292,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Director\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Director\InfoAboutSplitRooms.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
