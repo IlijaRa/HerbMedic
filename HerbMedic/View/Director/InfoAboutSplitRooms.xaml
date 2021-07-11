@@ -10,17 +10,18 @@
         <ImageBrush ImageSource="/images/templates/Home.png"/>
     </Window.Background>
     <Grid>
-        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_equipment" HorizontalAlignment="Left" Height="264" Margin="412,37,0,0" VerticalAlignment="Top" Width="361" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC">
+        <DataGrid IsReadOnly="True" x:Name="dg_equipment" HorizontalAlignment="Left" Height="264" Margin="412,37,0,0" VerticalAlignment="Top" Width="361" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC" SelectionChanged="dg_equipment_SelectionChanged">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#FF209E67"/>
             </DataGrid.Resources>
         </DataGrid>
+        
         <Label Content="Selected room:" HorizontalAlignment="Left" Margin="77,35,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="222,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox1" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="222,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Need to fill in" HorizontalAlignment="Left" Margin="77,89,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="more rooms!" HorizontalAlignment="Left" Margin="285,89,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px" Width="105"/>
-        <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="194,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="194,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="New room name:" HorizontalAlignment="Left" Margin="77,146,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="New room type:" HorizontalAlignment="Left" Margin="77,206,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Floor:" HorizontalAlignment="Left" Margin="77,266,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
@@ -31,12 +32,13 @@
             <ComboBoxItem Content="Ordination"/>
             <ComboBoxItem Content="IntensiveCare"/>
         </ComboBox>
-        <TextBox x:Name="Textbox4" HorizontalAlignment="Left" Height="28" Margin="222,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox4" HorizontalAlignment="Left" Height="28" Margin="222,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox5" HorizontalAlignment="Left" Height="28" Margin="222,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px"/>
         <Button Content="Create" HorizontalAlignment="Left" Margin="54,503,0,0" VerticalAlignment="Top" Width="166" Height="50" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonCreate"/>
         <Button Content="Go back" HorizontalAlignment="Left" Margin="252,503,0,0" VerticalAlignment="Top" Width="166" Height="50" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonCreate"/>
         <Label Content="Equipment:" HorizontalAlignment="Left" Margin="77,391,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox5_Copy" HorizontalAlignment="Left" Height="71" Margin="222,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
-        <Button Content="Load equipment" HorizontalAlignment="Left" Margin="533,322,0,0" VerticalAlignment="Top" Width="133" Height="40" Click="Button_Click" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px"/>
+        <Button Content="Load equipment" HorizontalAlignment="Left" Margin="534,322,0,0" VerticalAlignment="Top" Width="133" Height="40" Click="Button_Click" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px"/>
+        <TextBox x:Name="Textbox6" HorizontalAlignment="Left" Height="84" Margin="222,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox7" HorizontalAlignment="Left" Height="84" Margin="355,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using Classes.Controller;
 using Classes.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -95,6 +96,19 @@ namespace HerbMedic.View
                 observableEquipment.Add(statics);
             }
             dg_equipment.ItemsSource = observableEquipment;
+        }
+
+        private void dg_equipment_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Textbox6.Text = "";
+            Textbox7.Text = "";
+            foreach (StaticEquipment stat in dg_equipment.SelectedItems)
+            {
+                string name = JsonConvert.SerializeObject(stat.name);
+                string quantity = JsonConvert.SerializeObject(stat.quantity);
+                Textbox6.Text += name     + "\n";
+                Textbox7.Text += quantity + "\n";
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ToastNotifications;
 using ToastNotifications.Lifetime;
+using ToastNotifications.Messages;
 using ToastNotifications.Position;
 
 namespace HerbMedic.View
@@ -23,6 +24,7 @@ namespace HerbMedic.View
     public partial class SplitRooms : Window
     {
         RoomController roomController = new RoomController();
+        RenovationController renovationController = new RenovationController();
         public SplitRooms()
         {
             InitializeComponent();
@@ -82,12 +84,61 @@ namespace HerbMedic.View
 
         private void ButtonScheduleRenovation(object sender, RoutedEventArgs e)
         {
-            InfoAboutSplitRooms info = new InfoAboutSplitRooms();
-            info.Show();
-            Room room = (Room)dg_rooms.SelectedItem;
-            info.transferData(Textbox1.Text, Textbox2.Text, room.floor);
-            this.Hide();
-            
+            bool passed = false;
+            string s1 = String.Empty;
+            string s2 = String.Empty;
+            DateTime dt;
+            try
+            {
+                s1 = Textbox3.Text;
+                dt = Convert.ToDateTime(s1);
+                s1 = dt.ToString("HH:mm");
+                passed = true;
+                try
+                {
+                    s2 = Textbox4.Text;
+                    dt = Convert.ToDateTime(s2);
+                    s2 = dt.ToString("HH:mm");
+                    passed = true;
+                    if (dg_rooms.SelectedCells.Count < 1)
+                    {
+                        notifier.ShowWarning("WARNING: You need to select room to split!");
+                    }
+                    else
+                    {
+                        if (Textbox1.Text == "" || Textbox2.Text == "" || Textbox3.Text == "" || Textbox4.Text == "" || Textbox5.Text == "" || Datepicker1.Text == "")
+                        {
+                            notifier.ShowWarning("WARNING: You need too fill all empty places!");
+                        }
+                        else
+                        {
+                                Renovation renovation = new Renovation(renovationController.GenerateId(),
+                                                                   "ADVANCED",
+                                                                   Convert.ToDateTime(Datepicker1.Text),
+                                                                   Convert.ToDateTime(Textbox2.Text),
+                                                                   Convert.ToDateTime(Textbox3.Text),
+                                                                   Textbox4.Text,
+                                                                   null,
+                                                                   null);
+                                string message = renovationController.CreateRenovation(renovation);
+
+                            InfoAboutSplitRooms info = new InfoAboutSplitRooms();
+                            info.Show();
+                            Room room = (Room)dg_rooms.SelectedItem;
+                            info.transferData(Textbox1.Text, Textbox2.Text, room.floor);
+                            this.Hide();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    notifier.ShowWarning("WARNING: End time format is bad!");
+                }
+            }
+            catch (Exception ex)
+            {
+                notifier.ShowWarning("WARNING: Start time format is bad!");
+            }
         }
     }
 }
