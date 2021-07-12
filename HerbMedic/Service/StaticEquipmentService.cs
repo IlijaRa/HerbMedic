@@ -169,7 +169,7 @@ namespace Classes.Service
                     if (stat.name.Contains(name))
                     {
                         searchedEquipment.Add(stat);
-                    }
+                    }     
                 }
                 return searchedEquipment;
             }

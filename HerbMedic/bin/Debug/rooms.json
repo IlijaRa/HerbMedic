@@ -165,19 +165,19 @@
       {
         "roomName": "1-AR",
         "id": 5,
-        "typeOdStaticEquipment": "stolovi",
+        "name": "stolovi",
         "quantity": 5
       },
       {
         "roomName": "1-AR",
         "id": 5,
-        "typeOdStaticEquipment": "majice",
+        "name": "majice",
         "quantity": 5
       },
       {
         "roomName": "1-AR",
         "id": 2,
-        "typeOdStaticEquipment": "stolice",
+        "name": "stolice",
         "quantity": 44
       }
     ]
@@ -192,13 +192,13 @@
       {
         "roomName": "17-LL",
         "id": 1,
-        "typeOdStaticEquipment": "laseri",
+        "name": "laseri",
         "quantity": 15
       },
       {
         "roomName": "17-LL",
         "id": 2,
-        "typeOdStaticEquipment": "stolice",
+        "name": "stolice",
         "quantity": 44
       }
     ]
@@ -229,19 +229,19 @@
       {
         "roomName": "GB-44",
         "id": 1,
-        "typeOdStaticEquipment": "stolice",
+        "name": "stolice",
         "quantity": 500
       },
       {
         "roomName": "GB-44",
         "id": 19,
-        "typeOdStaticEquipment": "ormari",
+        "name": "ormari",
         "quantity": 400
       },
       {
         "roomName": "GB-44",
         "id": 112,
-        "typeOdStaticEquipment": "skeneri",
+        "name": "skeneri",
         "quantity": 54
       }
     ]
@@ -256,43 +256,43 @@
       {
         "roomName": "105-FR",
         "id": 22,
-        "typeOdStaticEquipment": "stolovi",
+        "name": "stolovi",
         "quantity": 40
       },
       {
         "roomName": "105-FR",
         "id": 5,
-        "typeOdStaticEquipment": "klupe",
+        "name": "klupe",
         "quantity": 170
       },
       {
         "roomName": "105-FR",
         "id": 15,
-        "typeOdStaticEquipment": "aparati",
+        "name": "aparati",
         "quantity": 4
       },
       {
         "roomName": "105-FR",
         "id": 3,
-        "typeOdStaticEquipment": "solarni",
+        "name": "solarni",
         "quantity": 3
       },
       {
         "roomName": "105-FR",
         "id": 1,
-        "typeOdStaticEquipment": "stolice",
+        "name": "stolice",
         "quantity": 500
       },
       {
         "roomName": "105-FR",
         "id": 19,
-        "typeOdStaticEquipment": "ormari",
+        "name": "ormari",
         "quantity": 350
       },
       {
         "roomName": "105-FR",
         "id": 112,
-        "typeOdStaticEquipment": "skeneri",
+        "name": "skeneri",
         "quantity": 450
       }
     ]

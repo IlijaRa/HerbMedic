@@ -98,9 +98,9 @@ namespace Classes.Service
          throw new NotImplementedException();
       }
       
-      public void UpdateRenovation(Renovation renovation)
+      public void AddRoomToRenovation(int id, string roomName)
       {
-         throw new NotImplementedException();
+         renovationRepository.AddRoomToRenovation(id, roomName);
       }
       
       public void DeleteRenovationById(int id)

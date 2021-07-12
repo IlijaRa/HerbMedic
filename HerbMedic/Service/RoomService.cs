@@ -34,7 +34,18 @@ namespace Classes.Service
             return listRooms;
         }
 
-      public string CreatePendingRoom(Room room)
+        public string FormatStaticEquipment(string equipment)
+        {
+            var charsToRemove = new string[] { "@", ",", ".", ";", "'", "\\", "\"" };
+            string helper = "";
+            //kada se selektuju zeljene sobe u datagridu, iz nekog razloga se u json ovo upise \"33-LG\" umesto samo naziv sobe, tako da ovde svi znaci viska otklanjaju
+            foreach (var c in charsToRemove)
+                helper = equipment.Replace(c, string.Empty);
+
+            return helper;
+        }
+
+        public string CreatePendingRoom(Room room)
       {
           return roomRepository.CreatePendingRoom(room);
       }
@@ -139,7 +150,7 @@ namespace Classes.Service
             return BigRoom;
         }
 
-        public void SplitRoom(Room roomForSplit, int numberOfSplits)
+      public void SplitRoom(Room roomForSplit, int numberOfSplits)
       {
          throw new NotImplementedException();
       }

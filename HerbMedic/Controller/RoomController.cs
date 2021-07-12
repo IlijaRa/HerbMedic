@@ -18,6 +18,11 @@ namespace Classes.Controller
           return roomService.FormatMergeRooms(TextboxWithRooms);
       }
 
+        public string FormatStaticEquipment(string equipment)
+        {
+            return roomService.FormatStaticEquipment(equipment);
+        }
+
       public bool CheckFloors(List<string> roomNames)
       {
          return roomService.CheckFloors(roomNames);
@@ -73,7 +78,7 @@ namespace Classes.Controller
             return roomService.MergeRooms(roomAtributes, RoomsForMerge);
         }
 
-        public void SplitRoom(Room roomForSplit, int numberOfSplits)
+      public void SplitRoom(Room roomForSplit, int numberOfSplits)
       {
          throw new NotImplementedException();
       }

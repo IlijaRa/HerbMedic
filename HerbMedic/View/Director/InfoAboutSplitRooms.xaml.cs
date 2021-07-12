@@ -24,6 +24,8 @@ namespace HerbMedic.View
     public partial class InfoAboutSplitRooms : Window
     {
         RoomController roomController = new RoomController();
+        RenovationController renovationController = new RenovationController();
+        StaticEquipmentController staticController = new StaticEquipmentController();
 
         public InfoAboutSplitRooms()
         {
@@ -79,12 +81,48 @@ namespace HerbMedic.View
 
         private void ButtonCreate(object sender, RoutedEventArgs e)
         {
-            Room room = new Room(roomController.GenerateId(), 
+            Random random = new Random();
+            List<StaticEquipment> staticEquip = new List<StaticEquipment>();
+            string[] equip = Textbox6.Text.Split('\n');
+            string[] quantity= Textbox7.Text.Split('\n');
+
+            for(int i=0; i<equip.Count()-1; i++)
+            {
+                string cleanEquip = roomController.FormatStaticEquipment(equip[i]);
+                StaticEquipment s = new StaticEquipment(Textbox3.Text, 
+                                            staticController.GenerateId() + random.Next(1000),
+                                            cleanEquip,
+                                            Convert.ToInt32(quantity[i].ToString()));
+                staticEquip.Add(s);
+            }
+            Room room = new Room(roomController.GenerateId()+ random.Next(1000), 
                                  Textbox3.Text, 
                                  Combobox1.Text, 
                                  Convert.ToInt32(Textbox4.Text),
                                  Textbox5.Text,
-                                 null);
+                                 staticEquip);
+
+            string message = roomController.CreatePendingRoom(room);
+
+            if(message == "SUCCEEDED")
+            {
+                renovationController.AddRoomToRenovation(renovationController.GenerateId()-1, Textbox3.Text);
+                
+                int roomCount= Convert.ToInt32(Textbox2.Text);
+                roomCount -= 1;
+                Textbox2.Text = roomCount.ToString();
+                if(roomCount == 0)
+                {
+                    MessageBox.Show("You can go back now");
+                }
+
+                Textbox3.Text = "";
+                Textbox4.Text = "";
+                Textbox5.Text = "";
+                Textbox6.Text = "";
+                Textbox7.Text = "";
+                Combobox1.Text = "";
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -108,6 +146,19 @@ namespace HerbMedic.View
                 string quantity = JsonConvert.SerializeObject(stat.quantity);
                 Textbox6.Text += name     + "\n";
                 Textbox7.Text += quantity + "\n";
+            }
+        }
+
+        private void ButtonGoBack(object sender, RoutedEventArgs e)
+        {
+            if(Textbox2.Text != "0")
+            {
+                MessageBox.Show("There are more rooms that you did not fill!");
+            }
+            else{
+                Home home = new Home();
+                home.Show();
+                this.Hide();
             }
         }
     }

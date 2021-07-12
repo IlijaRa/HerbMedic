@@ -24,9 +24,9 @@ namespace Classes.Controller
          throw new NotImplementedException();
       }
       
-      public void UpdateRenovation(Renovation renovation)
+      public void AddRoomToRenovation(int id, string roomName)
       {
-         throw new NotImplementedException();
+         renovationService.AddRoomToRenovation(id, roomName);
       }
       
       public void DeleteRenovationById(int id)

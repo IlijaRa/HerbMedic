@@ -100,34 +100,47 @@ namespace HerbMedic.View
                     dt = Convert.ToDateTime(s2);
                     s2 = dt.ToString("HH:mm");
                     passed = true;
-                    if (dg_rooms.SelectedCells.Count < 1)
+                    try
                     {
-                        notifier.ShowWarning("WARNING: You need to select room to split!");
-                    }
-                    else
-                    {
-                        if (Textbox1.Text == "" || Textbox2.Text == "" || Textbox3.Text == "" || Textbox4.Text == "" || Textbox5.Text == "" || Datepicker1.Text == "")
+                        if (dg_rooms.SelectedCells.Count < 1)
                         {
-                            notifier.ShowWarning("WARNING: You need too fill all empty places!");
+                            notifier.ShowWarning("WARNING: You need to select room to split!");
                         }
                         else
                         {
+                            if (Textbox1.Text == "" || Textbox2.Text == "" || Textbox3.Text == "" || Textbox4.Text == "" || Textbox5.Text == "" || Datepicker1.Text == "")
+                            {
+                                notifier.ShowWarning("WARNING: You need too fill all empty places!");
+                            }
+                            else
+                            {
+                                List<string> rooms = new List<string>();
                                 Renovation renovation = new Renovation(renovationController.GenerateId(),
-                                                                   "ADVANCED",
-                                                                   Convert.ToDateTime(Datepicker1.Text),
-                                                                   Convert.ToDateTime(Textbox2.Text),
-                                                                   Convert.ToDateTime(Textbox3.Text),
-                                                                   Textbox4.Text,
-                                                                   null,
-                                                                   null);
+                                                                       "ADVANCED",
+                                                                       Convert.ToDateTime(Datepicker1.Text),
+                                                                       Convert.ToDateTime(Textbox3.Text),
+                                                                       Convert.ToDateTime(Textbox4.Text),
+                                                                       Textbox5.Text,
+                                                                       null,
+                                                                       rooms);
+
                                 string message = renovationController.CreateRenovation(renovation);
 
-                            InfoAboutSplitRooms info = new InfoAboutSplitRooms();
-                            info.Show();
-                            Room room = (Room)dg_rooms.SelectedItem;
-                            info.transferData(Textbox1.Text, Textbox2.Text, room.floor);
-                            this.Hide();
+                                if (message == "SUCCEEDED")
+                                {
+                                    InfoAboutSplitRooms info = new InfoAboutSplitRooms();
+                                    info.Show();
+                                    Room room = (Room)dg_rooms.SelectedItem;
+                                    info.transferData(Textbox1.Text, Textbox2.Text, room.floor);
+                                    this.Hide();
+                                }
+                                
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        notifier.ShowError("ERROR: Creation didn't go well");
                     }
                 }
                 catch (Exception ex)

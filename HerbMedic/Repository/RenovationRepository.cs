@@ -54,9 +54,11 @@ namespace Classes.Repository
          throw new NotImplementedException();
       }
       
-      public void UpdateRenovation(Renovation renovation)
+      public void AddRoomToRenovation(int id, string roomName)
       {
-         throw new NotImplementedException();
+            int index = renovations.FindIndex(obj => obj.id == id);
+            renovations[index].rooms.Add(roomName); // u renoviranje dodaje nazive soba koje popunjava kasnije u formi
+            writeInJson();
       }
       
       public void DeleteRenovationById(int id)
