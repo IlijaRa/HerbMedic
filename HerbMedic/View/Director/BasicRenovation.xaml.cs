@@ -125,6 +125,7 @@ namespace HerbMedic.View
                         List<string> rooms = new List<string>() {Combobox1.Text};
                         Renovation renovation = new Renovation(renovationController.GenerateId(),
                                                                "BASIC",
+                                                               "BASIC",
                                                                Convert.ToDateTime(Datepicker1.Text),
                                                                Convert.ToDateTime(Textbox2.Text),
                                                                Convert.ToDateTime(Textbox3.Text),

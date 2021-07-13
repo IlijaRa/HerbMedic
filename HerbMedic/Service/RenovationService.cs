@@ -83,10 +83,15 @@ namespace Classes.Service
       public void DeleteExpiredBasicRenovation()
       {
          List<Renovation> renovations = renovationRepository.ReadAllRenovations();
-         DateTime currentDate = DateTime.Now;
+            DateTime currentDateAndTime = DateTime.Now;
+            DateTime currentDate = currentDateAndTime.Date;
+            int currentHour = currentDateAndTime.Hour;
+            int currentMinute = currentDateAndTime.Minute;
+
             foreach (var renovation in renovations.ToArray())
             {
-                if (renovation.date < currentDate || (renovation.date == currentDate && renovation.startTime < currentDate) && renovation.type == "BASIC")
+                if ((renovation.date.Date < currentDate && renovation.type == "BASIC" && renovation.subtype == "BASIC") ||
+                    (renovation.date.Date == currentDate && renovation.startTime.Hour <= currentHour && renovation.startTime.Minute <= currentMinute && renovation.type == "BASIC" && renovation.subtype == "BASIC"))
                 {
                     renovationRepository.DeleteRenovationById(renovation.id);
                 } 

@@ -41,10 +41,14 @@ namespace Classes.Service
       {
          List<TransferEquipment> transfers = transferRepository.ReadAllTransfers();
          List<Room> rooms = roomRepository.ReadAllRooms();
-         DateTime currentDate = DateTime.Now;
-         foreach(var transfer in transfers.ToArray())
+            DateTime currentDateAndTime = DateTime.Now;
+            DateTime currentDate = currentDateAndTime.Date;
+            int currentHour = currentDateAndTime.Hour;
+            int currentMinute = currentDateAndTime.Minute;
+
+         foreach (var transfer in transfers.ToArray())
          {
-            if(transfer.date < currentDate || (transfer.date == currentDate && transfer.startTime < currentDate))//ako je datum transfera opreme manji od trenutnog datuma ,ili ako je datum transfera jednak trenutnom datumu i pocetak transfera manji od trenutnog vremena
+            if(transfer.date < currentDate || (transfer.date == currentDate && transfer.startTime.Hour < currentHour && transfer.startTime.Minute < currentMinute))//ako je datum transfera opreme manji od trenutnog datuma ,ili ako je datum transfera jednak trenutnom datumu i pocetak transfera manji od trenutnog vremena
             {
                   foreach(var room in rooms.ToArray())
                   {

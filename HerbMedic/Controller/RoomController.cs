@@ -33,12 +33,17 @@ namespace Classes.Controller
          return roomService.CreatePendingRoom(room);
       }
       
-      public void SwitchToRoomJson()
+      public void SwitchMergeToRoomJson()
       {
-         roomService.SwitchToRoomJson();
+         roomService.SwitchMergeToRoomJson();
       }
 
-      public Room ReadRoomById(int id)
+        public void SwitchSplitToRoomJson()
+        {
+            roomService.SwitchSplitToRoomJson();
+        }
+
+        public Room ReadRoomById(int id)
       {
          throw new NotImplementedException();
       }

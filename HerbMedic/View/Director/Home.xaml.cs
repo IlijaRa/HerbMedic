@@ -13,7 +13,8 @@ namespace HerbMedic.View
         public Home()
         {
             InitializeComponent();
-            roomController.SwitchToRoomJson();
+            roomController.SwitchMergeToRoomJson();
+            roomController.SwitchSplitToRoomJson();
             staticController.ExecuteTransfer();
             renovationController.DeleteExpiredBasicRenovation();
         }

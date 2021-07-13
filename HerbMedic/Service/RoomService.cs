@@ -50,37 +50,84 @@ namespace Classes.Service
           return roomRepository.CreatePendingRoom(room);
       }
 
-      public void SwitchToRoomJson()
+      public void SwitchMergeToRoomJson()
       {
             List<Renovation> renovations = renovationController.ReadAllRenovations();
             List<Room> pendingRooms = roomRepository.ReadAllPendingRooms();
-            DateTime currentDate = DateTime.Now;
+            DateTime currentDateAndTime = DateTime.Now;
+            DateTime currentDate = currentDateAndTime.Date;
+            int currentHour = currentDateAndTime.Hour;
+            int currentMinute = currentDateAndTime.Minute;
 
             foreach (var renovation in renovations.ToList())
             {
-                // ukoliko je datum renoviranja istekao
-                if (renovation.date < currentDate || (renovation.date == currentDate && renovation.startTime < currentDate) && renovation.type == "ADVANCED")
+
+                if ((renovation.date.Date < currentDate && renovation.type == "ADVANCED" && renovation.subtype == "MERGE") || 
+                    (renovation.date.Date == currentDate && renovation.startTime.Hour <= currentHour && renovation.startTime.Minute <= currentMinute && renovation.type == "ADVANCED" && renovation.subtype == "MERGE"))
                 {
-                    // prolazi se kroz sve pendingRooms koje sluze za skladistenje u json dok ne dodje pravi datum za formiranje prostorije
-                    foreach(var pendingRoom in pendingRooms.ToList())
-                    {
-                        // ako je naziv pending sobe isti kao i naziv newRoom u renoviranju radi sledece
-                        if(pendingRoom.name == renovation.newRoom)
+                    //if(renovation.type == "ADVANCED" & renovation.subtype == "MERGE")
+                    //{
+                        // prolazi se kroz sve pendingRooms koje sluze za skladistenje u json dok ne dodje pravi datum za formiranje prostorije
+                        foreach (var pendingRoom in pendingRooms.ToList())
                         {
-                            //brisanje svih manjih soba iz rooms.json koje su spojene u vecu sobu i kreiranje te velike sobe
-                            string message = roomRepository.CreateRoom(pendingRoom);
-                            foreach (var roomName in renovation.rooms.ToList())
+                            // ako je naziv pending sobe isti kao i naziv newRoom u renoviranju radi sledece
+                            if (pendingRoom.name == renovation.newRoom)
                             {
-                                roomRepository.DeleteRoomByName(roomName);
+                                //brisanje svih manjih soba iz rooms.json koje su spojene u vecu sobu i kreiranje te velike sobe
+                                string message = roomRepository.CreateRoom(pendingRoom);
+                                foreach (var roomName in renovation.rooms.ToList())
+                                {
+                                    roomRepository.DeleteRoomByName(roomName);
+                                }
+                                roomRepository.DeletePendingRoomByName(pendingRoom.name);
+                                renovationController.DeleteRenovationById(renovation.id);
                             }
-                            roomRepository.DeletePendingRoomByName(pendingRoom.name);
-                            renovationController.DeleteRenovationById(renovation.id);
                         }
-                    }
+                    //}
                 }
             }
             
         }
+
+        // JAKO BITNO: Ako je u pitanju renoviranje za SPLIT, onda se u property "newRoom" unosi prostorija koja se deli
+        public void SwitchSplitToRoomJson()
+        {
+            List<Renovation> renovations = renovationController.ReadAllRenovations();
+            List<Room> pendingRooms = roomRepository.ReadAllPendingRooms();
+            DateTime currentDateAndTime = DateTime.Now;
+            DateTime currentDate = currentDateAndTime.Date;
+            int currentHour = currentDateAndTime.Hour;
+            int currentMinute = currentDateAndTime.Minute;
+            bool checker = false;
+            foreach (var renovation in renovations.ToList())
+            {
+
+                if ((renovation.date.Date < currentDate && renovation.type == "ADVANCED" && renovation.subtype == "SPLIT") ||
+                    (renovation.date.Date == currentDate && renovation.startTime.Hour <= currentHour && renovation.startTime.Minute <= currentMinute && renovation.type == "ADVANCED" && renovation.subtype == "SPLIT"))
+                {
+                    foreach(var room in renovation.rooms)
+                    {
+                        foreach (var pendingRoom in pendingRooms.ToList())
+                        {
+                            // ako je naziv pendingRoom-a sadrzan u trenutnom renoviranju onda ce se on prebaciti u room.json
+                            if (room == pendingRoom.name)
+                            {
+                                checker = true;
+                                string message = roomRepository.CreateRoom(pendingRoom);
+                                roomRepository.DeletePendingRoomByName(pendingRoom.name);
+                                
+                            }
+                        }
+                    }  
+                }
+                if (checker == true)
+                {
+                    roomRepository.DeleteRoomByName(renovation.newRoom);
+                    renovationController.DeleteRenovationById(renovation.id);
+                }  
+            }
+        }
+
 
         public bool CheckFloors(List<string> roomNames)
       {

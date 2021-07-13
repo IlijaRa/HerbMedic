@@ -114,33 +114,36 @@ namespace HerbMedic.View
                             }
                             else
                             {
-                                List<string> rooms = new List<string>();
-                                Renovation renovation = new Renovation(renovationController.GenerateId(),
-                                                                       "ADVANCED",
-                                                                       Convert.ToDateTime(Datepicker1.Text),
-                                                                       Convert.ToDateTime(Textbox3.Text),
-                                                                       Convert.ToDateTime(Textbox4.Text),
-                                                                       Textbox5.Text,
-                                                                       null,
-                                                                       rooms);
-
-                                string message = renovationController.CreateRenovation(renovation);
-
-                                if (message == "SUCCEEDED")
+                                if (Convert.ToInt32(Textbox2.Text)>1 || Convert.ToInt32(Textbox2.Text)<=3)
                                 {
-                                    InfoAboutSplitRooms info = new InfoAboutSplitRooms();
-                                    info.Show();
-                                    Room room = (Room)dg_rooms.SelectedItem;
-                                    info.transferData(Textbox1.Text, Textbox2.Text, room.floor);
-                                    this.Hide();
-                                }
-                                
+                                    List<string> rooms = new List<string>();
+                                    Renovation renovation = new Renovation(renovationController.GenerateId(),
+                                                                           "ADVANCED",
+                                                                           "SPLIT",
+                                                                           Convert.ToDateTime(Datepicker1.Text),
+                                                                           Convert.ToDateTime(Textbox3.Text),
+                                                                           Convert.ToDateTime(Textbox4.Text),
+                                                                           Textbox5.Text,
+                                                                           Textbox1.Text,
+                                                                           rooms);
+
+                                    string message = renovationController.CreateRenovation(renovation);
+
+                                    if (message == "SUCCEEDED")
+                                    {
+                                        InfoAboutSplitRooms info = new InfoAboutSplitRooms();
+                                        info.Show();
+                                        Room room = (Room)dg_rooms.SelectedItem;
+                                        info.transferData(Textbox1.Text, Textbox2.Text, room.floor);
+                                        this.Hide();
+                                    }
+                                }                                
                             }
                         }
                     }
                     catch (Exception ex)
                     {
-                        notifier.ShowError("ERROR: Creation didn't go well");
+                        notifier.ShowError("ERROR: Creation didn't go well. Check your inputs!");
                     }
                 }
                 catch (Exception ex)

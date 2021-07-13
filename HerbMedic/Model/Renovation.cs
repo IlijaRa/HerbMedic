@@ -7,6 +7,7 @@ namespace Classes.Model
    {
       public int id { get; set; }
       public string type { get; set; }
+      public string subtype { get; set; }
       public DateTime date { get; set; }
       public DateTime startTime { get; set; }
       public DateTime endTime { get; set; }
@@ -14,10 +15,11 @@ namespace Classes.Model
       public string newRoom { get; set; }
       public List<string> rooms { get; set; }
 
-        public Renovation(int id, string type, DateTime date, DateTime startTime, DateTime endTime, string description, string newRoom, List<string> rooms)
+        public Renovation(int id, string type, string subtype, DateTime date, DateTime startTime, DateTime endTime, string description, string newRoom, List<string> rooms)
         {
             this.id = id;
             this.type = type;
+            this.subtype = subtype;
             this.date = date;
             this.startTime = startTime;
             this.endTime = endTime;

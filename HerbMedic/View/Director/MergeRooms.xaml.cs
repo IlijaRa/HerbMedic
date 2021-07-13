@@ -127,6 +127,7 @@ namespace HerbMedic.View
                                 // formiranje objekta renoviranje da bi se smestio u json
                                 Renovation renovation = new Renovation(renovationController.GenerateId(),
                                                                    "ADVANCED",
+                                                                   "MERGE",
                                                                    Convert.ToDateTime(Datepicker1.Text),
                                                                    Convert.ToDateTime(Textbox2.Text),
                                                                    Convert.ToDateTime(Textbox3.Text),

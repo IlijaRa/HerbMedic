@@ -1,58 +1,4 @@
 [
-{
-    "id": 1,
-    "name": "33-LG",
-    "type": "Ordination",
-    "floor": 4,
-    "description": "Waiting for operations",
-    "staticEquipment": [
-      {
-        "roomName": "33-LG",
-        "id": 1,
-        "name": "benches",
-        "quantity": 3
-      },
-      {
-        "roomName": "33-LG",
-        "id": 2,
-        "name": "chairs",
-        "quantity": 20
-      },
-      {
-        "roomName": "33-LG",
-        "id": 14,
-        "name": "lockers",
-        "quantity": 2
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "29-UK",
-    "type": "Ordination",
-    "floor": 3,
-    "description": "For the treatment of children",
-    "staticEquipment": [
-      {
-        "roomName": "29-UK",
-        "id": 1,
-        "name": "tables",
-        "quantity": 8
-      },
-      {
-        "roomName": "29-UK",
-        "id": 2,
-        "name": "lockers",
-        "quantity": 2
-      },
-      {
-        "roomName": "29-UK",
-        "id": 3,
-        "name": "respirators",
-        "quantity": 4
-      }
-    ]
-  },
   {
     "id": 3,
     "name": "18-OG",
@@ -83,54 +29,6 @@
         "id": 7,
         "name": "respirators",
         "quantity": 7
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "04-RT",
-    "type": "IntensiveCare",
-    "floor": 4,
-    "description": "Intensive care for children",
-    "staticEquipment": [
-      {
-        "roomName": "04-RT",
-        "id": 8,
-        "name": "lasers",
-        "quantity": 10
-      },
-      {
-        "roomName": "04-RT",
-        "id": 9,
-        "name": "respirators",
-        "quantity": 7
-      },
-      {
-        "roomName": "04-RT",
-        "id": 16,
-        "name": "chairs",
-        "quantity": 2
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "107-TA",
-    "type": "IntensiveCare",
-    "floor": 3,
-    "description": "Room made for older clients",
-    "staticEquipment": [
-      {
-        "roomName": "107-TA",
-        "id": 10,
-        "name": "lasers",
-        "quantity": 3
-      },
-      {
-        "roomName": "107-TA",
-        "id": 11,
-        "name": "lockers",
-        "quantity": 3
       }
     ]
   },
@@ -294,6 +192,99 @@
         "id": 112,
         "name": "skeneri",
         "quantity": 450
+      }
+    ]
+  },
+  {
+    "id": 4141,
+    "name": "140-NOVA",
+    "type": "IntensiveCare",
+    "floor": 3,
+    "description": "fwefwh",
+    "staticEquipment": [
+      {
+        "roomName": "140-NOVA",
+        "id": 284,
+        "name": "tables",
+        "quantity": 8
+      },
+      {
+        "roomName": "140-NOVA",
+        "id": 843,
+        "name": "lockers",
+        "quantity": 2
+      },
+      {
+        "roomName": "140-NOVA",
+        "id": 914,
+        "name": "respirators",
+        "quantity": 5
+      },
+      {
+        "roomName": "140-NOVA",
+        "id": 883,
+        "name": "lasers",
+        "quantity": 3
+      },
+      {
+        "roomName": "140-NOVA",
+        "id": 313,
+        "name": "lockers",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "id": 4991,
+    "name": "33-LG",
+    "type": "IntensiveCare",
+    "floor": 4,
+    "description": "fwefwg",
+    "staticEquipment": [
+      {
+        "roomName": "33-LG",
+        "id": 12127,
+        "name": "benches",
+        "quantity": 3
+      },
+      {
+        "roomName": "33-LG",
+        "id": 11920,
+        "name": "chairs",
+        "quantity": 20
+      },
+      {
+        "roomName": "33-LG",
+        "id": 12408,
+        "name": "lockers",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": 4927,
+    "name": "104-YO",
+    "type": "IntensiveCare",
+    "floor": 4,
+    "description": "fwefwg",
+    "staticEquipment": [
+      {
+        "roomName": "104-YO",
+        "id": 11690,
+        "name": "lasers",
+        "quantity": 10
+      },
+      {
+        "roomName": "104-YO",
+        "id": 12414,
+        "name": "respirators",
+        "quantity": 6
+      },
+      {
+        "roomName": "104-YO",
+        "id": 11912,
+        "name": "chairs",
+        "quantity": 2
       }
     ]
   }

@@ -117,7 +117,6 @@ namespace HerbMedic.View
                 }
 
                 Textbox3.Text = "";
-                Textbox4.Text = "";
                 Textbox5.Text = "";
                 Textbox6.Text = "";
                 Textbox7.Text = "";
@@ -153,7 +152,7 @@ namespace HerbMedic.View
         {
             if(Textbox2.Text != "0")
             {
-                MessageBox.Show("There are more rooms that you did not fill!");
+                MessageBox.Show("There are more rooms that you need to fill!");
             }
             else{
                 Home home = new Home();
