@@ -136,3 +136,9 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\BeCareful.g.c
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\BeCareful.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\CommandAboutFillingRoomInfo.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\CommandAboutFillingRoomInfo.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\AppointmentCRUD.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\HomeDoctor.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\AppointmentCRUD.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\HomeDoctor.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\HomePatient.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\HomeSecretary.g.cs

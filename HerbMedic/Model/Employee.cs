@@ -1,24 +1,22 @@
 using System;
-
+using System.Collections.Generic;
 namespace Classes.Model
 {
    public class Employee
    {
-      public int salary;
-      public System.TimeSpan workingHours;
-      public System.TimeSpan annualVacation;
-      public EmployeeType role;
-      public string explenation;
-      
-      public User user;
-      public Room room;
-      public Warehouse warehouse;
-      public System.Collections.Generic.List<Proposition> proposition;
-      
-     
-      public System.Collections.Generic.List<MedicalRecord> medicalRecord;
+        public int id { get; set; }
+        public int salary { get; set; }
+        public int WorkingHoursPerWeek { get; set; }
+        public int AnnualVacation { get; set; }
+        public string role { get; set; }
+        public User user { get; set; }
+        public Room room { get; set; }
 
-      public System.Collections.Generic.List<Appointment> appointment;
-   
-   }
+        //public List<Proposition> proposition;
+
+        //public List<MedicalRecord> medicalRecord;
+
+        //public List<Appointment> appointments;
+
+    }
 }

@@ -261,6 +261,12 @@
     <Compile Include="View\Director\StaticEquipmentManagement.xaml.cs">
       <DependentUpon>StaticEquipmentManagement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\AppointmentCRUD.xaml.cs">
+      <DependentUpon>AppointmentCRUD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\HomeDoctor.xaml.cs">
+      <DependentUpon>HomeDoctor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MessageBoxes\AreYouSure.xaml.cs">
       <DependentUpon>AreYouSure.xaml</DependentUpon>
     </Compile>
@@ -269,6 +275,12 @@
     </Compile>
     <Compile Include="View\MessageBoxes\CommandAboutFillingRoomInfo.xaml.cs">
       <DependentUpon>CommandAboutFillingRoomInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Patient\HomePatient.xaml.cs">
+      <DependentUpon>HomePatient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Secretary\HomeSecretary.xaml.cs">
+      <DependentUpon>HomeSecretary.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -342,6 +354,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Doctor\AppointmentCRUD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\HomeDoctor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MessageBoxes\AreYouSure.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -351,6 +371,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MessageBoxes\CommandAboutFillingRoomInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Patient\HomePatient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Secretary\HomeSecretary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -427,6 +455,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\messageBoxes\DangerBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\templates\HomeDoctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\templates\HomeSecretary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\templates\HomePatient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\users\patient.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

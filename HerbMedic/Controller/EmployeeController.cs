@@ -6,22 +6,28 @@ namespace Classes.Controller
 {
    public class EmployeeController
    {
+      EmployeeController employeeController = new EmployeeController();
       public List<Doctor> GetDoctorBySpecialization(string specialization)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Employee CreateEmployee(Classes.Model.Employee employee)
+      public Employee FindEmployeeByUsername(string username)
+      {
+            return employeeController.FindEmployeeByUsername(username);
+      }
+
+      public Employee CreateEmployee(Employee employee)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Employee ReadEmployee(int employeeId)
+      public Employee ReadEmployee(int employeeId)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Employee UpdateEmployee(Classes.Model.Employee employee)
+      public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();
       }
@@ -36,12 +42,9 @@ namespace Classes.Controller
          throw new NotImplementedException();
       }
       
-      public Boolean MarkOffDaysForDoctor(System.TimeSpan parameter1, string explanation, Boolean onOffDays)
+      public Boolean MarkOffDaysForDoctor(TimeSpan parameter1, string explanation, Boolean onOffDays)
       {
          throw new NotImplementedException();
       }
-      
-      public Classes.Service.EmployeeService employeeService;
-   
    }
 }

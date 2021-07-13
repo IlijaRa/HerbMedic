@@ -1,27 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
-using Classes.Controller;
-using Classes.Model;
-using HerbMedic.View;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using ToastNotifications;
 using ToastNotifications.Lifetime;
-using ToastNotifications.Messages;
 using ToastNotifications.Position;
 
-namespace HerbMedic
+namespace HerbMedic.View.Doctor
 {
-    public partial class MainWindow : Window
+    public partial class AppointmentCRUD : Window
     {
-        EmployeeController employeeController = new EmployeeController();
-        UserController userController = new UserController();
-        public MainWindow()
+        public AppointmentCRUD()
         {
             InitializeComponent();
         }
         /*----------------------------WPF PART--------------------------------*/
-                    
+
                     /* Here is the implementation of toast notifications */
                     Notifier notifier = new Notifier(cfg =>
                     {
@@ -41,7 +44,7 @@ namespace HerbMedic
 
                     private void OnGotFocusTextbox(object sender, RoutedEventArgs e)
                     {
-                        var brush = SetRGBColor(32, 158, 103);
+                        var brush = SetRGBColor(45, 173, 246);
                         TextBox text = e.Source as TextBox;
                         text.Background = brush;
                     }
@@ -49,17 +52,6 @@ namespace HerbMedic
                     {
                         TextBox text = e.Source as TextBox;
                         text.Background = Brushes.White;
-                    }
-                    private void OnGotFocusPasswordbox(object sender, RoutedEventArgs e)
-                    {
-                        var brush = SetRGBColor(32, 158, 103);
-                        PasswordBox pwtext = e.Source as PasswordBox;
-                        pwtext.Background = brush;
-                    }
-                    private void OnLostFocusPasswordbox(object sender, RoutedEventArgs e)
-                    {
-                        PasswordBox pwtext = e.Source as PasswordBox;
-                        pwtext.Background = Brushes.White;
                     }
                     public Brush SetRGBColor(int red, int green, int blue)
                     {
@@ -70,23 +62,24 @@ namespace HerbMedic
                         return brush;
                     }
         /*----------------------------FUNCTIONALITY PART--------------------------------*/
-        private void ButtonLogIn(object sender, RoutedEventArgs e)
+        private void ButtonCreate(object sender, RoutedEventArgs e)
         {
-            string password = Passwordbox1.Password.ToString();
-            //Employee employee = employeeController.FindEmployeeByUsername(Textbox1.Text);
-            //bool areCredentialsOK = employeeController.CheckEmployeeCredentials(Textbox1.Text, password);
-            //if(employee == null)
-            User user = userController.ReadUserByUsername(Textbox1.Text);
-            bool isCredentialsOK = userController.CheckUserCredentials(Textbox1.Text, password);
-            if (isCredentialsOK == false)
-                notifier.ShowError("Entered user doesnt exists!");
-            else
-            {
-                Home home = new Home();
-                home.Show();
-                home.TransferInfo(user);
-                this.Hide();
-            }
+
+        }
+
+        private void ButtonUpdate(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDelete(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonReadAll(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

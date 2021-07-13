@@ -6,10 +6,10 @@ namespace Classes.Model
    {
       public int id { get; set; }
         public bool isEmergency { get; set; } = false;
-        public Patient patient { get; set; }
-        public Secretary secretary { get; set; }
-        public Doctor doctor { get; set; }
-        public Employee employee { get; set; }
+        public string patient { get; set; }
+        //public Secretary secretary { get; set; }
+        public string doctor { get; set; }
+        //public Employee employee { get; set; }
         public DateTime startTime { get; set; }
         public DateTime endTime { get; set; }
         public DateTime date { get; set; }
