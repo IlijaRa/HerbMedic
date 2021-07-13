@@ -13,20 +13,29 @@ namespace Classes.Controller
          return medicineService.CreateMedicine(medicine);
       }
       
-      public Medicine ReadMedicine(int medicineId)
+      public void CreateIngredient(Ingredient ingredient)
+        {
+            medicineService.CreateIngredient(ingredient);
+        }
+
+        public void CreateAlternative(Alternative alternative)
+        {
+            medicineService.CreateAlternative(alternative);
+        }
+        public Medicine ReadMedicine(int medicineId)
       {
          throw new NotImplementedException();
       }
-      public List<string> ReadMedicineIngredients(string medicineName)
-      {
+        public List<Ingredient> ReadMedicineIngredients(string medicineName)
+        {
             return medicineService.ReadMedicineIngredients(medicineName);
-      }
-        public List<string> ReadMedicineAlternatives(string medicineName)
+        }
+        public List<Alternative> ReadMedicineAlternatives(string medicineName)
         {
             return medicineService.ReadMedicineAlternatives(medicineName);
         }
 
-      public string UpdateMedicine(Medicine medicine)
+        public string UpdateMedicine(Medicine medicine)
       {
          return medicineService.UpdateMedicine(medicine);
       }

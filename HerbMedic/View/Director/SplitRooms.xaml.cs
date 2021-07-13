@@ -137,6 +137,10 @@ namespace HerbMedic.View
                                         info.transferData(Textbox1.Text, Textbox2.Text, room.floor);
                                         this.Hide();
                                     }
+                                    else
+                                    {
+                                        notifier.ShowWarning("WARNING: Check date inputs!");
+                                    }
                                 }                                
                             }
                         }

@@ -1,86 +1,5 @@
 [
   {
-    "id": 3,
-    "name": "18-OG",
-    "type": "OperatingRoom",
-    "floor": 1,
-    "description": "For the treatment of adults",
-    "staticEquipment": [
-      {
-        "roomName": "18-OG",
-        "id": 4,
-        "name": "benches",
-        "quantity": 3
-      },
-      {
-        "roomName": "18-OG",
-        "id": 5,
-        "name": "chairs",
-        "quantity": 2
-      },
-      {
-        "roomName": "18-OG",
-        "id": 6,
-        "name": "lasers",
-        "quantity": 10
-      },
-      {
-        "roomName": "18-OG",
-        "id": 7,
-        "name": "respirators",
-        "quantity": 7
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "name": "11-BG",
-    "type": "OperatingRoom",
-    "floor": 1,
-    "description": "Operating room for emergency situations",
-    "staticEquipment": [
-      {
-        "roomName": "11-BG",
-        "id": 12,
-        "name": "pump",
-        "quantity": 3
-      },
-      {
-        "roomName": "11-BG",
-        "id": 13,
-        "name": "chairs",
-        "quantity": 12
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "name": "1-AR",
-    "type": "Ordination",
-    "floor": 11,
-    "description": "Odrinacija za primanje starijih lica",
-    "staticEquipment": [
-      {
-        "roomName": "1-AR",
-        "id": 5,
-        "name": "stolovi",
-        "quantity": 5
-      },
-      {
-        "roomName": "1-AR",
-        "id": 5,
-        "name": "majice",
-        "quantity": 5
-      },
-      {
-        "roomName": "1-AR",
-        "id": 2,
-        "name": "stolice",
-        "quantity": 44
-      }
-    ]
-  },
-  {
     "id": 8,
     "name": "17-LL",
     "type": "IntensiveCare",
@@ -107,7 +26,14 @@
     "type": "Ordination",
     "floor": 1,
     "description": "Ordinacija za ljude srednjih godina",
-    "staticEquipment": []
+    "staticEquipment": [
+      {
+        "roomName": "80-TRA",
+        "id": 13332,
+        "name": "skeneri",
+        "quantity": 15
+      }
+    ]
   },
   {
     "id": 10,
@@ -191,7 +117,7 @@
         "roomName": "105-FR",
         "id": 112,
         "name": "skeneri",
-        "quantity": 450
+        "quantity": 435
       }
     ]
   },
@@ -258,6 +184,12 @@
         "id": 12408,
         "name": "lockers",
         "quantity": 2
+      },
+      {
+        "roomName": "33-LG",
+        "id": 12415,
+        "name": "respirators",
+        "quantity": 2
       }
     ]
   },
@@ -278,13 +210,67 @@
         "roomName": "104-YO",
         "id": 12414,
         "name": "respirators",
-        "quantity": 6
+        "quantity": 4
       },
       {
         "roomName": "104-YO",
         "id": 11912,
         "name": "chairs",
         "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": 5100,
+    "name": "801-RT",
+    "type": "IntensiveCare",
+    "floor": 1,
+    "description": "gerghe",
+    "staticEquipment": [
+      {
+        "roomName": "801-RT",
+        "id": 12675,
+        "name": "benches",
+        "quantity": 3
+      },
+      {
+        "roomName": "801-RT",
+        "id": 13312,
+        "name": "chairs",
+        "quantity": 2
+      },
+      {
+        "roomName": "801-RT",
+        "id": 12531,
+        "name": "lasers",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "id": 5073,
+    "name": "101-YU",
+    "type": "OperatingRoom",
+    "floor": 1,
+    "description": "vwervb",
+    "staticEquipment": [
+      {
+        "roomName": "101-YU",
+        "id": 13331,
+        "name": "respirators",
+        "quantity": 7
+      },
+      {
+        "roomName": "101-YU",
+        "id": 12848,
+        "name": "pump",
+        "quantity": 3
+      },
+      {
+        "roomName": "101-YU",
+        "id": 13315,
+        "name": "chairs",
+        "quantity": 12
       }
     ]
   }

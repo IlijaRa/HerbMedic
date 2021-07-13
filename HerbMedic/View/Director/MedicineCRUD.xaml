@@ -13,22 +13,22 @@
         <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#FF209E67" BorderBrush="#FF00182D" Click="ButtonGoBack">
             <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
         </Button>
-        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_medicines" HorizontalAlignment="Left" Height="305" Margin="74,40,0,0" VerticalAlignment="Top" Width="426" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC">
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_medicines" HorizontalAlignment="Left" Height="305" Margin="74,40,0,0" VerticalAlignment="Top" Width="376" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC" SelectionChanged="dg_medicines_SelectionChanged">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#FF209E67"/>
             </DataGrid.Resources>
         </DataGrid>
-        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_ingredients" HorizontalAlignment="Left" Height="120" Margin="530,62,0,0" VerticalAlignment="Top" Width="216" Foreground="#FF00182D" AutoGenerateColumns="True" Background="#CCFFCC">
+        <DataGrid IsReadOnly="True" x:Name="dg_ingredients" HorizontalAlignment="Left" Height="120" Margin="480,62,0,0" VerticalAlignment="Top" Width="280" Foreground="#FF00182D" AutoGenerateColumns="True" Background="#CCFFCC" SelectionChanged="dg_ingredients_SelectionChanged">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#FF209E67"/>
             </DataGrid.Resources>
         </DataGrid>
-        <Button Content="Create" HorizontalAlignment="Left" Margin="579,417,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonCreate"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="579,456,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonUpdate"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="579,494,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonDelete"/>
-        <Button Content="Read all" HorizontalAlignment="Left" Margin="579,534,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonReadAll"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="593,376,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonCreate"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="593,428,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonUpdate"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="593,481,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonDelete"/>
+        <Button Content="Read all" HorizontalAlignment="Left" Margin="593,534,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonReadAll"/>
         <Label Content="Identificator:" HorizontalAlignment="Left" Margin="74,354,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Medicine name:" HorizontalAlignment="Left" Margin="74,394,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Status:" HorizontalAlignment="Left" Margin="74,434,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
@@ -37,19 +37,18 @@
         <TextBox x:Name="Textbox2" Text="{Binding SelectedItem.name, ElementName=dg_medicines, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="216,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox3" Text="{Binding SelectedItem.status, ElementName=dg_medicines, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="216,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox4" Text="{Binding SelectedItem.description, ElementName=dg_medicines, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="216,474,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Foreground="#FF00182D" FontSize="17px"/>
-        <Button Content="More about medicine" HorizontalAlignment="Left" Margin="579,378,0,0" VerticalAlignment="Top" Width="167" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonMoreAboutMedicine"/>
         <Label Content="Ingredients:" HorizontalAlignment="Left" Margin="74,513,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Alternatives:" HorizontalAlignment="Left" Margin="74,551,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="MEDICINES:" HorizontalAlignment="Center" Margin="333,-2,310,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="149"/>
-        <TextBox x:Name="Textbox5" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="216,514,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox6" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="216,553,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Foreground="#FF00182D" FontSize="17px"/>
-        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_alternatives" HorizontalAlignment="Left" Height="120" Margin="530,225,0,0" VerticalAlignment="Top" Width="216" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC">
+        <TextBox x:Name="Textbox5" Text="{Binding SelectedItem.ingredientName, ElementName=dg_ingredients, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="216,514,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox6" Text="{Binding SelectedItem.alternativeName, ElementName=dg_alternatives, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="216,553,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Foreground="#FF00182D" FontSize="17px"/>
+        <DataGrid IsReadOnly="True" x:Name="dg_alternatives" HorizontalAlignment="Left" Height="120" Margin="480,225,0,0" VerticalAlignment="Top" Width="280" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC" SelectionChanged="dg_alternatives_SelectionChanged">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#FF209E67"/>
             </DataGrid.Resources>
         </DataGrid>
-        <Label Content="INGREDIENTS:" HorizontalAlignment="Left" Margin="530,31,0,0" VerticalAlignment="Top"/>
-        <Label Content="ALTERNATIVES:" HorizontalAlignment="Left" Margin="530,194,0,0" VerticalAlignment="Top"/>
+        <Label Content="INGREDIENTS:" HorizontalAlignment="Left" Margin="480,31,0,0" VerticalAlignment="Top"/>
+        <Label Content="ALTERNATIVES:" HorizontalAlignment="Left" Margin="480,194,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

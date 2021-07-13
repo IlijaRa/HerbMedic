@@ -11,16 +11,16 @@
     </Window.Background>
 
     <Grid>
-        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_rooms" HorizontalAlignment="Left" Height="305" Margin="74,40,0,0" VerticalAlignment="Top" Width="426" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC">
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_rooms" HorizontalAlignment="Left" Height="305" Margin="74,40,0,0" VerticalAlignment="Top" Width="426" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#CCFFCC" SelectionChanged="dg_rooms_SelectionChanged">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#FF209E67"/>
             </DataGrid.Resources>
         </DataGrid>
-        <Button Content="Create" HorizontalAlignment="Left" Margin="592,417,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonCreate"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="592,456,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonUpdate"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="592,494,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonDelete"/>
-        <Button Content="Read all" HorizontalAlignment="Left" Margin="592,534,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonReadAll"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="592,398,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonCreate"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="592,437,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonUpdate"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="592,475,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonDelete"/>
+        <Button Content="Read all" HorizontalAlignment="Left" Margin="592,515,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonReadAll"/>
         <Label Content="Identificator:" HorizontalAlignment="Left" Margin="66,375,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Room name:" HorizontalAlignment="Left" Margin="66,415,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Room type:" HorizontalAlignment="Left" Margin="66,453,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
@@ -35,7 +35,6 @@
         </ComboBox>
         <TextBox x:Name="Textbox4" Text="{Binding SelectedItem.floor, ElementName=dg_rooms, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox5" Text="{Binding SelectedItem.description, ElementName=dg_rooms, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,534,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <Button Content="Read equipment" HorizontalAlignment="Left" Margin="592,378,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#FF209E67" FontSize="17px" Click="ButtonReadStaticEquipment"/>
 
         <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_equipment" HorizontalAlignment="Left" Height="305" Margin="530,40,0,0" VerticalAlignment="Top" Width="216" Foreground="#FF00182D" Background="#CCFFCC">
             <DataGrid.Resources>

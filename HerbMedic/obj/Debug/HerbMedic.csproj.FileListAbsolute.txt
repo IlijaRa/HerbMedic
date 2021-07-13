@@ -130,3 +130,9 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\HerbMedic.csproj.CoreCompileInp
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\HerbMedic.csproj.CopyComplete
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Director\InfoAboutSplitRooms.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Director\InfoAboutSplitRooms.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\AreYouSure.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\AreYouSure.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\BeCareful.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\BeCareful.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\CommandAboutFillingRoomInfo.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\CommandAboutFillingRoomInfo.baml

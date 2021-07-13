@@ -4,12 +4,8 @@
     "name": "aspirin",
     "status": "WAITING",
     "description": "weg",
-    "ingredients": [
-      "weg"
-    ],
-    "alternatives": [
-      "weggw"
-    ],
+    "ingredients": [],
+    "alternatives": [],
     "reason": null
   },
   {
@@ -17,12 +13,8 @@
     "name": "lanosprazol",
     "status": "WAITING",
     "description": "This medicine can be used anytime",
-    "ingredients": [
-      "malatin"
-    ],
-    "alternatives": [
-      "malatin"
-    ],
+    "ingredients": [],
+    "alternatives": [],
     "reason": null
   },
   {
@@ -30,15 +22,8 @@
     "name": "menilotonin",
     "status": "VALIDATED",
     "description": "slobodna upotreba",
-    "ingredients": [
-      "adrenalin",
-      "scandonest",
-      "mediapan"
-    ],
-    "alternatives": [
-      "kardiopirin",
-      "brufen"
-    ],
+    "ingredients": [],
+    "alternatives": [],
     "reason": "fwefgw"
   },
   {
@@ -46,15 +31,8 @@
     "name": "tauroninsin",
     "status": "VALIDATED",
     "description": "za pankreas",
-    "ingredients": [
-      "iseotinska kiselina",
-      "cistein",
-      "hipotaurin"
-    ],
-    "alternatives": [
-      "blister",
-      "aspirin"
-    ],
+    "ingredients": [],
+    "alternatives": [],
     "reason": null
   },
   {
@@ -62,16 +40,8 @@
     "name": "digoxicor",
     "status": "VALIDATED",
     "description": "za slepo crevo",
-    "ingredients": [
-      "monosan",
-      "molicor",
-      "brufen",
-      "aspirin"
-    ],
-    "alternatives": [
-      "blister",
-      "abasaglar"
-    ],
+    "ingredients": [],
+    "alternatives": [],
     "reason": null
   },
   {
@@ -79,16 +49,49 @@
     "name": "mediokroksin",
     "status": "VALIDATED",
     "description": "izuzetno opasan lek za samostalno koricenje",
+    "ingredients": [],
+    "alternatives": [],
+    "reason": "Ime nije dobro napisano, i za alternativu dodati da postoji i vitamin C"
+  },
+  {
+    "id": 7,
+    "name": "fwefddd",
+    "status": "WAITING",
+    "description": "wef",
     "ingredients": [
-      "perodaksil",
-      "mamonit",
-      "diaruaksin"
+      {
+        "medicineName": "fwefddd",
+        "ingredientId": 112,
+        "ingredientName": "aha"
+      },
+      {
+        "medicineName": "fwefddd",
+        "ingredientId": 265,
+        "ingredientName": "fwefg"
+      },
+      {
+        "medicineName": "fwefddd",
+        "ingredientId": 824,
+        "ingredientName": "wfwef"
+      }
     ],
     "alternatives": [
-      "penicilin",
-      "bensedin",
-      "bromazepam"
+      {
+        "medicineName": "fwefddd",
+        "alternativeId": 920,
+        "alternativeName": "fq"
+      },
+      {
+        "medicineName": "fwefddd",
+        "alternativeId": 223,
+        "alternativeName": "fqwf"
+      },
+      {
+        "medicineName": "fwefddd",
+        "alternativeId": 949,
+        "alternativeName": "qfe"
+      }
     ],
-    "reason": "Ime nije dobro napisano, i za alternativu dodati da postoji i vitamin C"
+    "reason": null
   }
 ]

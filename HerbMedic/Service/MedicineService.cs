@@ -14,22 +14,32 @@ namespace Classes.Service
       {
          return medicineRepository.CreateMedicine(medicine);
       }
-      
+
+        public void CreateIngredient(Ingredient ingredient)
+        {
+            medicineRepository.CreateIngredient(ingredient);
+        }
+
+        public void CreateAlternative(Alternative alternative)
+        {
+            medicineRepository.CreateAlternative(alternative);
+        }
+
       public Medicine ReadMedicine(int medicineId)
       {
          throw new NotImplementedException();
       }
-        public List<string> ReadMedicineIngredients(string medicineName)
+        public List<Ingredient> ReadMedicineIngredients(string medicineName)
         {
             return medicineRepository.ReadMedicineIngredients(medicineName);
         }
 
-        public List<string> ReadMedicineAlternatives(string medicineName)
+        public List<Alternative> ReadMedicineAlternatives(string medicineName)
         {
             return medicineRepository.ReadMedicineAlternatives(medicineName);
         }
 
-      public string UpdateMedicine(Medicine medicine)
+        public string UpdateMedicine(Medicine medicine)
       {
          return medicineRepository.UpdateMedicine(medicine);
       }

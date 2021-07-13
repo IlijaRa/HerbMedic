@@ -106,6 +106,7 @@
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Allergen.cs" />
     <Compile Include="Model\AllergenWarning.cs" />
+    <Compile Include="Model\Alternative.cs" />
     <Compile Include="Model\Anamnesis.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\AprovedState.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Model\EmployeeType.cs" />
     <Compile Include="Model\Feedback.cs" />
     <Compile Include="Model\HospitalTreatment.cs" />
+    <Compile Include="Model\Ingredient.cs" />
     <Compile Include="Model\InReviewState.cs" />
     <Compile Include="Model\MedicalRecord.cs" />
     <Compile Include="Model\Medicine.cs" />
@@ -259,6 +261,15 @@
     <Compile Include="View\Director\StaticEquipmentManagement.xaml.cs">
       <DependentUpon>StaticEquipmentManagement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MessageBoxes\AreYouSure.xaml.cs">
+      <DependentUpon>AreYouSure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageBoxes\BeCareful.xaml.cs">
+      <DependentUpon>BeCareful.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageBoxes\CommandAboutFillingRoomInfo.xaml.cs">
+      <DependentUpon>CommandAboutFillingRoomInfo.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -331,6 +342,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MessageBoxes\AreYouSure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MessageBoxes\BeCareful.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MessageBoxes\CommandAboutFillingRoomInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -392,6 +415,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\templates\NewRoomInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\messageBoxes\questionmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\messageBoxes\InfoBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\messageBoxes\danger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\messageBoxes\DangerBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

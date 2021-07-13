@@ -130,12 +130,19 @@ namespace HerbMedic.View
         {
             try
             {
-                DynamicEquipment equipment = (DynamicEquipment)dg_equipments.SelectedItem;
-                string message = dynamicController.DeleteDynamicEquipment(equipment.id);
-                if (message == "SUCCEEDED")
-                    notifier.ShowSuccess("SUCCESS: Equipment is deleted!");
+                if (dg_equipments.SelectedCells.Count > 0)
+                {
+                    DynamicEquipment equipment = (DynamicEquipment)dg_equipments.SelectedItem;
+                    string message = dynamicController.DeleteDynamicEquipment(equipment.id);
+                    if (message == "SUCCEEDED")
+                        notifier.ShowSuccess("SUCCESS: Equipment is deleted!");
+                    else
+                        notifier.ShowError("ERROR: Equipment isn't deleted!");
+                }
                 else
-                    notifier.ShowError("ERROR: Equipment isn't deleted!");
+                {
+                    notifier.ShowWarning("WARNING: Firstly you need to select equipment!");
+                }
             }
             catch
             {

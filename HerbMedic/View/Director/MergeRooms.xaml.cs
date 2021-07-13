@@ -110,7 +110,7 @@ namespace HerbMedic.View
                     passed = true;
                     if (dg_rooms.SelectedCells.Count <2)
                     {
-                        notifier.ShowWarning("WARNING: You need to select rooms for merge!");
+                        notifier.ShowWarning("WARNING: You need to select a minimum of two rooms for merge!");
                     }
                     else
                     {
@@ -124,32 +124,55 @@ namespace HerbMedic.View
                             bool areFloorsTheSame = roomController.CheckFloors(rooms);
                             if (areFloorsTheSame)
                             {
-                                // formiranje objekta renoviranje da bi se smestio u json
-                                Renovation renovation = new Renovation(renovationController.GenerateId(),
-                                                                   "ADVANCED",
-                                                                   "MERGE",
-                                                                   Convert.ToDateTime(Datepicker1.Text),
-                                                                   Convert.ToDateTime(Textbox2.Text),
-                                                                   Convert.ToDateTime(Textbox3.Text),
-                                                                   Textbox4.Text,
-                                                                   Textbox6.Text,
-                                                                   rooms);
-                                string message = renovationController.CreateRenovation(renovation);
+                                string[] startTiming = Textbox2.Text.Split(':');
+                                string[] endTiming = Textbox3.Text.Split(':');
 
-                                //formiranje objekta nove sobe da bi se smestio u pendingRoom json
-                                List<string> mergingRooms = roomController.FormatMergeRooms(Textbox1.Text);
-                                Room newRoomAtributes = new Room(roomController.GenerateId(), Textbox6.Text, Combobox1.Text, Convert.ToInt32(Textbox7.Text), Textbox8.Text, null);
-                                Room BigRoom = roomController.MergeRooms(newRoomAtributes, mergingRooms);
-                                string message1 = roomController.CreatePendingRoom(BigRoom);
+                                int startTimeHour = Convert.ToInt32(startTiming[0]);
+                                int endTimeHour = Convert.ToInt32(endTiming[0]);
 
-                                if (message == "SUCCEEDED" && message1 == "SUCCEEDED")
+                                if (startTimeHour < endTimeHour)
                                 {
-                                    notifier.ShowSuccess("SUCCESS: Renovation is created!");
+                                    // formiranje objekta renoviranje da bi se smestio u json
+                                    Renovation renovation = new Renovation(renovationController.GenerateId(),
+                                                                       "ADVANCED",
+                                                                       "MERGE",
+                                                                       Convert.ToDateTime(Datepicker1.Text),
+                                                                       Convert.ToDateTime(Textbox2.Text),
+                                                                       Convert.ToDateTime(Textbox3.Text),
+                                                                       Textbox4.Text,
+                                                                       Textbox6.Text,
+                                                                       rooms);
+                                    string message = renovationController.CreateRenovation(renovation);
+
+                                    //formiranje objekta nove sobe da bi se smestio u pendingRoom json
+                                    List<string> mergingRooms = roomController.FormatMergeRooms(Textbox1.Text);
+                                    Room newRoomAtributes = new Room(roomController.GenerateId(), Textbox6.Text, Combobox1.Text, Convert.ToInt32(Textbox7.Text), Textbox8.Text, null);
+                                    Room BigRoom = roomController.MergeRooms(newRoomAtributes, mergingRooms);
+                                    string message1 = roomController.CreatePendingRoom(BigRoom);
+
+                                    if (message == "SUCCEEDED" && message1 == "SUCCEEDED")
+                                    {
+                                        Textbox1.Text = "";
+                                        Textbox2.Text = "";
+                                        Textbox3.Text = "";
+                                        Textbox4.Text = "";
+                                        Textbox6.Text = "";
+                                        Textbox7.Text = "";
+                                        Textbox8.Text = "";
+                                        Combobox1.Text = "";
+                                        Datepicker1.SelectedDate = null;
+                                        notifier.ShowSuccess("SUCCESS: Renovation is created!");
+                                    }
+                                    else
+                                    {
+                                        notifier.ShowWarning("WARNING: Watch entered date correction and exemination terms in room that you want to renovate");
+                                    }
                                 }
                                 else
                                 {
-                                    notifier.ShowWarning("WARNING: Watch entered date correction and exemination terms in room that you want to renovate");
+                                    notifier.ShowWarning("WARNING: Check date input!");
                                 }
+                                
                             }
                             else
                             {

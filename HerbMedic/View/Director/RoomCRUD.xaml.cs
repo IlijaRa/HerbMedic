@@ -10,6 +10,7 @@ using Classes.Controller;
 using Classes.Model;
 using ToastNotifications.Messages;
 using System.Collections.ObjectModel;
+using HerbMedic.View.MessageBoxes;
 
 namespace HerbMedic.View
 {
@@ -70,13 +71,22 @@ namespace HerbMedic.View
         {
             try
             {
-                Room selectedRoom = (Room)dg_rooms.SelectedItem;
-                List<StaticEquipment> staticEquip = roomController.ReadRoomsEquipment(selectedRoom.name);
-                dg_equipment.ItemsSource = staticEquip;
+                if (dg_rooms.SelectedCells.Count > 0)
+                {
+                    Room selectedRoom = (Room)dg_rooms.SelectedItem;
+                    List<StaticEquipment> staticEquip = roomController.ReadRoomsEquipment(selectedRoom.name);
+                    dg_equipment.ItemsSource = staticEquip;
+                }
+                else
+                {
+                    notifier.ShowWarning("WARNING: You didn't select a room!");
+                }
+
             }
-            catch
+            catch(Exception exception)
             {
-                notifier.ShowWarning("Firstly you need to select a room!");
+                notifier.ShowWarning(exception.Message);
+                //notifier.ShowWarning("Firstly you need to select a room!");
             }
         }
 
@@ -107,47 +117,75 @@ namespace HerbMedic.View
 
         private void ButtonReadAll(object sender, RoutedEventArgs e)
         {
-            List<Room> rooms = roomController.ReadAllRooms();
-            ObservableCollection<Room> observableRooms = new ObservableCollection<Room>();
-            foreach (var room in rooms)
+            try
             {
-                observableRooms.Add(room);
+                List<Room> rooms = roomController.ReadAllRooms();
+                ObservableCollection<Room> observableRooms = new ObservableCollection<Room>();
+                foreach (var room in rooms)
+                {
+                    observableRooms.Add(room);
+                }
+                dg_rooms.ItemsSource = observableRooms;
             }
-            dg_rooms.ItemsSource = observableRooms;
-        }
+            catch(Exception exception)
+            {
+                notifier.ShowError(exception.Message);
+            }
+}
 
         private void ButtonDelete(object sender, RoutedEventArgs e)
         {
-            Room selectedRoom = (Room)dg_rooms.SelectedItem;
-            string message = roomController.DeleteRoomById(selectedRoom.id);
-            if (dg_rooms.SelectedItem == null)
-                notifier.ShowWarning("You need to select room!");
-            if (message == "SUCCEEDED")
+            try
             {
-                notifier.ShowSuccess("SUCCESS: Room is deleted!");
+                if(dg_rooms.SelectedCells.Count > 0)
+                {
+                    Room selectedRoom = (Room)dg_rooms.SelectedItem;
+                    string message = roomController.DeleteRoomById(selectedRoom.id);
+                    if (dg_rooms.SelectedItem == null)
+                        notifier.ShowWarning("You need to select room!");
+                    if (message == "SUCCEEDED")
+                    {
+                        notifier.ShowSuccess("SUCCESS: Room is deleted!");
+                    }
+                    else
+                        notifier.ShowWarning("ERROR: Room isn't deleted!");
+                }
+                else
+                {
+                    notifier.ShowWarning("WARNING: You didn't select a room!");
+                }
             }
-            else
-                notifier.ShowWarning("ERROR: Room isn't deleted!");
+            catch
+            {
+                notifier.ShowWarning("WARNING: Blanks are poorly filled!");
+            }
 
         }
 
         private void ButtonUpdate(object sender, RoutedEventArgs e)
         {
-            List<StaticEquipment> staticEquipment = roomController.ReadRoomsEquipment(Textbox2.Text);
-            Room room = new Room(Convert.ToInt32(Textbox1.Text),
-                                 Textbox2.Text,
-                                 Combobox1.Text,
-                                 Convert.ToInt32(Textbox4.Text),
-                                 Textbox5.Text,
-                                 staticEquipment);
-            string message = roomController.UpdateRoom(room);
+            try {
 
-            if (message == "SUCCEEDED")
-            {
-                notifier.ShowSuccess("SUCCESS: Room is updated!");
+                List<StaticEquipment> staticEquipment = roomController.ReadRoomsEquipment(Textbox2.Text);
+                Room room = new Room(Convert.ToInt32(Textbox1.Text),
+                                     Textbox2.Text,
+                                     Combobox1.Text,
+                                     Convert.ToInt32(Textbox4.Text),
+                                     Textbox5.Text,
+                                     staticEquipment);
+                string message = roomController.UpdateRoom(room);
+
+                if (message == "SUCCEEDED")
+                {
+                    notifier.ShowSuccess("SUCCESS: Room is updated!");
+                }
+                else
+                    notifier.ShowError("ERROR: Room isn't updated!");
             }
-            else
-                notifier.ShowError("ERROR: Room isn't updated!");
+            catch
+            {
+                notifier.ShowWarning("WARNING: Blanks are poorly filled!");
+            }
         }
 
         private void ButtonGoBack(object sender, RoutedEventArgs e)
@@ -155,6 +193,13 @@ namespace HerbMedic.View
             Home home = new Home();
             home.Show();
             this.Hide();
+        }
+
+        private void dg_rooms_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Room selectedRoom = (Room)dg_rooms.SelectedItem;
+            List<StaticEquipment> staticEquip = roomController.ReadRoomsEquipment(selectedRoom.name);
+            dg_equipment.ItemsSource = staticEquip;
         }
     }
 }

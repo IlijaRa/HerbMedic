@@ -5,7 +5,15 @@ namespace Classes.Model
 {
     public class Medicine
     {
-        public Medicine(int id, string name, string status, string description, List<string> ingredients, List<string> alternatives, string reason)
+        public int id { get; set; }
+        public string name { get; set; }
+        public string status { get; set; }
+        public string description { get; set; }
+        public List<Ingredient> ingredients { get; set; }
+        public List<Alternative> alternatives { get; set; }
+        public string reason { get; set; }
+
+        public Medicine(int id, string name, string status, string description, List<Ingredient> ingredients, List<Alternative> alternatives, string reason)
         {
             this.id = id;
             this.name = name;
@@ -16,12 +24,5 @@ namespace Classes.Model
             this.reason = reason;
         }
 
-        public int id { get; set; }
-        public string name { get; set; }
-        public string status { get; set; }
-        public string description { get; set; }
-        public List<string> ingredients { get; set; }
-        public List<string> alternatives { get; set; }
-        public string reason { get; set; }
     }
 }

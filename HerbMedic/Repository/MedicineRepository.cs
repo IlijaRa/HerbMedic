@@ -14,8 +14,8 @@ namespace Classes.Repository
         {
             readMedicineJson();
         }
-      public void readMedicineJson()
-      {
+          public void readMedicineJson()
+          {
             if (!File.Exists("medicines.json"))
             {
                 File.Create("medicines.json").Close();
@@ -29,7 +29,7 @@ namespace Classes.Repository
                     medicines = JsonConvert.DeserializeObject<List<Medicine>>(json);
                 }
             }
-        }
+          }
         public void writeInJson()
         {
             string json = JsonConvert.SerializeObject(medicines, Formatting.Indented);
@@ -44,44 +44,62 @@ namespace Classes.Repository
             message = "SUCCEEDED";
           return message;
       }
-      
+
+        public void CreateIngredient(Ingredient ingredient)
+        {
+            int index = medicines.FindIndex(obj => obj.name == ingredient.medicineName);
+            medicines[index].ingredients.Add(ingredient);
+            writeInJson();
+        }
+
+        public void CreateAlternative(Alternative alternative)
+        {
+            int index = medicines.FindIndex(obj => obj.name == alternative.medicineName);
+            medicines[index].alternatives.Add(alternative);
+            writeInJson();
+        }
+
       public Medicine ReadMedicine(int medicineId)
       {
          throw new NotImplementedException();
       }
-        public List<string> ReadMedicineIngredients(string medicineName)
+        public List<Ingredient> ReadMedicineIngredients(string medicineName)
         {
-            List<string> ingredients = new List<string>();
+            List<Ingredient> ingredients = new List<Ingredient>();
             foreach(var medicine in medicines)
             {
-                if (medicine.name == medicineName)
+                if(medicine.name == medicineName)
                 {
-                    foreach(var ingredient in medicine.ingredients.ToArray())
+                    foreach(var ingred in medicine.ingredients)
                     {
-                        ingredients.Add(ingredient);
+                        ingredients.Add(ingred);
                     }
                 }
             }
+            //int index = medicines.FindIndex(obj => obj.name == medicineName);
+            //ingredients = medicines[index].ingredients;
             return ingredients;
         }
 
-        public List<string> ReadMedicineAlternatives(string medicineName)
+        public List<Alternative> ReadMedicineAlternatives(string medicineName)
         {
-            List<string> alternatives = new List<string>();
+            List<Alternative> alternatives = new List<Alternative>();
             foreach (var medicine in medicines)
             {
                 if (medicine.name == medicineName)
                 {
-                    foreach (var ingredient in medicine.ingredients.ToArray())
+                    foreach (var alter in medicine.alternatives)
                     {
-                        alternatives.Add(ingredient);
+                        alternatives.Add(alter);
                     }
                 }
             }
+            //int index = medicines.FindIndex(obj => obj.name == medicineName);
+            //alternatives = medicines[index].alternatives;
             return alternatives;
         }
 
-      public string UpdateMedicine(Medicine medicine)
+        public string UpdateMedicine(Medicine medicine)
       {
             string message;
             int index = medicines.FindIndex(obj => obj.id == medicine.id);

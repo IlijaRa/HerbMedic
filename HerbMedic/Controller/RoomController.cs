@@ -43,7 +43,7 @@ namespace Classes.Controller
             roomService.SwitchSplitToRoomJson();
         }
 
-        public Room ReadRoomById(int id)
+      public Room ReadRoomById(int id)
       {
          throw new NotImplementedException();
       }
