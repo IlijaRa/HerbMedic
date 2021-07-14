@@ -60,12 +60,12 @@
       {
         "id": 941,
         "isEmergency": false,
-        "patient": "Simona Prokic",
+        "patient": "Margarita Peric",
         "employeeUsername": "makezza",
         "date": "2021-07-15T00:00:00",
         "startTime": "2021-07-14T11:00:00",
         "endTime": "2021-07-14T12:00:00",
-        "roomName": "101-YU",
+        "roomName": "33-LG",
         "appointmentType": "Operation"
       }
     ],

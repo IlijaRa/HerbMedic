@@ -191,6 +191,7 @@ namespace HerbMedic.View.Doctor
                 if (message == "SUCCEEDED")
                 {
                     notifier.ShowSuccess("SUCCESS: Operation is updated!");
+
                 }
                 else
                     notifier.ShowError("ERROR: Operation isn't updated! Check your inputs.");
@@ -233,9 +234,9 @@ namespace HerbMedic.View.Doctor
             {
                 List<Appointment> operations = employeeController.ReadOperationsByUsername(Textbox_username.Text);
                 ObservableCollection<Appointment> observableAppointments = new ObservableCollection<Appointment>();
-                foreach (var appointment in operations)
+                foreach (var o in operations)
                 {
-                    observableAppointments.Add(appointment);
+                    observableAppointments.Add(o);
                 }
                 dg_operations.ItemsSource = observableAppointments;
             }

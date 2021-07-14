@@ -30,7 +30,7 @@ namespace HerbMedic.View
             InitializeComponent();
             List<DynamicEquipment> equipments = dynamicController.ReadAllDynamicEquipment();
             ObservableCollection<DynamicEquipment> observableEquipments = new ObservableCollection<DynamicEquipment>();
-            foreach (var equipment in equipments)
+            foreach (var equipment in equipments.ToList())
             {
                 observableEquipments.Add(equipment);
             }
@@ -154,7 +154,7 @@ namespace HerbMedic.View
         {
             List<DynamicEquipment> equipments = dynamicController.ReadAllDynamicEquipment();
             ObservableCollection<DynamicEquipment> observableEquipments = new ObservableCollection<DynamicEquipment>();
-            foreach (var equipment in equipments)
+            foreach (var equipment in equipments.ToList())
             {
                 observableEquipments.Add(equipment);
             }

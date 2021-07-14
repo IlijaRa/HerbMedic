@@ -202,9 +202,9 @@
   {
     "id": 4927,
     "name": "104-YO",
-    "type": "IntensiveCare",
+    "type": "OperatingRoom",
     "floor": 4,
-    "description": "fwefwg",
+    "description": "fwefwgvwegwegweh",
     "staticEquipment": [
       {
         "roomName": "104-YO",
@@ -229,7 +229,7 @@
   {
     "id": 5100,
     "name": "801-RT",
-    "type": "IntensiveCare",
+    "type": "Ordination",
     "floor": 1,
     "description": "gerghe",
     "staticEquipment": [
@@ -255,36 +255,17 @@
   },
   {
     "id": 5073,
-    "name": "101-YU",
-    "type": "OperatingRoom",
-    "floor": 1,
-    "description": "vwervb",
-    "staticEquipment": [
-      {
-        "roomName": "101-YU",
-        "id": 13331,
-        "name": "respirators",
-        "quantity": 7
-      },
-      {
-        "roomName": "101-YU",
-        "id": 12848,
-        "name": "pump",
-        "quantity": 3
-      },
-      {
-        "roomName": "101-YU",
-        "id": 13315,
-        "name": "chairs",
-        "quantity": 12
-      }
-    ]
+    "name": "101-YI",
+    "type": "Ordination",
+    "floor": 4,
+    "description": "AFAFAFAFAFAF",
+    "staticEquipment": []
   },
   {
     "id": 5101,
-    "name": "aaa4-YU",
-    "type": "OperatingRoom",
-    "floor": 1,
+    "name": "43-AU",
+    "type": "Ordination",
+    "floor": 33,
     "description": "vwervb",
     "staticEquipment": []
   }

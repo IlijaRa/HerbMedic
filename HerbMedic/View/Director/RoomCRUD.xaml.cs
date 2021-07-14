@@ -178,6 +178,15 @@ namespace HerbMedic.View
                 if (message == "SUCCEEDED")
                 {
                     notifier.ShowSuccess("SUCCESS: Room is updated!");
+
+                    List<Room> rooms = roomController.ReadAllRooms();
+                    ObservableCollection<Room> observableRooms = new ObservableCollection<Room>();
+                    foreach (var r in rooms)
+                    {
+                        observableRooms.Add(r);
+                    }
+                    dg_rooms.ItemsSource = observableRooms;
+
                 }
                 else
                     notifier.ShowError("ERROR: Room isn't updated!");
@@ -195,11 +204,18 @@ namespace HerbMedic.View
             this.Hide();
         }
 
-        private void dg_rooms_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             Room selectedRoom = (Room)dg_rooms.SelectedItem;
             List<StaticEquipment> staticEquip = roomController.ReadRoomsEquipment(selectedRoom.name);
             dg_equipment.ItemsSource = staticEquip;
         }
+
+        //private void dg_rooms_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    Room selectedRoom = (Room)dg_rooms.SelectedItem;
+        //    List<StaticEquipment> staticEquip = roomController.ReadRoomsEquipment(selectedRoom.name);
+        //    dg_equipment.ItemsSource = staticEquip;
+        //}
     }
 }
