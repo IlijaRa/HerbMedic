@@ -6,7 +6,7 @@ namespace Classes.Controller
 {
    public class EmployeeController
    {
-      EmployeeController employeeController = new EmployeeController();
+      EmployeeService employeeService = new EmployeeService();
       public List<Doctor> GetDoctorBySpecialization(string specialization)
       {
          throw new NotImplementedException();
@@ -14,7 +14,7 @@ namespace Classes.Controller
       
       public Employee FindEmployeeByUsername(string username)
       {
-            return employeeController.FindEmployeeByUsername(username);
+            return employeeService.FindEmployeeByUsername(username);
       }
 
       public Employee CreateEmployee(Employee employee)
@@ -26,8 +26,13 @@ namespace Classes.Controller
       {
          throw new NotImplementedException();
       }
-      
-      public Employee UpdateEmployee(Employee employee)
+
+        public List<Appointment> ReadAppointmentsByUsername(string username)
+        {
+            return employeeService.ReadAppointmentsByUsername(username);
+        }
+
+        public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();
       }

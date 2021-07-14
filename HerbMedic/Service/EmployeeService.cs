@@ -1,12 +1,13 @@
 using Classes.Model;
 using System.Collections.Generic;
 using System;
+using Classes.Repository;
 
 namespace Classes.Service
 {
    public class EmployeeService
    {
-        EmployeeService employeeService = new EmployeeService();
+        EmployeeRepository employeeRepository = new EmployeeRepository();
       public List<Doctor> GetDoctorBySpecialization(string specialization)
       {
          throw new NotImplementedException();
@@ -14,7 +15,7 @@ namespace Classes.Service
 
         public Employee FindEmployeeByUsername(string username)
         {
-            return employeeService.FindEmployeeByUsername(username);
+            return employeeRepository.FindEmployeeByUsername(username);
         }
 
         public Employee CreateEmployee(Employee employee)
@@ -26,8 +27,13 @@ namespace Classes.Service
       {
          throw new NotImplementedException();
       }
-      
-      public Employee UpdateEmployee(Employee employee)
+
+        public List<Appointment> ReadAppointmentsByUsername(string username)
+        {
+            return employeeRepository.ReadAppointmentsByUsername(username);
+        }
+
+        public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();
       }

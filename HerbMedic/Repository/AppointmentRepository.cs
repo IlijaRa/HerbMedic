@@ -38,8 +38,8 @@ namespace Classes.Repository
       {
          throw new NotImplementedException();
       }
-      
-      public Appointment ReadAppointment(int appointmentId)
+
+        public Appointment ReadAppointment(int appointmentId)
       {
          throw new NotImplementedException();
       }

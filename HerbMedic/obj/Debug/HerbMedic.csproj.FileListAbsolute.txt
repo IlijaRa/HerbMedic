@@ -142,3 +142,5 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\AppointmentCRUD.bam
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\HomeDoctor.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\HomePatient.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\HomeSecretary.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\HomePatient.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\HomeSecretary.baml

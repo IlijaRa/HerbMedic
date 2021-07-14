@@ -19,7 +19,8 @@
 			"dateOfBirth": "1998-06-12T00:00:00",
 			"notificationRefferal": null
 		},
-		"room": "EconomySector"
+		"room": "EconomySector",
+		"appointments": null
 	},
 	{
 		"id": 2,
@@ -41,6 +42,30 @@
 			"dateOfBirth": "1994-06-23T00:00:00",
 			"notificationRefferal": null
 		},
-		"room": "33-LG"
+		"room": "33-LG",
+		"appointments": [
+			{
+				"id": 1,
+				"isEmergency": false,
+				"patient": "Simona Prokic",
+				"employeeUsername": "makezza",
+				"date": "2021-07-15T00:00:00",
+				"startTime": "2021-07-14T11:00:00",
+				"endTime": "2021-07-14T12:00:00",
+				"roomName": "33-LG",
+				"appointmentType": "Examination"
+			},
+			{
+				"id": 2,
+				"isEmergency": true,
+				"patient": "Margarita Peric",
+				"employeeUsername": "makezza",
+				"date": "2021-07-18T00:00:00",
+				"startTime": "2021-07-14T18:00:00",
+				"endTime": "2021-07-14T19:00:00",
+				"roomName": "33-LG",
+				"appointmentType": "Examination"
+			}
+		]
 	}
 ]

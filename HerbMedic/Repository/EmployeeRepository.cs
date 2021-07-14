@@ -9,7 +9,7 @@ namespace Classes.Repository
    public class EmployeeRepository
    {
         public List<Employee> employees = new List<Employee>();
-        EmployeeRepository()
+        public EmployeeRepository()
         {
             readEmployeeJson();
         }
@@ -30,7 +30,7 @@ namespace Classes.Repository
                 }
             }
         }
-        public List<Doctor> GetDoctorBySpecialization(string specialization)
+      public List<Doctor> GetDoctorBySpecialization(string specialization)
       {
          throw new NotImplementedException();
       }
@@ -43,17 +43,35 @@ namespace Classes.Repository
             return employee;
         }
 
-        public Classes.Model.Employee CreateEmployee(Classes.Model.Employee employee)
+      public Employee CreateEmployee(Employee employee)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Employee ReadEmployee(int employeeId)
+      public Employee ReadEmployee(int employeeId)
       {
          throw new NotImplementedException();
       }
-      
-      public Classes.Model.Employee UpdateEmployee(Classes.Model.Employee employee)
+
+        public List<Appointment> ReadAppointmentsByUsername(string username)
+        {
+            List<Appointment> appoints = new List<Appointment>();
+            
+            foreach(var employee in employees)
+            {
+                if(employee.user.username == username)
+                {
+                    foreach (var appoint in employee.appointments)
+                    {
+                        appoints.Add(appoint);
+                    }
+                }   
+            }
+
+            return appoints;
+        }
+
+      public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();
       }
@@ -68,7 +86,7 @@ namespace Classes.Repository
          throw new NotImplementedException();
       }
       
-      public Boolean MarkOffDaysForDoctor(System.TimeSpan parameter1, string explanation, Boolean onOffDays)
+      public Boolean MarkOffDaysForDoctor(TimeSpan parameter1, string explanation, Boolean onOffDays)
       {
          throw new NotImplementedException();
       }

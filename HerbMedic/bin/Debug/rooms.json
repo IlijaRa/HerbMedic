@@ -32,6 +32,12 @@
         "id": 13332,
         "name": "skeneri",
         "quantity": 15
+      },
+      {
+        "roomName": "80-TRA",
+        "id": 13333,
+        "name": "lasers",
+        "quantity": 2
       }
     ]
   },
@@ -204,7 +210,7 @@
         "roomName": "104-YO",
         "id": 11690,
         "name": "lasers",
-        "quantity": 10
+        "quantity": 8
       },
       {
         "roomName": "104-YO",

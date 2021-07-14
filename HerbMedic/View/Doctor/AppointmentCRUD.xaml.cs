@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Classes.Controller;
+using Classes.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +22,20 @@ namespace HerbMedic.View.Doctor
 {
     public partial class AppointmentCRUD : Window
     {
+        EmployeeController employeeController = new EmployeeController();
+        PatientController patientController = new PatientController();
         public AppointmentCRUD()
         {
             InitializeComponent();
+            List<Classes.Model.Patient> patients = patientController.ReadAllPatients();
+            List<string> nameSurname = new List<string>();
+
+            foreach(var patient in patients)
+            {
+                nameSurname.Add(patient.user.firstName + " " +patient.user.lastName);
+            }
+
+            Combobox1.ItemsSource = nameSurname;
         }
         /*----------------------------WPF PART--------------------------------*/
 
@@ -78,6 +92,23 @@ namespace HerbMedic.View.Doctor
         }
 
         private void ButtonReadAll(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void TransferAndDisplayAppointments(string username)
+        {
+            Textbox_username.Text = username;
+            List<Appointment> appointments = employeeController.ReadAppointmentsByUsername(Textbox_username.Text);
+            ObservableCollection<Appointment> observableAppointments = new ObservableCollection<Appointment>();
+            foreach (var appointment in appointments)
+            {
+                observableAppointments.Add(appointment);
+            }
+            dg_appointments.ItemsSource = observableAppointments;
+        }
+
+        private void ButtonGoBack(object sender, RoutedEventArgs e)
         {
 
         }

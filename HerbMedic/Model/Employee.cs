@@ -10,13 +10,13 @@ namespace Classes.Model
         public int AnnualVacation { get; set; }
         public string role { get; set; }
         public User user { get; set; }
-        public Room room { get; set; }
+        public string room { get; set; }
 
         //public List<Proposition> proposition;
 
         //public List<MedicalRecord> medicalRecord;
 
-        //public List<Appointment> appointments;
+        public List<Appointment> appointments;
 
     }
 }

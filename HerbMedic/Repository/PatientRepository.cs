@@ -1,22 +1,49 @@
 using Classes.Model;
 using System.Collections.Generic;
 using System;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace Classes.Repository
 {
    public class PatientRepository
    {
-      public Classes.Model.Patient CreatePatient(Classes.Model.Patient patient)
+        public List<Patient> patients = new List<Patient>();
+
+        public PatientRepository()
+        {
+            readPatientJson();
+        }
+        public void readPatientJson()
+        {
+            // deserializuje renovation.json
+            if (!File.Exists("patients.json"))
+            {
+                File.Create("patients.json").Close();
+            }
+
+            using (StreamReader r = new StreamReader("patients.json"))
+            {
+                string json = r.ReadToEnd();
+                if (json != "")
+                {
+                    patients = JsonConvert.DeserializeObject<List<Patient>>(json);
+                }
+            }
+        }
+
+
+        public Patient CreatePatient(Patient patient)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Patient ReadPatient(int patientId)
+      public Patient ReadPatient(int patientId)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Patient UpdatePatient(Classes.Model.Patient patient)
+      public Patient UpdatePatient(Patient patient)
       {
          throw new NotImplementedException();
       }
@@ -25,13 +52,13 @@ namespace Classes.Repository
       {
          throw new NotImplementedException();
       }
-      
-      public List<Patient> GetAllPatients()
-      {
-         throw new NotImplementedException();
-      }
-      
-      public void deleteAll()
+
+        public List<Patient> ReadAllPatients()
+        {
+            return patients;
+        }
+
+        public void deleteAll()
       {
          throw new NotImplementedException();
       }
@@ -46,7 +73,7 @@ namespace Classes.Repository
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Patient GetPatientByJMBG(int jmbg)
+      public Patient GetPatientByJMBG(int jmbg)
       {
          throw new NotImplementedException();
       }

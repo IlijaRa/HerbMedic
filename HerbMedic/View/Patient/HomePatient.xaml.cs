@@ -23,5 +23,45 @@ namespace HerbMedic.View.Patient
         {
             InitializeComponent();
         }
+
+        private void ButtonRoomCRUD(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonMedicineCRUD(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonStaticEquipmentCRUD(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDynamicEquipmentCRUD(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonSearchEquipment(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonEquipmentManagement(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonAdvancedRenovation(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonBasicRenovation(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

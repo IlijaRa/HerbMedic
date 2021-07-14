@@ -10,23 +10,27 @@
         <ImageBrush ImageSource="/images/templates/HomeDoctor.png"/>
     </Window.Background>
     <Grid>
-        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_appointments" HorizontalAlignment="Left" Height="305" Margin="74,40,0,0" VerticalAlignment="Top" Width="426" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#BEFBFF">
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_appointments" HorizontalAlignment="Left" Height="263" Margin="74,40,0,0" VerticalAlignment="Top" Width="672" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#BEFBFF">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#2dadf6"/>
             </DataGrid.Resources>
         </DataGrid>
         <Label Content="APPOINTMENTS:" HorizontalAlignment="Center" Margin="317,-2,276,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="199"/>
-        <Label Content="Identificator:" HorizontalAlignment="Left" Margin="66,375,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Start time:" HorizontalAlignment="Left" Margin="66,453,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Patient:" HorizontalAlignment="Left" Margin="66,415,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="End time:" HorizontalAlignment="Left" Margin="66,493,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Description:" HorizontalAlignment="Left" Margin="66,531,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1" Text="{Binding SelectedItem.id, ElementName=dg_rooms, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
-        <TextBox x:Name="Textbox2" Text="{Binding SelectedItem.name, ElementName=dg_rooms, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,455,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <ComboBox x:Name="Combobox1" Text="{Binding SelectedItem.type, ElementName=dg_rooms, Mode=OneWay}" HorizontalAlignment="Left" Height="28" Margin="178,417,0,0" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox4" Text="{Binding SelectedItem.floor, ElementName=dg_rooms, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <ComboBox x:Name="Textbox5" Text="{Binding SelectedItem.description, ElementName=dg_rooms, Mode=OneWay}" HorizontalAlignment="Left" Height="28" Margin="178,534,0,0" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px">
+        <Label Content="Identificator:" HorizontalAlignment="Left" Margin="66,336,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Start time:" HorizontalAlignment="Left" Margin="66,455,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Patient:" HorizontalAlignment="Left" Margin="66,376,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Date:" HorizontalAlignment="Left" Margin="66,415,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="End time:" HorizontalAlignment="Left" Margin="66,495,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Type:" HorizontalAlignment="Left" Margin="66,533,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="485,455,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="485,495,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <ComboBox x:Name="Combobox1" Text="{Binding SelectedItem.patient, ElementName=dg_appointments, Mode=OneWay}" HorizontalAlignment="Left" Height="28" Margin="178,378,0,0" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
+        <DatePicker x:Name="Datepicker1" Text="{Binding SelectedItem.date, ElementName=dg_appointments, Mode=OneWay}" HorizontalAlignment="Left" Height="28" Margin="178,418,0,0" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox2" Text="{Binding SelectedItem.startTime, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,457,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox3" Text="{Binding SelectedItem.endTime, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" Foreground="#FF00182D" FontSize="17px"/>
+        <ComboBox x:Name="Combobox2" Text="{Binding SelectedItem.appointmentType, ElementName=dg_appointments, Mode=OneWay}" HorizontalAlignment="Left" Height="28" Margin="178,536,0,0" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px">
             <ComboBoxItem>Examination</ComboBoxItem>
             <ComboBoxItem>Operation</ComboBoxItem>
         </ComboBox>
@@ -34,5 +38,10 @@
         <Button Content="Update" HorizontalAlignment="Left" Margin="592,437,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonUpdate"/>
         <Button Content="Delete" HorizontalAlignment="Left" Margin="592,475,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonDelete"/>
         <Button Content="Read all" HorizontalAlignment="Left" Margin="592,515,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonReadAll"/>
+        <TextBox x:Name="Textbox_username" HorizontalAlignment="Left" Height="23" Margin="625,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF00182D" FontSize="17" IsEnabled="False"/>
+        <Image HorizontalAlignment="Left" Height="23" Margin="595,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/users/surgeon.png" IsEnabled="False"/>
+        <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#2dadf6" BorderBrush="#FF00182D" Click="ButtonGoBack">
+            <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
+        </Button>
     </Grid>
 </Window>

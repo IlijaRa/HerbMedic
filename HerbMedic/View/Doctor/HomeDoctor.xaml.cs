@@ -25,6 +25,7 @@ namespace HerbMedic.View.Doctor
         {
             AppointmentCRUD appointment = new AppointmentCRUD();
             appointment.Show();
+            appointment.TransferAndDisplayAppointments(Textbox1.Text);
             this.Hide();
         }
     }

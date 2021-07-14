@@ -25,9 +25,8 @@
         <Label Content="Start time:" HorizontalAlignment="Left" Margin="68,139,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="End time:" HorizontalAlignment="Left" Margin="68,180,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Description:" HorizontalAlignment="Left" Margin="68,222,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="(M/dd/yyyy)" HorizontalAlignment="Left" Margin="661,98,0,0" VerticalAlignment="Top" Height="37" Foreground="#FF00182D" FontSize="17px"/>
         <ComboBox x:Name="Combobox1" HorizontalAlignment="Left" Height="28" Margin="204,63,0,0" VerticalAlignment="Top" Width="554" Foreground="#FF00182D" FontSize="17px"/>
-        <DatePicker x:Name="Datepicker1" HorizontalAlignment="Left" Height="28" Margin="204,102,0,0" VerticalAlignment="Top" Width="452" Foreground="#FF00182D" FontSize="17px"/>
+        <DatePicker x:Name="Datepicker1" HorizontalAlignment="Left" Height="28" Margin="204,102,0,0" VerticalAlignment="Top" Width="554" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox2" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="204,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="477" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox3" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="204,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="477" Foreground="#FF00182D" FontSize="17px"/>
         <TextBox x:Name="Textbox4" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="204,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554" Foreground="#FF00182D" FontSize="17px"/>

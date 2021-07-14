@@ -1,22 +1,24 @@
 using Classes.Model;
 using System.Collections.Generic;
 using System;
+using Classes.Repository;
 
 namespace Classes.Service
 {
    public class PatientService
    {
-      public Classes.Model.Patient CreatePatient(Classes.Model.Patient patient)
+        PatientRepository patientRepository = new PatientRepository();
+      public Patient CreatePatient(Patient patient)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Patient ReadPatient(int patientId)
+      public Patient ReadPatient(int patientId)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Patient UpdatePatient(Classes.Model.Patient patient)
+      public Patient UpdatePatient(Patient patient)
       {
          throw new NotImplementedException();
       }
@@ -25,13 +27,13 @@ namespace Classes.Service
       {
          throw new NotImplementedException();
       }
-      
-      public List<Patient> GetAllPatients()
-      {
-         throw new NotImplementedException();
-      }
-      
-      public void deleteAll()
+
+        public List<Patient> ReadAllPatients()
+        {
+            return patientRepository.ReadAllPatients();
+        }
+
+        public void deleteAll()
       {
          throw new NotImplementedException();
       }
@@ -46,7 +48,7 @@ namespace Classes.Service
          throw new NotImplementedException();
       }
       
-      public Classes.Model.Patient GetPatientByJMBG(int jmbg)
+      public Patient GetPatientByJMBG(int jmbg)
       {
          throw new NotImplementedException();
       }
@@ -65,8 +67,5 @@ namespace Classes.Service
       {
          throw new NotImplementedException();
       }
-      
-      public Classes.Repository.PatientRepository patientRepository;
-   
    }
 }
