@@ -75,8 +75,29 @@ namespace Classes.Repository
             writePendingJson();
             return message = "SUCCEEDED";
         }
-      
-      public Room ReadRoomById(int id)
+        public List<Room> FindRoomsByEquipmentForOperation(List<string> equipmentForOperation)
+        {
+            List<Room> RoomsWithEquipment = new List<Room>();
+            foreach(var room in rooms)
+            {
+                foreach(var e in equipmentForOperation)
+                {
+                    foreach(var stat in room.staticEquipment)
+                    {
+                        if (stat.name == e && room.type == "OperatingRoom")
+                        {
+                            RoomsWithEquipment.Add(room);
+                            break;
+                        }
+                            
+                    }
+                }
+            }
+            return RoomsWithEquipment;
+        }
+
+
+        public Room ReadRoomById(int id)
       {
          throw new NotImplementedException();
       }

@@ -60,12 +60,21 @@ namespace Classes.Service
             return appointmentRepository.DeleteAppointment(appointmentId, username);
         }
 
-        public void readAllAppointments()
+      public void readAllAppointments()
       {
 
       }
-      
-      public Appointment CreateEmergency(Patient patient, string specialization)
+
+        public List<string> FormatOperationEquipment(string TextboxWithEquipment)
+        {
+            List<string> formatedEquipment = new List<string>();
+            string[] equip = TextboxWithEquipment.Split(',');
+            foreach (var e in equip)
+                formatedEquipment.Add(e);
+            return formatedEquipment;
+        }
+
+        public Appointment CreateEmergency(Patient patient, string specialization)
       {
          throw new NotImplementedException();
       }

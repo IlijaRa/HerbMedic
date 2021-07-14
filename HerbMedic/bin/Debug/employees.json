@@ -37,14 +37,14 @@
       },
       {
         "id": 2,
-        "isEmergency": true,
+        "isEmergency": false,
         "patient": "Margarita Peric",
         "employeeUsername": "makezza",
-        "date": "2021-07-18T00:00:00",
+        "date": "2021-07-19T00:00:00",
         "startTime": "2021-07-14T18:00:00",
         "endTime": "2021-07-14T19:00:00",
         "roomName": "33-LG",
-        "appointmentType": "Examination"
+        "appointmentType": "Operation"
       },
       {
         "id": 7,
@@ -56,6 +56,17 @@
         "endTime": "2021-07-14T16:00:00",
         "roomName": "33-LG",
         "appointmentType": "Examination"
+      },
+      {
+        "id": 941,
+        "isEmergency": false,
+        "patient": "Simona Prokic",
+        "employeeUsername": "makezza",
+        "date": "2021-07-15T00:00:00",
+        "startTime": "2021-07-14T11:00:00",
+        "endTime": "2021-07-14T12:00:00",
+        "roomName": "101-YU",
+        "appointmentType": "Operation"
       }
     ],
     "id": 2,

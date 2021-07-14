@@ -34,8 +34,13 @@ namespace Classes.Controller
       {
 
       }
-      
-      public Appointment CreateEmergency(Patient patient, string specialization)
+
+        public List<string> FormatOperationEquipment(string TextboxWithEquipment)
+        {
+            return appointmentService.FormatOperationEquipment(TextboxWithEquipment);
+        }
+
+        public Appointment CreateEmergency(Patient patient, string specialization)
       {
          throw new NotImplementedException();
       }

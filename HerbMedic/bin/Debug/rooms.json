@@ -279,5 +279,13 @@
         "quantity": 12
       }
     ]
+  },
+  {
+    "id": 5101,
+    "name": "aaa4-YU",
+    "type": "OperatingRoom",
+    "floor": 1,
+    "description": "vwervb",
+    "staticEquipment": []
   }
 ]

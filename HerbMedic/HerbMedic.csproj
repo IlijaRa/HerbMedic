@@ -267,6 +267,9 @@
     <Compile Include="View\Doctor\HomeDoctor.xaml.cs">
       <DependentUpon>HomeDoctor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\OperationCRUD.xaml.cs">
+      <DependentUpon>OperationCRUD.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MessageBoxes\AreYouSure.xaml.cs">
       <DependentUpon>AreYouSure.xaml</DependentUpon>
     </Compile>
@@ -359,6 +362,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Doctor\HomeDoctor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\OperationCRUD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

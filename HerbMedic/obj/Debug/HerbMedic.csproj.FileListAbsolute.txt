@@ -144,3 +144,5 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\HomePatient.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\HomeSecretary.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\HomePatient.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\HomeSecretary.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\OperationCRUD.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\OperationCRUD.baml

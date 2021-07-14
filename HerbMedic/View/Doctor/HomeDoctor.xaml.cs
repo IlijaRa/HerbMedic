@@ -20,6 +20,7 @@ namespace HerbMedic.View.Doctor
         public HomeDoctor()
         {
             InitializeComponent();
+            Textbox1.Text = "makezza";
         }
 
         private void ButtonAppointmentCRUD(object sender, RoutedEventArgs e)
@@ -41,6 +42,14 @@ namespace HerbMedic.View.Doctor
             Textbox7.Text = user.address;
             Textbox8.Text = user.email;
             Textbox9.Text = user.dateOfBirth.Date.ToString("d/MM/yyyy");
+        }
+
+        private void ButtonOperationCRUD(object sender, RoutedEventArgs e)
+        {
+            OperationCRUD operation = new OperationCRUD();
+            operation.Show();
+            operation.TransferAndDisplayOperations(Textbox1.Text);
+            this.Hide();
         }
     }
 }

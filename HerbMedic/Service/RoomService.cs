@@ -45,6 +45,11 @@ namespace Classes.Service
             return helper;
         }
 
+        public List<Room> FindRoomsByEquipmentForOperation(List<string> equipmentForOperation)
+        {
+            return roomRepository.FindRoomsByEquipmentForOperation(equipmentForOperation);
+        }
+
         public string CreatePendingRoom(Room room)
       {
           return roomRepository.CreatePendingRoom(room);

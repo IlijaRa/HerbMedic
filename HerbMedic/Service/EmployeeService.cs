@@ -33,6 +33,11 @@ namespace Classes.Service
             return employeeRepository.ReadAppointmentsByUsername(username);
         }
 
+        public List<Appointment> ReadOperationsByUsername(string username)
+        {
+            return employeeRepository.ReadOperationsByUsername(username);
+        }
+
         public User ReadEmployeeUserByUsername(string username)
         {
             return employeeRepository.ReadEmployeeUserByUsername(username);

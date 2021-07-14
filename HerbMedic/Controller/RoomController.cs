@@ -23,6 +23,11 @@ namespace Classes.Controller
             return roomService.FormatStaticEquipment(equipment);
         }
 
+        public List<Room> FindRoomsByEquipmentForOperation(List<string> equipmentForOperation)
+        {
+            return roomService.FindRoomsByEquipmentForOperation(equipmentForOperation);
+        }
+
       public bool CheckFloors(List<string> roomNames)
       {
          return roomService.CheckFloors(roomNames);

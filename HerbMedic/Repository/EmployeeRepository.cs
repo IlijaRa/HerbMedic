@@ -57,19 +57,15 @@ namespace Classes.Repository
         {
             List<Appointment> appoints = new List<Appointment>();
             var employee = employees.Find(obj => obj.user.username == username);
-            appoints = employee.appointments;
+            appoints = employee.appointments.FindAll(obj => obj.appointmentType == "Examination");
+            return appoints;
+        }
 
-            //foreach(var employee in employees)
-            //{
-            //    if(employee.user.username == username)
-            //    {
-            //        foreach (var appoint in employee.appointments)
-            //        {
-            //            appoints.Add(appoint);
-            //        }
-            //    }   
-            //}
-
+        public List<Appointment> ReadOperationsByUsername(string username)
+        {
+            List<Appointment> appoints = new List<Appointment>();
+            var employee = employees.Find(obj => obj.user.username == username);
+            appoints = employee.appointments.FindAll(obj => obj.appointmentType == "Operation");
             return appoints;
         }
 

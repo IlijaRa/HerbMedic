@@ -32,7 +32,6 @@
         <TextBox x:Name="Textbox3" Text="{Binding SelectedItem.endTime, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" Foreground="#FF00182D" FontSize="17px"/>
         <ComboBox x:Name="Combobox2" Text="{Binding SelectedItem.appointmentType, ElementName=dg_appointments, Mode=OneWay}" HorizontalAlignment="Left" Height="28" Margin="178,536,0,0" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px">
             <ComboBoxItem>Examination</ComboBoxItem>
-            <ComboBoxItem>Operation</ComboBoxItem>
         </ComboBox>
         <Button Content="Create" HorizontalAlignment="Left" Margin="592,358,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonCreate"/>
         <Button Content="Update" HorizontalAlignment="Left" Margin="592,411,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonUpdate"/>

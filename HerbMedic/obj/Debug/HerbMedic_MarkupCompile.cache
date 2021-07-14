@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\GitRepositories\HerbMedic\HerbMedic\App.xaml
-23129422719
+241140957436
 
-1681321446055
+169979294390
 191246883950
-MainWindow.xaml;View\Director\AdvancedRenovation.xaml;View\Director\BasicRenovation.xaml;View\Director\DocumentationAboutDoneExports.xaml;View\Director\DynamicEquipmentCRUD.xaml;View\Director\ExportDynamicEquipment.xaml;View\Director\Home.xaml;View\Director\InfoAboutSplitRooms.xaml;View\Director\MedicineCRUD.xaml;View\Director\MergeRooms.xaml;View\Director\RoomCRUD.xaml;View\Director\SearchEquipment.xaml;View\Director\SeeRenovations.xaml;View\Director\SplitRooms.xaml;View\Director\StaticEquipmentCRUD.xaml;View\Director\StaticEquipmentManagement.xaml;View\Doctor\AppointmentCRUD.xaml;View\Doctor\HomeDoctor.xaml;View\MessageBoxes\AreYouSure.xaml;View\MessageBoxes\BeCareful.xaml;View\MessageBoxes\CommandAboutFillingRoomInfo.xaml;View\Patient\HomePatient.xaml;View\Secretary\HomeSecretary.xaml;
+MainWindow.xaml;View\Director\AdvancedRenovation.xaml;View\Director\BasicRenovation.xaml;View\Director\DocumentationAboutDoneExports.xaml;View\Director\DynamicEquipmentCRUD.xaml;View\Director\ExportDynamicEquipment.xaml;View\Director\Home.xaml;View\Director\InfoAboutSplitRooms.xaml;View\Director\MedicineCRUD.xaml;View\Director\MergeRooms.xaml;View\Director\RoomCRUD.xaml;View\Director\SearchEquipment.xaml;View\Director\SeeRenovations.xaml;View\Director\SplitRooms.xaml;View\Director\StaticEquipmentCRUD.xaml;View\Director\StaticEquipmentManagement.xaml;View\Doctor\AppointmentCRUD.xaml;View\Doctor\HomeDoctor.xaml;View\Doctor\OperationCRUD.xaml;View\MessageBoxes\AreYouSure.xaml;View\MessageBoxes\BeCareful.xaml;View\MessageBoxes\CommandAboutFillingRoomInfo.xaml;View\Patient\HomePatient.xaml;View\Secretary\HomeSecretary.xaml;
 
 False
 
