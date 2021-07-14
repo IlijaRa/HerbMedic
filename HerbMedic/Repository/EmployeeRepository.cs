@@ -56,22 +56,47 @@ namespace Classes.Repository
         public List<Appointment> ReadAppointmentsByUsername(string username)
         {
             List<Appointment> appoints = new List<Appointment>();
-            
-            foreach(var employee in employees)
-            {
-                if(employee.user.username == username)
-                {
-                    foreach (var appoint in employee.appointments)
-                    {
-                        appoints.Add(appoint);
-                    }
-                }   
-            }
+            var employee = employees.Find(obj => obj.user.username == username);
+            appoints = employee.appointments;
+
+            //foreach(var employee in employees)
+            //{
+            //    if(employee.user.username == username)
+            //    {
+            //        foreach (var appoint in employee.appointments)
+            //        {
+            //            appoints.Add(appoint);
+            //        }
+            //    }   
+            //}
 
             return appoints;
         }
 
-      public Employee UpdateEmployee(Employee employee)
+        public User ReadEmployeeUserByUsername(string username)
+        {
+            User user = new User();
+            foreach(var employee in employees)
+            {
+                if (employee.user.username == username)
+                    user = employee.user;
+            }
+
+            return user;
+        }
+
+        public string ReadEmployeesRoomByUsername(string username)
+        {
+            string room = "";
+            foreach(var employee in employees)
+            {
+                if (employee.user.username == username)
+                    room = employee.room;
+            }
+            return room;
+        }
+
+        public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();
       }

@@ -57,27 +57,29 @@ namespace Classes.Service
             return isDateOK;
         }
 
+        // mora se pogledati ova funkcija
         public bool CheckIfTermIsAvailable(Renovation renovation)
         {
-            string start = renovation.startTime.ToString("HH:mm");
-            string end = renovation.endTime.ToString("HH:mm");
-            string enterdate = renovation.date.ToString("M/dd/yyyy");
-            List<Appointment> appointments = appointmentController.readAllAppointments();
-            bool isAvailable = true;            // flag da li je slobodan termin
+            bool isAvailable = true;
+            //string start = renovation.startTime.ToString("HH:mm");
+            //string end = renovation.endTime.ToString("HH:mm");
+            //string enterdate = renovation.date.ToString("M/dd/yyyy");
+            //List<Appointment> appointments = appointmentController.readAllAppointments();
+            //bool isAvailable = true;            // flag da li je slobodan termin
 
-            // proverava da li je ovaj termin vec zauzet u appointmentima
-            foreach (var apps in appointments)
-            {
+            //// proverava da li je ovaj termin vec zauzet u appointmentima
+            //foreach (var apps in appointments)
+            //{
 
-                    if (apps.roomName == renovation.rooms[0] && apps.date.Date == renovation.date.Date)
-                    {
-                        string appstart = apps.startTime.ToString("HH:mm"); // stavlja se u isti format kao i start da bi moglo da se uporedi sa njim
-                        if (appstart.Equals(start))
-                        {
-                            isAvailable = false;
-                        }
-                    }
-            }
+            //        if (apps.roomName == renovation.rooms[0] && apps.date.Date == renovation.date.Date)
+            //        {
+            //            string appstart = apps.startTime.ToString("HH:mm"); // stavlja se u isti format kao i start da bi moglo da se uporedi sa njim
+            //            if (appstart.Equals(start))
+            //            {
+            //                isAvailable = false;
+            //            }
+            //        }
+            //}
             return isAvailable;
         }
       public void DeleteExpiredBasicRenovation()

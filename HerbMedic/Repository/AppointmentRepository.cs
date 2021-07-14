@@ -8,35 +8,45 @@ namespace Classes.Repository
 {
    public class AppointmentRepository
    {
-      List<Appointment> appointments = new List<Appointment>();
+      List<Employee> employees = new List<Employee>();
         public AppointmentRepository()
         {
-            readAppointmentJson();
+            readEmployeeJson();
         }
-        public void readAppointmentJson()
+        public void readEmployeeJson()
         {
-            if (!File.Exists("appointments.json"))
+            if (!File.Exists("employees.json"))
             {
-                File.Create("appointments.json").Close();
+                File.Create("employees.json").Close();
             }
 
-            using (StreamReader r = new StreamReader("appointments.json"))
+            using (StreamReader r = new StreamReader("employees.json"))
             {
                 string json = r.ReadToEnd();
                 if (json != "")
                 {
-                    appointments = JsonConvert.DeserializeObject<List<Appointment>>(json);
+                    employees = JsonConvert.DeserializeObject<List<Employee>>(json);
                 }
             }
         }
         public void writeInJson()
         {
-            string json = JsonConvert.SerializeObject(appointments, Formatting.Indented);
-            File.WriteAllText("appointments.json", json);
+            string json = JsonConvert.SerializeObject(employees, Formatting.Indented);
+            File.WriteAllText("employees.json", json);
         }
-      public Appointment CreateAppointment(Appointment appointment, int patientId)
+      public string CreateAppointment(Appointment appointment)
       {
-         throw new NotImplementedException();
+         string message = "NOT SUCCEEDED";
+         foreach(var employee in employees)
+            {
+                if(employee.user.username == appointment.employeeUsername)
+                {
+                    employee.appointments.Add(appointment);
+                    writeInJson();
+                    message = "SUCCEEDED";
+                }
+            }
+            return message;
       }
 
         public Appointment ReadAppointment(int appointmentId)
@@ -44,19 +54,31 @@ namespace Classes.Repository
          throw new NotImplementedException();
       }
       
-      public Appointment UpdateAppointment(Appointment appointment)
+      public string UpdateAppointment(Appointment appointment)
       {
-         throw new NotImplementedException();
+            string message = "";
+            var employee = employees.Find(obj => obj.user.username == appointment.employeeUsername);
+            int appo = employee.appointments.FindIndex(obj => obj.id == appointment.id);
+            employee.appointments[appo] = appointment;
+            writeInJson();
+            message = "SUCCEEDED";
+            
+            return message;
       }
-      
-      public void DeleteAppointment(int appointmentId)
+
+        public string DeleteAppointment(int appointmentId, string username)
+        {
+            string message = "";
+            var employee = employees.Find(obj => obj.user.username == username);
+            int appIndex = employee.appointments.FindIndex(obj => obj.id == appointmentId);
+            employee.appointments.RemoveAt(appIndex);
+            writeInJson();
+            message = "SUCCEEDED";
+            return message;
+        }
+
+        public void readAllAppointments()// trenutno je void
       {
-         throw new NotImplementedException();
-      }
-      
-      public List<Appointment> readAllAppointments()
-      {
-         return appointments;
       }
       
       public Appointment CreateEmergency(Patient patient, string specialization)

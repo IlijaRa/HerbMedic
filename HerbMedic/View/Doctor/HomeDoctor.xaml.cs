@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Classes.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,19 @@ namespace HerbMedic.View.Doctor
             appointment.Show();
             appointment.TransferAndDisplayAppointments(Textbox1.Text);
             this.Hide();
+        }
+
+        public void TransferInfoAboutUser(User user)
+        {
+            Textbox1.Text = user.username;
+            Textbox2.Text = user.password;
+            Textbox3.Text = user.firstName;
+            Textbox4.Text = user.lastName;
+            Textbox5.Text = user.jmbg;
+            Textbox6.Text = user.phoneNumber;
+            Textbox7.Text = user.address;
+            Textbox8.Text = user.email;
+            Textbox9.Text = user.dateOfBirth.Date.ToString("d/MM/yyyy");
         }
     }
 }

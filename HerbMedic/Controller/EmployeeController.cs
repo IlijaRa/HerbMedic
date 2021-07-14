@@ -32,6 +32,16 @@ namespace Classes.Controller
             return employeeService.ReadAppointmentsByUsername(username);
         }
 
+        public User ReadEmployeeUserByUsername(string username)
+        {
+            return employeeService.ReadEmployeeUserByUsername(username);
+        }
+
+        public string ReadEmployeesRoomByUsername(string username)
+        {
+            return employeeService.ReadEmployeesRoomByUsername(username);
+        }
+
         public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();

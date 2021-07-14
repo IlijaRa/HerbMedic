@@ -1,7 +1,7 @@
 [
 	{
 		"healthInsuranceNumber": 12345,
-		"height": 90,
+		"height": 70,
 		"weight": 180,
 		"bloodType": "A+",
 		"isBlocked": false,
@@ -23,6 +23,60 @@
 			"address": "Maksima Gorkog 16",
 			"email": "marusic.smokva@gmail.com",
 			"dateOfBirth": "1985-05-18T00:00:00",
+			"notificationRefferal": null
+		}
+	},
+	{
+		"healthInsuranceNumber": 14236,
+		"height": 56,
+		"weight": 172,
+		"bloodType": "A+",
+		"isBlocked": false,
+		"cancelationCounter": 4,
+		"dateOfCancelation": "2021-07-15T00:00:00",
+		"medicineAlerts": null,
+		"referralLetterForSpecialists": null,
+		"surveys": null,
+		"hospitalTreatments": null,
+		"user":{
+			"id": 4,
+			"username": "smolica",
+			"password": "abra",
+			"firstName": "Simona",
+			"lastName": "Prokic",
+			"jmbg": "2211994780056",
+			"phoneNumber": "035473457",
+			"feedback": null,
+			"address": "Strazilovksa 44",
+			"email": "prokic.simona@gmail.com",
+			"dateOfBirth": "1994-11-22T00:00:00",
+			"notificationRefferal": null
+		}
+	},
+	{
+		"healthInsuranceNumber": 12345,
+		"height": 90,
+		"weight": 180,
+		"bloodType": "A+",
+		"isBlocked": false,
+		"cancelationCounter": 4,
+		"dateOfCancelation": "2021-07-15T00:00:00",
+		"medicineAlerts": null,
+		"referralLetterForSpecialists": null,
+		"surveys": null,
+		"hospitalTreatments": null,
+		"user":{
+			"id": 5,
+			"username": "smolica",
+			"password": "abra",
+			"firstName": "Margarita",
+			"lastName": "Peric",
+			"jmbg": "1111993780045",
+			"phoneNumber": "066533734",
+			"feedback": null,
+			"address": "Futoska 77",
+			"email": "peric.margarita@gmail.com",
+			"dateOfBirth": "1993-11-11T00:00:00",
 			"notificationRefferal": null
 		}
 	}	

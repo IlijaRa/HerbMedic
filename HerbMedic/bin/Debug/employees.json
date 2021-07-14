@@ -1,71 +1,82 @@
 [
-	{
-		"id": 1,
-		"salary": 90000,
-		"WorkingHoursPerWeek": 35,
-	    "AnnualVacation": 20,
-		"role": "Director",
-		"user": {
-			"id": 1,
-			"username": "zare1",
-			"password": "ftn",
-			"firstName": "Zarko",
-			"lastName": "Zarkovic",
-			"jmbg": "1206998780035",
-			"phoneNumber": "0691894321",
-			"feedback": null,
-			"address": "Maksima Gorkog 15",
-			"email": "zarkovic.zarko@gmail.com",
-			"dateOfBirth": "1998-06-12T00:00:00",
-			"notificationRefferal": null
-		},
-		"room": "EconomySector",
-		"appointments": null
-	},
-	{
-		"id": 2,
-		"salary": 90000,
-		"WorkingHoursPerWeek": 50,
-	    "AnnualVacation": 14,
-		"role": "Doctor",
-		"user": {
-			"id": 2,
-			"username": "makezza",
-			"password": "ftn",
-			"firstName": "Marko",
-			"lastName": "Markovic",
-			"jmbg": "2306994780035",
-			"phoneNumber": "062316322",
-			"feedback": null,
-			"address": "Boska Buhe 10",
-			"email": "markovic.marko@gmail.com",
-			"dateOfBirth": "1994-06-23T00:00:00",
-			"notificationRefferal": null
-		},
-		"room": "33-LG",
-		"appointments": [
-			{
-				"id": 1,
-				"isEmergency": false,
-				"patient": "Simona Prokic",
-				"employeeUsername": "makezza",
-				"date": "2021-07-15T00:00:00",
-				"startTime": "2021-07-14T11:00:00",
-				"endTime": "2021-07-14T12:00:00",
-				"roomName": "33-LG",
-				"appointmentType": "Examination"
-			},
-			{
-				"id": 2,
-				"isEmergency": true,
-				"patient": "Margarita Peric",
-				"employeeUsername": "makezza",
-				"date": "2021-07-18T00:00:00",
-				"startTime": "2021-07-14T18:00:00",
-				"endTime": "2021-07-14T19:00:00",
-				"roomName": "33-LG",
-				"appointmentType": "Examination"
-			}
-		]
-	}
+  {
+    "appointments": null,
+    "id": 1,
+    "salary": 90000,
+    "WorkingHoursPerWeek": 35,
+    "AnnualVacation": 20,
+    "role": "Director",
+    "user": {
+      "id": 1,
+      "username": "zare1",
+      "password": "ftn",
+      "firstName": "Zarko",
+      "lastName": "Zarkovic",
+      "jmbg": "1206998780035",
+      "phoneNumber": "0691894321",
+      "feedback": null,
+      "address": "Maksima Gorkog 15",
+      "email": "zarkovic.zarko@gmail.com",
+      "dateOfBirth": "1998-06-12T00:00:00",
+      "notificationRefferal": null
+    },
+    "room": "EconomySector"
+  },
+  {
+    "appointments": [
+      {
+        "id": 1,
+        "isEmergency": false,
+        "patient": "Simona Prokic",
+        "employeeUsername": "makezza",
+        "date": "2021-07-15T00:00:00",
+        "startTime": "2021-07-14T11:00:00",
+        "endTime": "2021-07-14T12:00:00",
+        "roomName": "33-LG",
+        "appointmentType": "Examination"
+      },
+      {
+        "id": 2,
+        "isEmergency": true,
+        "patient": "Margarita Peric",
+        "employeeUsername": "makezza",
+        "date": "2021-07-18T00:00:00",
+        "startTime": "2021-07-14T18:00:00",
+        "endTime": "2021-07-14T19:00:00",
+        "roomName": "33-LG",
+        "appointmentType": "Examination"
+      },
+      {
+        "id": 7,
+        "isEmergency": false,
+        "patient": "Smokva Marusic",
+        "employeeUsername": "makezza",
+        "date": "2021-07-15T00:00:00",
+        "startTime": "2021-07-14T11:00:00",
+        "endTime": "2021-07-14T16:00:00",
+        "roomName": "33-LG",
+        "appointmentType": "Examination"
+      }
+    ],
+    "id": 2,
+    "salary": 90000,
+    "WorkingHoursPerWeek": 50,
+    "AnnualVacation": 14,
+    "role": "Doctor",
+    "user": {
+      "id": 2,
+      "username": "makezza",
+      "password": "ftn",
+      "firstName": "Marko",
+      "lastName": "Markovic",
+      "jmbg": "2306994780035",
+      "phoneNumber": "062316322",
+      "feedback": null,
+      "address": "Boska Buhe 10",
+      "email": "markovic.marko@gmail.com",
+      "dateOfBirth": "1994-06-23T00:00:00",
+      "notificationRefferal": null
+    },
+    "room": "33-LG"
+  }
 ]

@@ -34,10 +34,10 @@
             <ComboBoxItem>Examination</ComboBoxItem>
             <ComboBoxItem>Operation</ComboBoxItem>
         </ComboBox>
-        <Button Content="Create" HorizontalAlignment="Left" Margin="592,398,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonCreate"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="592,437,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonUpdate"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="592,475,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonDelete"/>
-        <Button Content="Read all" HorizontalAlignment="Left" Margin="592,515,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonReadAll"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="592,358,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonCreate"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="592,411,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonUpdate"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="592,465,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonDelete"/>
+        <Button Content="Read all" HorizontalAlignment="Left" Margin="592,517,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#2dadf6" FontSize="17px" Click="ButtonReadAll"/>
         <TextBox x:Name="Textbox_username" HorizontalAlignment="Left" Height="23" Margin="625,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF00182D" FontSize="17" IsEnabled="False"/>
         <Image HorizontalAlignment="Left" Height="23" Margin="595,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/users/surgeon.png" IsEnabled="False"/>
         <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#2dadf6" BorderBrush="#FF00182D" Click="ButtonGoBack">

@@ -33,6 +33,16 @@ namespace Classes.Service
             return employeeRepository.ReadAppointmentsByUsername(username);
         }
 
+        public User ReadEmployeeUserByUsername(string username)
+        {
+            return employeeRepository.ReadEmployeeUserByUsername(username);
+        }
+
+        public string ReadEmployeesRoomByUsername(string username)
+        {
+            return employeeRepository.ReadEmployeesRoomByUsername(username);
+        }
+
         public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();

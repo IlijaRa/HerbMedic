@@ -13,5 +13,23 @@ namespace Classes.Model
         public DateTime endTime { get; set; }
         public string roomName { get; set; }
         public string appointmentType { get; set; }
+
+        public Appointment(int id, bool isEmergency, string patient, string employeeUsername, DateTime date, DateTime startTime, DateTime endTime, string roomName, string appointmentType)
+        {
+            this.id = id;
+            this.isEmergency = isEmergency;
+            this.patient = patient;
+            this.employeeUsername = employeeUsername;
+            this.date = date;
+            this.startTime = startTime;
+            this.endTime = endTime;
+            this.roomName = roomName;
+            this.appointmentType = appointmentType;
+        }
+
+        public Appointment()
+        {
+
+        }
     }
 }

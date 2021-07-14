@@ -9,9 +9,9 @@ namespace Classes.Controller
    {
       AppointmentService appointmentService = new AppointmentService();
       
-      public Appointment CreateAppointment(Appointment appointment, int patientId)
+      public string CreateAppointment(Appointment appointment)
       {
-         throw new NotImplementedException();
+            return appointmentService.CreateAppointment(appointment);
       }
      
 
@@ -20,19 +20,19 @@ namespace Classes.Controller
          throw new NotImplementedException();
       }
       
-      public Appointment UpdateAppointment(Appointment appointment)
+      public string UpdateAppointment(Appointment appointment)
       {
-         throw new NotImplementedException();
+         return appointmentService.UpdateAppointment(appointment);
       }
       
-      public void DeleteAppointment(int appointmentId)
+      public string DeleteAppointment(int appointmentId,string username)
       {
-         throw new NotImplementedException();
+            return appointmentService.DeleteAppointment(appointmentId, username);
       }
       
-      public List<Appointment> readAllAppointments()
+      public void readAllAppointments()
       {
-         return appointmentService.readAllAppointments();
+
       }
       
       public Appointment CreateEmergency(Patient patient, string specialization)
