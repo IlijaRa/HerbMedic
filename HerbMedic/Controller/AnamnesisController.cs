@@ -6,22 +6,26 @@ namespace Classes.Controller
 {
    public class AnamnesisController
    {
-      public Classes.Model.Anamnesis CreateAnamnesis(Classes.Model.Anamnesis anamnesis)
+        AnamnesisService anamnesisService = new AnamnesisService();
+
+      public string CreateAnamnesis(Anamnesis anamnesis)
       {
-         throw new NotImplementedException();
+            return anamnesisService.CreateAnamnesis(anamnesis);
       }
       
-      public Classes.Model.Anamnesis UpdateAnamnesis(Classes.Model.Anamnesis anamnesis)
+        public List<Anamnesis> ReadAnamnesisByNameSurname(string fullName)
+        {
+            return anamnesisService.ReadAnamnesisByNameSurname(fullName);
+        }
+
+      public string UpdateAnamnesis(Anamnesis anamnesis)
       {
-         throw new NotImplementedException();
+            return anamnesisService.UpdateAnamnesis(anamnesis);
       }
       
       public List<Anamnesis> GetAnamnesisByPatientJmbg(string patientJmbg)
       {
          throw new NotImplementedException();
       }
-      
-      public Classes.Service.AnamnesisService anamnesisService;
-   
    }
 }

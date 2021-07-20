@@ -69,6 +69,14 @@ namespace Classes.Repository
             return appoints;
         }
 
+        public List<Appointment> ReadAllDutiesByUsername(string username)
+        {
+            List<Appointment> appoints = new List<Appointment>();
+            var employee = employees.Find(obj => obj.user.username == username);
+            appoints = employee.appointments;
+            return appoints;
+        }
+
         public User ReadEmployeeUserByUsername(string username)
         {
             User user = new User();

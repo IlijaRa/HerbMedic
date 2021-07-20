@@ -17,11 +17,14 @@ FD:\GitRepositories\HerbMedic\HerbMedic\View\Director\SplitRooms.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Director\StaticEquipmentCRUD.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Director\StaticEquipmentManagement.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Doctor\AppointmentCRUD.xaml;;
+FD:\GitRepositories\HerbMedic\HerbMedic\View\Doctor\DutySchedule.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Doctor\HomeDoctor.xaml;;
+FD:\GitRepositories\HerbMedic\HerbMedic\View\Doctor\MedicalRecord.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Doctor\OperationCRUD.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\MessageBoxes\AreYouSure.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\MessageBoxes\BeCareful.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\MessageBoxes\CommandAboutFillingRoomInfo.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Patient\HomePatient.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Secretary\HomeSecretary.xaml;;
+FD:\GitRepositories\HerbMedic\HerbMedic\View\Doctor\Anamnesis.xaml;;
 

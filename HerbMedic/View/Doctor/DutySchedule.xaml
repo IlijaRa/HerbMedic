@@ -1,0 +1,48 @@
+﻿<Window x:Class="HerbMedic.View.Doctor.DutySchedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HerbMedic.View.Doctor"
+        mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Title="DutySchedule" Height="600" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/images/templates/HomeDoctor.png"/>
+    </Window.Background>
+    <Grid>
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_appointsOperations" HorizontalAlignment="Left" Height="224" Margin="74,40,0,0" VerticalAlignment="Top" Width="672" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#BEFBFF" SelectionChanged="dg_appointsOperations_SelectionChanged">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#2dadf6"/>
+            </DataGrid.Resources>
+        </DataGrid>
+
+        <Label Content="DUTY SCHEDULE:" HorizontalAlignment="Center" Margin="305,-2,281,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="206"/>
+        <Label Content="INFO ABOUT PATIENT:" HorizontalAlignment="Center" Margin="273,268,260,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="259"/>
+
+        <TextBox x:Name="Textbox_username" HorizontalAlignment="Left" Height="23" Margin="625,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF00182D" FontSize="17" IsEnabled="False"/>
+        <Image HorizontalAlignment="Left" Height="23" Margin="595,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/users/surgeon.png" IsEnabled="False"/>
+        <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#2dadf6" BorderBrush="#FF00182D" Click="ButtonGoBack">
+            <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
+        </Button>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="74,321,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Surname:" HorizontalAlignment="Left" Margin="74,367,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="74,417,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px" Width="93"/>
+        <Label Content="JMBG" HorizontalAlignment="Left" Margin="74,471,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Phone:" HorizontalAlignment="Left" Margin="74,523,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Birthday:" HorizontalAlignment="Left" Margin="433,321,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Blood type:" HorizontalAlignment="Left" Margin="433,367,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="433,417,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="433,471,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Button Content="Medical record" HorizontalAlignment="Left" Background="#2dadf6" Margin="438,517,0,0" VerticalAlignment="Top" Width="306" Height="39" Foreground="#FF00182D" FontSize="17px" Click="ButtonMedicalRecord"/>
+        <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Height="28" Margin="177,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Height="28" Margin="177,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox3" HorizontalAlignment="Left" Height="28" Margin="177,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox4" HorizontalAlignment="Left" Height="28" Margin="177,473,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox5" HorizontalAlignment="Left" Height="28" Margin="177,525,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox7" HorizontalAlignment="Left" Height="28" Margin="539,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox8" HorizontalAlignment="Left" Height="28" Margin="539,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox9" HorizontalAlignment="Left" Height="28" Margin="539,473,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox6" HorizontalAlignment="Left" Height="28" Margin="539,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+    </Grid>
+</Window>

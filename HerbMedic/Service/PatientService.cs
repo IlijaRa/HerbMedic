@@ -17,8 +17,13 @@ namespace Classes.Service
       {
          throw new NotImplementedException();
       }
-      
-      public Patient UpdatePatient(Patient patient)
+
+        public Patient ReadPatientByNameSurname(string nameSurname)
+        {
+            return patientRepository.ReadPatientByNameSurname(nameSurname);
+        }
+
+        public Patient UpdatePatient(Patient patient)
       {
          throw new NotImplementedException();
       }

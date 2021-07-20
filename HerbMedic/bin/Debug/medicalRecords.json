@@ -1,0 +1,44 @@
+[
+  {
+    "patient": "Smokva Marusic",
+    "anamnesis": [
+      {
+        "id": 32,
+        "patientName": "Smokva Marusic",
+        "title": "GWEG",
+        "description": "WEGEWG",
+        "date": "2021-07-20T00:00:00"
+      },
+      {
+        "id": 665,
+        "patientName": "Smokva Marusic",
+        "title": "faef",
+        "description": "wefwef",
+        "date": "2021-07-15T00:00:00"
+      },
+      {
+        "id": 5,
+        "patientName": "Smokva Marusic",
+        "title": "gew",
+        "description": "gweg",
+        "date": "2021-07-23T00:00:00"
+      },
+      {
+        "id": 172,
+        "patientName": "Smokva Marusic",
+        "title": "wef",
+        "description": "wef",
+        "date": "2021-07-22T00:00:00"
+      },
+      {
+        "id": 427,
+        "patientName": "Smokva Marusic",
+        "title": "ispravljano",
+        "description": "ispravljano",
+        "date": "2021-12-11T00:00:00"
+      }
+    ],
+    "prescriptions": [],
+    "allergens": []
+  }
+]

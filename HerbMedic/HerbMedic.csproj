@@ -261,11 +261,20 @@
     <Compile Include="View\Director\StaticEquipmentManagement.xaml.cs">
       <DependentUpon>StaticEquipmentManagement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\Anamnesis.xaml.cs">
+      <DependentUpon>Anamnesis.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Doctor\AppointmentCRUD.xaml.cs">
       <DependentUpon>AppointmentCRUD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\DutySchedule.xaml.cs">
+      <DependentUpon>DutySchedule.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Doctor\HomeDoctor.xaml.cs">
       <DependentUpon>HomeDoctor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\MedicalRecord.xaml.cs">
+      <DependentUpon>MedicalRecord.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Doctor\OperationCRUD.xaml.cs">
       <DependentUpon>OperationCRUD.xaml</DependentUpon>
@@ -357,11 +366,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Doctor\Anamnesis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Doctor\AppointmentCRUD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Doctor\DutySchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Doctor\HomeDoctor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\MedicalRecord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

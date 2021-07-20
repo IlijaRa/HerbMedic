@@ -1,27 +1,32 @@
 using Classes.Model;
 using System.Collections.Generic;
 using System;
+using Classes.Repository;
 
 namespace Classes.Service
 {
    public class AnamnesisService
    {
-      public Classes.Model.Anamnesis CreateAnamnesis(Classes.Model.Anamnesis anamnesis)
+        AnamnesisRepository anamnesisRepository = new AnamnesisRepository();
+
+      public string CreateAnamnesis(Anamnesis anamnesis)
       {
-         throw new NotImplementedException();
+            return anamnesisRepository.CreateAnamnesis(anamnesis);
       }
-      
-      public Classes.Model.Anamnesis UpdateAnamnesis(Classes.Model.Anamnesis anamnesis)
+
+        public List<Anamnesis> ReadAnamnesisByNameSurname(string fullName)
+        {
+            return anamnesisRepository.ReadAnamnesisByNameSurname(fullName);
+        }
+
+      public string UpdateAnamnesis(Anamnesis anamnesis)
       {
-         throw new NotImplementedException();
+            return anamnesisRepository.UpdateAnamnesis(anamnesis);
       }
       
       public List<Anamnesis> GetAnamnesisByPatientJmbg(string patientJmbg)
       {
          throw new NotImplementedException();
       }
-      
-      public Classes.Repository.AnamnesisRepository anamnesisRepository;
-   
    }
 }

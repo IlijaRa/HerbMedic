@@ -38,6 +38,11 @@ namespace Classes.Service
             return employeeRepository.ReadOperationsByUsername(username);
         }
 
+        public List<Appointment> ReadAllDutiesByUsername(string username)
+        {
+            return employeeRepository.ReadAllDutiesByUsername(username);
+        }
+
         public User ReadEmployeeUserByUsername(string username)
         {
             return employeeRepository.ReadEmployeeUserByUsername(username);

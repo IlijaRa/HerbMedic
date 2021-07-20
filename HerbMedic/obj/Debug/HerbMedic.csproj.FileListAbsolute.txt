@@ -146,3 +146,9 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\HomePatient.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\HomeSecretary.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\OperationCRUD.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\OperationCRUD.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\DutySchedule.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\DutySchedule.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\MedicalRecord.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\MedicalRecord.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\Anamnesis.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\Anamnesis.baml

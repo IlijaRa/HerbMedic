@@ -51,5 +51,13 @@ namespace HerbMedic.View.Doctor
             operation.TransferAndDisplayOperations(Textbox1.Text);
             this.Hide();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DutySchedule duty = new DutySchedule();
+            duty.Show();
+            duty.TransferAndDisplayOperations(Textbox1.Text);
+            this.Hide();
+        }
     }
 }

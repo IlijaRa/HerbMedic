@@ -67,6 +67,17 @@
         "endTime": "2021-07-14T12:00:00",
         "roomName": "33-LG",
         "appointmentType": "Operation"
+      },
+      {
+        "id": 537,
+        "isEmergency": false,
+        "patient": "Simona Prokic",
+        "employeeUsername": "makezza",
+        "date": "2021-07-21T00:00:00",
+        "startTime": "2021-07-20T15:00:00",
+        "endTime": "2021-07-20T16:00:00",
+        "roomName": "104-YO",
+        "appointmentType": "Operation"
       }
     ],
     "id": 2,

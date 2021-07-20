@@ -42,8 +42,24 @@ namespace Classes.Repository
       {
          throw new NotImplementedException();
       }
-      
-      public Patient UpdatePatient(Patient patient)
+
+        public Patient ReadPatientByNameSurname(string nameSurname)
+        {
+            Patient patient = new Patient();
+            string fullNameSurname = "";
+            foreach(var p in patients)
+            {
+                fullNameSurname = p.user.firstName + " " + p.user.lastName;
+                if (fullNameSurname.Equals(nameSurname))
+                {
+                    patient = p;
+                    break;
+                }         
+            }
+            return patient;
+        }
+
+        public Patient UpdatePatient(Patient patient)
       {
          throw new NotImplementedException();
       }

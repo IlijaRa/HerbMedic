@@ -1,19 +1,22 @@
-// File:    Anamnesis.cs
-// Author:  HP-Miha
-// Created: Thursday, April 8, 2021 19:20:32
-// Purpose: Definition of Class Anamnesis
-
 using System;
 
 namespace Classes.Model
 {
    public class Anamnesis
    {
-      public int id;
-      public string name;
-      public string description;
-      
-      public MedicalRecord medicalRecord;
-   
-   }
+      public int id { get; set; }
+      public string patientName { get; set; }
+      public string title { get; set; }
+      public string description { get; set; }
+      public DateTime date { get; set; }
+
+        public Anamnesis(int id, string patientName, string title, string description, DateTime date)
+        {
+            this.id = id;
+            this.patientName = patientName;
+            this.title = title;
+            this.description = description;
+            this.date = date;
+        }
+    }
 }
