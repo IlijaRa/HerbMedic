@@ -1,17 +1,29 @@
 using Classes.Model;
 using System.Collections.Generic;
 using System;
+using Classes.Repository;
 
 namespace Classes.Service
 {
    public class PrescriptionService
    {
-      public Classes.Model.Prescription AddPrescription(int id, string medicine, string usage, string quantity)
+        PrescriptionRepository prescriptionRepository = new PrescriptionRepository();
+      public string CreatePrescription(Prescription prescription)
       {
-         throw new NotImplementedException();
+            return prescriptionRepository.CreatePrescription(prescription);
       }
-      
-      public Classes.Model.Prescription GetPrescriptionById(int prescriptionId)
+
+        public string UpdatePrescription(Prescription prescription)
+        {
+            return prescriptionRepository.UpdatePrescription(prescription);
+        }
+
+        public List<Prescription> ReadPatientPrescriptions(string patientsFullname)
+        {
+            return prescriptionRepository.ReadPatientPrescriptions(patientsFullname);
+        }
+
+        public Prescription GetPrescriptionById(int prescriptionId)
       {
          throw new NotImplementedException();
       }
@@ -20,8 +32,5 @@ namespace Classes.Service
       {
          throw new NotImplementedException();
       }
-      
-      public Classes.Repository.PrescriptionRepository prescriptionRepository;
-   
    }
 }

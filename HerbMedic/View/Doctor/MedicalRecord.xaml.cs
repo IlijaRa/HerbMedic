@@ -46,7 +46,10 @@ namespace HerbMedic.View.Doctor
 
         private void ButtonPrescription(object sender, RoutedEventArgs e)
         {
-
+            PrescriptionForm prescription = new PrescriptionForm();
+            prescription.Show();
+            prescription.TransferInfo(Textbox1.Text, Textbox2.Text, Textbox_username.Text);
+            this.Hide();
         }
 
         private void ButtonAllergens(object sender, RoutedEventArgs e)

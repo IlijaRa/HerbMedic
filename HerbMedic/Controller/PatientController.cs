@@ -23,6 +23,8 @@ namespace Classes.Controller
             return patientService.ReadPatientByNameSurname(nameSurname);
         }
 
+        
+
         public Patient UpdatePatient(Patient patient)
       {
          throw new NotImplementedException();

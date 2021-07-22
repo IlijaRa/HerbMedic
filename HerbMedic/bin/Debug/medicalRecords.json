@@ -38,7 +38,94 @@
         "date": "2021-12-11T00:00:00"
       }
     ],
-    "prescriptions": [],
+    "prescriptions": [
+      {
+        "id": 928,
+        "patientName": "Smokva Marusic",
+        "medicineName": "mediokroksin",
+        "quantity": "3 table",
+        "usageInstruction": "aaaaaa"
+      },
+      {
+        "id": 688,
+        "patientName": "Smokva Marusic",
+        "medicineName": "digoxicor",
+        "quantity": "1 table",
+        "usageInstruction": "bbbbbbbbbbbbb"
+      }
+    ],
+    "allergens": []
+  },
+  {
+    "patient": "Simona Prokic",
+    "anamnesis": [
+      {
+        "id": 97,
+        "patientName": "Simona Prokic",
+        "title": "fwef",
+        "description": "aaa",
+        "date": "2021-07-22T00:00:00"
+      },
+      {
+        "id": 276,
+        "patientName": "Simona Prokic",
+        "title": "wwww",
+        "description": "fwef",
+        "date": "2021-07-20T00:00:00"
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": 82,
+        "patientName": "Simona Prokic",
+        "medicineName": "aspirin",
+        "quantity": "3 table",
+        "usageInstruction": "ergergerg"
+      },
+      {
+        "id": 540,
+        "patientName": "Simona Prokic",
+        "medicineName": "aspirin",
+        "quantity": "3 table",
+        "usageInstruction": "ergergerg"
+      }
+    ],
+    "allergens": []
+  },
+  {
+    "patient": "Margarita Peric",
+    "anamnesis": [
+      {
+        "id": 156,
+        "patientName": "Margarita Peric",
+        "title": "1",
+        "description": "1",
+        "date": "2021-07-24T00:00:00"
+      },
+      {
+        "id": 46,
+        "patientName": "Margarita Peric",
+        "title": "1",
+        "description": "1",
+        "date": "2021-07-24T00:00:00"
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": 258,
+        "patientName": "Margarita Peric",
+        "medicineName": "mediokroksin",
+        "quantity": "1 table",
+        "usageInstruction": "fqwfewg"
+      },
+      {
+        "id": 199,
+        "patientName": "Margarita Peric",
+        "medicineName": "mediokroksin",
+        "quantity": "1 table",
+        "usageInstruction": "fqwfewg"
+      }
+    ],
     "allergens": []
   }
 ]

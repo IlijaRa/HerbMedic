@@ -6,12 +6,23 @@ namespace Classes.Controller
 {
    public class PrescriptionController
    {
-      public Classes.Model.Prescription AddPrescription(int id, string medicine, string usage, string quantity)
+        PrescriptionService prescriptionService = new PrescriptionService();
+      public string CreatePrescription(Prescription prescription)
       {
-         throw new NotImplementedException();
+            return prescriptionService.CreatePrescription(prescription);
       }
-      
-      public Classes.Model.Prescription GetPrescriptionById(int prescriptionId)
+
+        public string UpdatePrescription(Prescription prescription)
+        {
+            return prescriptionService.UpdatePrescription(prescription);
+        }
+
+        public List<Prescription> ReadPatientPrescriptions(string patientsFullname)
+        {
+            return prescriptionService.ReadPatientPrescriptions(patientsFullname);
+        }
+
+        public Prescription GetPrescriptionById(int prescriptionId)
       {
          throw new NotImplementedException();
       }
@@ -20,8 +31,5 @@ namespace Classes.Controller
       {
          throw new NotImplementedException();
       }
-      
-      public Classes.Service.PrescriptionService prescriptionService;
-   
    }
 }

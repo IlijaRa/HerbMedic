@@ -8,6 +8,7 @@ namespace Classes.Service
    public class PatientService
    {
         PatientRepository patientRepository = new PatientRepository();
+        MedicalRecordRepository medicalRecordRepository = new MedicalRecordRepository();
       public Patient CreatePatient(Patient patient)
       {
          throw new NotImplementedException();
@@ -21,7 +22,7 @@ namespace Classes.Service
         public Patient ReadPatientByNameSurname(string nameSurname)
         {
             return patientRepository.ReadPatientByNameSurname(nameSurname);
-        }
+        }       
 
         public Patient UpdatePatient(Patient patient)
       {

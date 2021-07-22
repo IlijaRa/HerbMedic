@@ -1,22 +1,37 @@
 using Classes.Model;
 using System.Collections.Generic;
 using System;
+using Classes.Repository;
 
 namespace Classes.Service
 {
    public class MedicalRecordService
    {
-      public int CreateMedicalRecord(Classes.Model.MedicalRecord medicalRecord)
+        MedicalRecordRepository medicalRecordRepository = new MedicalRecordRepository();
+
+      public bool CreateMedicalRecord(MedicalRecord medicalRecord)
+      {
+           return medicalRecordRepository.CreateMedicalRecord(medicalRecord);
+      }
+
+        public bool CheckIfPatientHasMedicalRecord(string nameSurname)
+        {
+            bool isExist = false;
+            List<MedicalRecord> medicalRecords = medicalRecordRepository.ReadAllMedicalRecords();
+            foreach (var m in medicalRecords)
+            {
+                if (m.patient == nameSurname)
+                    isExist = true;
+            }
+            return isExist;
+        }
+
+        public MedicalRecord UpdateMedicalRecord(MedicalRecord medicalRecord)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.MedicalRecord UpdateMedicalRecord(Classes.Model.MedicalRecord medicalRecord)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Classes.Model.MedicalRecord GetMedicalRecordById(int id)
+      public MedicalRecord GetMedicalRecordById(int id)
       {
          throw new NotImplementedException();
       }
@@ -26,12 +41,9 @@ namespace Classes.Service
          throw new NotImplementedException();
       }
       
-      public List<MedicalRecord> GetAllMedicalRecords()
+      public List<MedicalRecord> ReadAllMedicalRecords()
       {
-         throw new NotImplementedException();
+            return medicalRecordRepository.ReadAllMedicalRecords();
       }
-      
-      public Classes.Repository.MedicalRecordRepository medicalRecordRepository;
-   
    }
 }

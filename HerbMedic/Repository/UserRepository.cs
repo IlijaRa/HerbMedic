@@ -49,7 +49,7 @@ namespace Classes.Repository
         public User ReadUserByUsername(string username)
         {
             User transferUser = new User();
-            foreach(var user in users.ToArray())
+            foreach(var user in users)
             {
                 if(user.username == username)
                 {

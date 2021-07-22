@@ -279,6 +279,9 @@
     <Compile Include="View\Doctor\OperationCRUD.xaml.cs">
       <DependentUpon>OperationCRUD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\PrescriptionForm.xaml.cs">
+      <DependentUpon>PrescriptionForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MessageBoxes\AreYouSure.xaml.cs">
       <DependentUpon>AreYouSure.xaml</DependentUpon>
     </Compile>
@@ -287,6 +290,9 @@
     </Compile>
     <Compile Include="View\MessageBoxes\CommandAboutFillingRoomInfo.xaml.cs">
       <DependentUpon>CommandAboutFillingRoomInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageBoxes\MedicalRecordDoesntExists.xaml.cs">
+      <DependentUpon>MedicalRecordDoesntExists.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Patient\HomePatient.xaml.cs">
       <DependentUpon>HomePatient.xaml</DependentUpon>
@@ -390,6 +396,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Doctor\PrescriptionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MessageBoxes\AreYouSure.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -399,6 +409,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MessageBoxes\CommandAboutFillingRoomInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MessageBoxes\MedicalRecordDoesntExists.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,26 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
-using Classes.Controller;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using ToastNotifications;
 using ToastNotifications.Lifetime;
 using ToastNotifications.Position;
+using Classes.Controller;
+using Classes.Model;
 using ToastNotifications.Messages;
 using System.Collections.ObjectModel;
 
 namespace HerbMedic.View.Doctor
 {
-    public partial class Anamnesis : Window
+    public partial class PrescriptionForm : Window
     {
-        AnamnesisController anamnesisController = new AnamnesisController();
-        public Anamnesis()
+        PrescriptionController prescriptionController = new PrescriptionController();
+        MedicineController medicineController = new MedicineController();
+
+        public PrescriptionForm()
         {
             InitializeComponent();
-            
+            List<Medicine> medicines = medicineController.ReadAllMedicines();
+            List<string> mediciny = new List<string>();
+            foreach(var medicine in medicines)
+            {
+                mediciny.Add(medicine.name);
+            }
+            Combobox1.ItemsSource = mediciny;
         }
-
         /*----------------------------WPF PART--------------------------------*/
 
                     /* Here is the implementation of toast notifications */
@@ -42,7 +58,7 @@ namespace HerbMedic.View.Doctor
 
                     private void OnGotFocusTextbox(object sender, RoutedEventArgs e)
                     {
-                        var brush = SetRGBColor(32, 158, 103);
+                        var brush = SetRGBColor(45, 173, 246);
                         TextBox text = e.Source as TextBox;
                         text.Background = brush;
                     }
@@ -79,20 +95,23 @@ namespace HerbMedic.View.Doctor
 
         private void ButtonCreate(object sender, RoutedEventArgs e)
         {
-            Random random = new Random();
-            string fullName = Textbox1.Text + " " + Textbox2.Text;
-            if (Textbox4.Text != "" && Textbox5.Text != "" && Datepicker1.Text != "") 
+            if(Combobox1.Text != "" && Combobox2.Text != "" && Textbox5.Text != "")
             {
-                Classes.Model.Anamnesis anamnesis = new Classes.Model.Anamnesis(random.Next(1000), 
-                                                                                fullName,
-                                                                                Textbox4.Text, 
-                                                                                Textbox5.Text, 
-                                                                                Convert.ToDateTime(Datepicker1.Text));
-                string message = anamnesisController.CreateAnamnesis(anamnesis);
-                if(message == "SUCCEEDED")
-                {
-                    notifier.ShowSuccess("SUCCESS: Anamnesis is succesfully added to a medical record");
-                }
+                Random random = new Random();
+                
+                string fullName=Textbox1.Text + " " + Textbox2.Text;
+
+                Prescription prescription = new Prescription(random.Next(1000),
+                                                            fullName,
+                                                            Combobox1.Text,
+                                                            Combobox2.Text,
+                                                            Textbox5.Text);
+
+                string message = prescriptionController.CreatePrescription(prescription);
+                if (message == "SUCCEEDED")
+                    notifier.ShowSuccess("SUCCEESS: Prescription successfully created!");
+                else
+                    notifier.ShowError("ERROR: Error occured while creating!");
             }
             else
             {
@@ -102,19 +121,23 @@ namespace HerbMedic.View.Doctor
 
         private void ButtonUpdate(object sender, RoutedEventArgs e)
         {
-            string fullName = Textbox1.Text + " " + Textbox2.Text;
-            if (Textbox4.Text != "" && Textbox5.Text != "" && Datepicker1.Text != "")
+            if (Combobox1.Text != "" && Combobox2.Text != "" && Textbox5.Text != "")
             {
-                Classes.Model.Anamnesis anamnesis = new Classes.Model.Anamnesis(Convert.ToInt32(Textbox3.Text),
-                                                                                fullName,
-                                                                                Textbox4.Text,
-                                                                                Textbox5.Text,
-                                                                                Convert.ToDateTime(Datepicker1.Text));
-                string message = anamnesisController.UpdateAnamnesis(anamnesis);
+                Random random = new Random();
+
+                string fullName = Textbox1.Text + " " + Textbox2.Text;
+
+                Prescription prescription = new Prescription(Convert.ToInt32(Textbox3.Text),
+                                                            fullName,
+                                                            Combobox1.Text,
+                                                            Combobox2.Text,
+                                                            Textbox5.Text);
+
+                string message = prescriptionController.UpdatePrescription(prescription);
                 if (message == "SUCCEEDED")
-                {
-                    notifier.ShowSuccess("SUCCESS: Anamnesis is succesfully added to a medical record");
-                }
+                    notifier.ShowSuccess("SUCCEESS: Prescription successfully created!");
+                else
+                    notifier.ShowError("ERROR: Error occured while creating!");
             }
             else
             {
@@ -122,23 +145,22 @@ namespace HerbMedic.View.Doctor
             }
         }
 
+        private void ButtonDelete(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void ButtonReadAll(object sender, RoutedEventArgs e)
         {
             string fullName = Textbox1.Text + " " + Textbox2.Text;
-            List<Classes.Model.Anamnesis> anamneses = anamnesisController.ReadAnamnesisByNameSurname(fullName);
-            ObservableCollection<Classes.Model.Anamnesis> observableAnamnesis = new ObservableCollection<Classes.Model.Anamnesis>();
-            foreach (var a in anamneses)
+            List<Prescription> prescriptions = prescriptionController.ReadPatientPrescriptions(fullName);
+            
+            ObservableCollection<Prescription> observablePrescriptions = new ObservableCollection<Prescription>();
+            foreach (var p in prescriptions)
             {
-                observableAnamnesis.Add(a);
+                observablePrescriptions.Add(p);
             }
-            dg_anamnesis.ItemsSource = observableAnamnesis;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Textbox3.Clear();
-            Textbox4.Clear();
-            Textbox5.Clear();
+            dg_prescriptions.ItemsSource = observablePrescriptions;
         }
     }
 }

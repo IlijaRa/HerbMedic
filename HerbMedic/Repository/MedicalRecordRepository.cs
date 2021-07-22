@@ -1,22 +1,57 @@
 using Classes.Model;
 using System.Collections.Generic;
 using System;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace Classes.Repository
 {
    public class MedicalRecordRepository
    {
-      public int CreateMedicalRecord(Classes.Model.MedicalRecord medicalRecord)
+        List<MedicalRecord> medicalRecords = new List<MedicalRecord>();
+
+        public MedicalRecordRepository()
+        {
+            readMedicalRecordJson();
+        }
+        public void readMedicalRecordJson()
+        {
+            if (!File.Exists("medicalRecords.json"))
+            {
+                File.Create("medicalRecords.json").Close();
+            }
+
+            using (StreamReader r = new StreamReader("medicalRecords.json"))
+            {
+                string json = r.ReadToEnd();
+                if (json != "")
+                {
+                    medicalRecords = JsonConvert.DeserializeObject<List<MedicalRecord>>(json);
+                }
+            }
+        }
+
+        public void writeInJson()
+        {
+            string json = JsonConvert.SerializeObject(medicalRecords, Formatting.Indented);
+            File.WriteAllText("medicalRecords.json", json);
+        }
+
+      public bool CreateMedicalRecord(MedicalRecord medicalRecord)
+      {
+            bool isCreated = false;
+            medicalRecords.Add(medicalRecord);
+            writeInJson();
+            isCreated = true;
+            return isCreated;
+      }
+
+        public MedicalRecord UpdateMedicalRecord(MedicalRecord medicalRecord)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.MedicalRecord UpdateMedicalRecord(Classes.Model.MedicalRecord medicalRecord)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Classes.Model.MedicalRecord GetMedicalRecordById(int id)
+      public MedicalRecord GetMedicalRecordById(int id)
       {
          throw new NotImplementedException();
       }
@@ -26,9 +61,9 @@ namespace Classes.Repository
          throw new NotImplementedException();
       }
       
-      public List<MedicalRecord> GetAllMedicalRecords()
+      public List<MedicalRecord> ReadAllMedicalRecords()
       {
-         throw new NotImplementedException();
+            return medicalRecords;
       }
       
       public string path;

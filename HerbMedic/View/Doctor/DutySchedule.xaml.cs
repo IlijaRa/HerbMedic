@@ -3,21 +3,14 @@ using Classes.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using ToastNotifications;
 using ToastNotifications.Lifetime;
 using ToastNotifications.Messages;
 using ToastNotifications.Position;
+using HerbMedic.View.MessageBoxes;
 
 namespace HerbMedic.View.Doctor
 {
@@ -25,7 +18,7 @@ namespace HerbMedic.View.Doctor
     {
         EmployeeController employeeController = new EmployeeController();
         PatientController patientController = new PatientController();
-
+        MedicalRecordController medicalRecordController = new MedicalRecordController();
         public DutySchedule()
         {
             InitializeComponent();
@@ -111,10 +104,20 @@ namespace HerbMedic.View.Doctor
         {
             if(Textbox1.Text != "" && Textbox2.Text != "")
             {
-                MedicalRecord medical = new MedicalRecord();
-                medical.Show();
-                medical.TransferInfoForMedicalRecord(Textbox1.Text, Textbox2.Text, Textbox_username.Text);
-                this.Hide();
+                string fullName = Textbox1.Text + " " + Textbox2.Text;
+                if (medicalRecordController.CheckIfPatientHasMedicalRecord(fullName) == true)
+                {
+                    MedicalRecord medical = new MedicalRecord();
+                    medical.Show();
+                    medical.TransferInfoForMedicalRecord(Textbox1.Text, Textbox2.Text, Textbox_username.Text);
+                    this.Hide();
+                }
+                else
+                {
+                    MedicalRecordDoesntExists doesntExists = new MedicalRecordDoesntExists();
+                    doesntExists.Show();
+                    doesntExists.TransferInfo(Textbox1.Text + " " + Textbox2.Text, Textbox_username.Text);
+                }
             }
             else
             {

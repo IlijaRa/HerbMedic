@@ -6,17 +6,24 @@ namespace Classes.Controller
 {
    public class MedicalRecordController
    {
-      public int CreateMedicalRecord(Classes.Model.MedicalRecord medicalRecord)
+        MedicalRecordService medicalRecordService = new MedicalRecordService();
+
+      public bool CreateMedicalRecord(MedicalRecord medicalRecord)
+      {
+          return medicalRecordService.CreateMedicalRecord(medicalRecord);
+      }
+
+        public bool CheckIfPatientHasMedicalRecord(string nameSurname)
+        {
+            return medicalRecordService.CheckIfPatientHasMedicalRecord(nameSurname);
+        }
+
+        public MedicalRecord UpdateMedicalRecord(MedicalRecord medicalRecord)
       {
          throw new NotImplementedException();
       }
       
-      public Classes.Model.MedicalRecord UpdateMedicalRecord(Classes.Model.MedicalRecord medicalRecord)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Classes.Model.MedicalRecord GetMedicalRecordById(int id)
+      public MedicalRecord GetMedicalRecordById(int id)
       {
          throw new NotImplementedException();
       }
@@ -26,12 +33,9 @@ namespace Classes.Controller
          throw new NotImplementedException();
       }
       
-      public List<MedicalRecord> GetAllMedicalRecords()
+      public List<MedicalRecord> ReadAllMedicalRecords()
       {
-         throw new NotImplementedException();
+            return medicalRecordService.ReadAllMedicalRecords();
       }
-      
-      public Classes.Service.MedicalRecordService medicalRecordService;
-   
    }
 }
