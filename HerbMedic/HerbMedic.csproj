@@ -267,6 +267,9 @@
     <Compile Include="View\Doctor\AppointmentCRUD.xaml.cs">
       <DependentUpon>AppointmentCRUD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\DoctorMedicine.xaml.cs">
+      <DependentUpon>DoctorMedicine.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Doctor\DutySchedule.xaml.cs">
       <DependentUpon>DutySchedule.xaml</DependentUpon>
     </Compile>
@@ -377,6 +380,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Doctor\AppointmentCRUD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\DoctorMedicine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

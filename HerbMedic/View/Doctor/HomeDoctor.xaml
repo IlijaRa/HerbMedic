@@ -24,8 +24,8 @@
         <StackPanel Grid.Column="1" Grid.Row="1">
             <Button Content="Appointment CRUD" Height="35px" Margin="26,6,5,7" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px" Click="ButtonAppointmentCRUD"/>
             <Button Content="Operation CRUD" Height="35px" Margin="26,7,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px" Click="ButtonOperationCRUD"/>
-            <Button Content="Duty schedule" Height="35px" Margin="26,7,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px" Click="Button_Click"/>
-            <Button Content="Dynamic equipment CRUD" Height="35px" Margin="26,7,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px"/>
+            <Button Content="Duty schedule" Height="35px" Margin="26,7,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px" Click="ButtonDutySchedule"/>
+            <Button Content="Medicine CRUD" Height="35px" Margin="26,7,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px" Click="ButtonMedicineCRUD"/>
             <Button Content="Search equipment" Height="35px" Margin="26,9,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px"/>
         </StackPanel>
 

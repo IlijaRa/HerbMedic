@@ -52,11 +52,19 @@ namespace HerbMedic.View.Doctor
             this.Hide();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonDutySchedule(object sender, RoutedEventArgs e)
         {
             DutySchedule duty = new DutySchedule();
             duty.Show();
             duty.TransferAndDisplayOperations(Textbox1.Text);
+            this.Hide();
+        }
+
+        private void ButtonMedicineCRUD(object sender, RoutedEventArgs e)
+        {
+            DoctorMedicine medicine = new DoctorMedicine();
+            medicine.Show();
+            medicine.TransferInfo(Textbox1.Text);
             this.Hide();
         }
     }

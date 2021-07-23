@@ -156,3 +156,5 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\PrescriptionForm.g.
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\PrescriptionForm.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\MedicalRecordDoesntExists.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\MedicalRecordDoesntExists.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\DoctorMedicine.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\DoctorMedicine.baml

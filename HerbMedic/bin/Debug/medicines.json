@@ -55,41 +55,51 @@
   },
   {
     "id": 7,
-    "name": "fwefddd",
+    "name": "probica",
     "status": "WAITING",
     "description": "wef",
     "ingredients": [
       {
-        "medicineName": "fwefddd",
-        "ingredientId": 112,
+        "medicineName": "probica",
+        "ingredientId": 435,
         "ingredientName": "aha"
       },
       {
-        "medicineName": "fwefddd",
-        "ingredientId": 265,
+        "medicineName": "probica",
+        "ingredientId": 164,
         "ingredientName": "fwefg"
       },
       {
-        "medicineName": "fwefddd",
-        "ingredientId": 824,
+        "medicineName": "probica",
+        "ingredientId": 589,
         "ingredientName": "wfwef"
+      },
+      {
+        "medicineName": "probica",
+        "ingredientId": 804,
+        "ingredientName": ""
       }
     ],
     "alternatives": [
       {
-        "medicineName": "fwefddd",
-        "alternativeId": 920,
+        "medicineName": "probica",
+        "alternativeId": 939,
         "alternativeName": "fq"
       },
       {
-        "medicineName": "fwefddd",
-        "alternativeId": 223,
+        "medicineName": "probica",
+        "alternativeId": 298,
         "alternativeName": "fqwf"
       },
       {
-        "medicineName": "fwefddd",
-        "alternativeId": 949,
+        "medicineName": "probica",
+        "alternativeId": 434,
         "alternativeName": "qfe"
+      },
+      {
+        "medicineName": "probica",
+        "alternativeId": 862,
+        "alternativeName": ""
       }
     ],
     "reason": null

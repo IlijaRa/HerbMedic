@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\GitRepositories\HerbMedic\HerbMedic\App.xaml
-29-1663732152
+30-1963593978
 
-174623565230
+175-1237828247
 191246883950
-MainWindow.xaml;View\Director\AdvancedRenovation.xaml;View\Director\BasicRenovation.xaml;View\Director\DocumentationAboutDoneExports.xaml;View\Director\DynamicEquipmentCRUD.xaml;View\Director\ExportDynamicEquipment.xaml;View\Director\Home.xaml;View\Director\InfoAboutSplitRooms.xaml;View\Director\MedicineCRUD.xaml;View\Director\MergeRooms.xaml;View\Director\RoomCRUD.xaml;View\Director\SearchEquipment.xaml;View\Director\SeeRenovations.xaml;View\Director\SplitRooms.xaml;View\Director\StaticEquipmentCRUD.xaml;View\Director\StaticEquipmentManagement.xaml;View\Doctor\Anamnesis.xaml;View\Doctor\AppointmentCRUD.xaml;View\Doctor\DutySchedule.xaml;View\Doctor\HomeDoctor.xaml;View\Doctor\MedicalRecord.xaml;View\Doctor\OperationCRUD.xaml;View\Doctor\PrescriptionForm.xaml;View\MessageBoxes\AreYouSure.xaml;View\MessageBoxes\BeCareful.xaml;View\MessageBoxes\CommandAboutFillingRoomInfo.xaml;View\MessageBoxes\MedicalRecordDoesntExists.xaml;View\Patient\HomePatient.xaml;View\Secretary\HomeSecretary.xaml;
+MainWindow.xaml;View\Director\AdvancedRenovation.xaml;View\Director\BasicRenovation.xaml;View\Director\DocumentationAboutDoneExports.xaml;View\Director\DynamicEquipmentCRUD.xaml;View\Director\ExportDynamicEquipment.xaml;View\Director\Home.xaml;View\Director\InfoAboutSplitRooms.xaml;View\Director\MedicineCRUD.xaml;View\Director\MergeRooms.xaml;View\Director\RoomCRUD.xaml;View\Director\SearchEquipment.xaml;View\Director\SeeRenovations.xaml;View\Director\SplitRooms.xaml;View\Director\StaticEquipmentCRUD.xaml;View\Director\StaticEquipmentManagement.xaml;View\Doctor\Anamnesis.xaml;View\Doctor\AppointmentCRUD.xaml;View\Doctor\DoctorMedicine.xaml;View\Doctor\DutySchedule.xaml;View\Doctor\HomeDoctor.xaml;View\Doctor\MedicalRecord.xaml;View\Doctor\OperationCRUD.xaml;View\Doctor\PrescriptionForm.xaml;View\MessageBoxes\AreYouSure.xaml;View\MessageBoxes\BeCareful.xaml;View\MessageBoxes\CommandAboutFillingRoomInfo.xaml;View\MessageBoxes\MedicalRecordDoesntExists.xaml;View\Patient\HomePatient.xaml;View\Secretary\HomeSecretary.xaml;
 
 False
 
