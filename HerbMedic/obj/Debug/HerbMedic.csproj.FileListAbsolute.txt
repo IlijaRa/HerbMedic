@@ -158,3 +158,5 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\MedicalRecord
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\MedicalRecordDoesntExists.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\DoctorMedicine.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\DoctorMedicine.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\MedicineDeclining.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\MedicineDeclining.baml

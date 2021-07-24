@@ -128,18 +128,30 @@ namespace Classes.Repository
       {
          return medicines;
       }
-      
-      public void VerificateMedicine(int medicineId)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public void DeclineMedicine(int medicineId, string reason)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public string path;
+
+        public string VerificateMedicine(Medicine medicine)
+        {
+            string message;
+            int index = medicines.FindIndex(obj => obj.id == medicine.id);
+            medicines[index].status= "VALIDATED";
+            medicines[index].reason = null;
+            writeInJson();
+            message = "SUCCEEDED";
+            return message;
+        }
+
+        public string DeclineMedicine(Medicine medicine)
+        {
+            string message;
+            int index = medicines.FindIndex(obj => obj.id == medicine.id);
+            medicines[index].status = "DECLINED";
+            medicines[index].reason = medicine.reason;
+            writeInJson();
+            message = "SUCCEEDED";
+            return message;
+        }
+
+        public string path;
    
    }
 }

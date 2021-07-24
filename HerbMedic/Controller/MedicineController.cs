@@ -50,14 +50,14 @@ namespace Classes.Controller
          return medicineService.ReadAllMedicines();
       }
       
-      public void VerificateMedicine(int medicineId)
+      public string VerificateMedicine(Medicine medicine)
       {
-         throw new NotImplementedException();
+            return medicineService.VerificateMedicine(medicine);
       }
       
-      public void DeclineMedicine(int medicineId, string reason)
+      public string DeclineMedicine(Medicine medicine)
       {
-         throw new NotImplementedException();
+            return medicineService.DeclineMedicine(medicine);
       }
       
       public int GenerateId()

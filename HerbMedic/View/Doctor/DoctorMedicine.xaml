@@ -28,7 +28,7 @@
                    Color="#2dadf6"/>
             </DataGrid.Resources>
         </DataGrid>
-        <Label Content="MEDICINES:" HorizontalAlignment="Center" Margin="329,-2,320,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="143"/>
+        <Label Content="MEDICINES:" HorizontalAlignment="Center" Margin="331,-2,318,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="143"/>
         <TextBox x:Name="Textbox_username" HorizontalAlignment="Left" Height="23" Margin="625,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF00182D" FontSize="17" IsEnabled="False"/>
         <Image HorizontalAlignment="Left" Height="23" Margin="595,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/users/surgeon.png" IsEnabled="False"/>
         <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#2dadf6" BorderBrush="#FF00182D" Click="ButtonGoBack">
@@ -43,9 +43,9 @@
         <Label Content="Name:" HorizontalAlignment="Left" Foreground="#FF00182D" FontSize="17px" Margin="103,107,0,0" VerticalAlignment="Top"/>
         <Label Content="Status:" HorizontalAlignment="Left" Foreground="#FF00182D" FontSize="17px" Margin="103,148,0,0" VerticalAlignment="Top"/>
         <Label Content="Description:" HorizontalAlignment="Left" Foreground="#FF00182D" FontSize="17px" Margin="103,191,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Foreground="#FF00182D" FontSize="17px" Margin="212,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Foreground="#FF00182D" FontSize="17px" Margin="212,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Foreground="#FF00182D" FontSize="17px" Margin="212,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Foreground="#FF00182D" FontSize="17px" Margin="212,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278"/>
+        <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Text="{Binding SelectedItem.id, ElementName=dg_medicines, Mode=OneWay}" Height="28" Foreground="#FF00182D" FontSize="17px" Margin="212,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" IsEnabled="False"/>
+        <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Text="{Binding SelectedItem.name, ElementName=dg_medicines, Mode=OneWay}" Height="28" Foreground="#FF00182D" FontSize="17px" Margin="212,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278"/>
+        <TextBox x:Name="Textbox3" HorizontalAlignment="Left" Text="{Binding SelectedItem.status, ElementName=dg_medicines, Mode=OneWay}" Height="28" Foreground="#FF00182D" FontSize="17px" Margin="212,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" IsEnabled="False"/>
+        <TextBox x:Name="Textbox4" HorizontalAlignment="Left" Text="{Binding SelectedItem.description, ElementName=dg_medicines, Mode=OneWay}" Height="28" Foreground="#FF00182D" FontSize="17px" Margin="212,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278"/>
     </Grid>
 </Window>

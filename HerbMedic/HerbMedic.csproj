@@ -279,6 +279,9 @@
     <Compile Include="View\Doctor\MedicalRecord.xaml.cs">
       <DependentUpon>MedicalRecord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\MedicineDeclining.xaml.cs">
+      <DependentUpon>MedicineDeclining.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Doctor\OperationCRUD.xaml.cs">
       <DependentUpon>OperationCRUD.xaml</DependentUpon>
     </Compile>
@@ -399,6 +402,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Doctor\MedicineDeclining.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Doctor\OperationCRUD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -516,6 +523,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\users\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\templates\MedicineDeclined.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

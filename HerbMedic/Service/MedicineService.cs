@@ -53,16 +53,17 @@ namespace Classes.Service
       {
          return medicineRepository.ReadAllMedicines();
       }
-      
-      public void VerificateMedicine(int medicineId)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public void DeclineMedicine(int medicineId, string reason)
-      {
-         throw new NotImplementedException();
-      }
+
+        public string VerificateMedicine(Medicine medicine)
+        {
+            return medicineRepository.VerificateMedicine(medicine);
+        }
+
+        public string DeclineMedicine(Medicine medicine)
+        {
+            return medicineRepository.DeclineMedicine(medicine);
+        }
+
         public int GenerateId()
         {
             List<Medicine> medicines = medicineRepository.ReadAllMedicines();
