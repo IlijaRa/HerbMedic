@@ -22,5 +22,9 @@ namespace Classes.Service
         {
             return referralLetterForSpecialistRepository.ReadAllReferralLetters(username);
         }
+        public string DeleteReferralLetter(ReferralLetterForSpecialist letter)
+        {
+            return referralLetterForSpecialistRepository.DeleteReferralLetter(letter);
+        }
     }
 }

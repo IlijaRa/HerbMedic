@@ -22,5 +22,17 @@
         <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#2dadf6" BorderBrush="#FF00182D" Click="ButtonGoBack">
             <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
         </Button>
+
+        <Label Content="Identificator:" HorizontalAlignment="Left" Margin="72,321,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1" Text="{Binding SelectedItem.id, ElementName=dg_referrals, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="220,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <Label Content="Sending doctor:" HorizontalAlignment="Left" Margin="72,368,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox2" Text="{Binding SelectedItem.doctorWhoSends, ElementName=dg_referrals, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="220,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <Label Content="Receiving doctor:" HorizontalAlignment="Left" Margin="72,414,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox3" Text="{Binding SelectedItem.doctorWhoReceives, ElementName=dg_referrals, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="220,417,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <Label Content="Patient name:" HorizontalAlignment="Left" Margin="72,459,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox4" Text="{Binding SelectedItem.patientName, ElementName=dg_referrals, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="220,462,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <Label Content="Reason:" HorizontalAlignment="Left" Margin="72,502,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox5" Text="{Binding SelectedItem.reason, ElementName=dg_referrals, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="220,505,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <Button Content="Referral letter has &#xD;&#xA;      been read" HorizontalAlignment="Left" Margin="612,394,0,0" VerticalAlignment="Top" Width="161" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px" Height="68" Click="ButtonHasBeenRead"/>
     </Grid>
 </Window>

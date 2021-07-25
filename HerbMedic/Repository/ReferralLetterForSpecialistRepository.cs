@@ -84,5 +84,28 @@ namespace Classes.Repository
             }
             return letters;
         }
+
+        public string DeleteReferralLetter(ReferralLetterForSpecialist letter)
+        {
+            string message = "NOT SUCCEEDED";
+            foreach(var e in employees)
+            {
+                string fullName = e.user.firstName + " " + e.user.lastName;
+                if (fullName == letter.doctorWhoReceives)
+                {
+                    foreach (var rl in e.referralLetters.ToArray())
+                    {
+                        if (rl.id == letter.id)
+                        {
+                            e.referralLetters.Remove(rl);
+                            writeInJson();
+                            message = "SUCCEEDED";
+                            break;
+                        }
+                    }
+                }
+            }
+            return message;
+        }
     }
 }
