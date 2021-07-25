@@ -116,5 +116,12 @@ namespace HerbMedic.View.Doctor
             receivedReferrals.TransferAndDisplayReferrals(Textbox1.Text);
             this.Hide();
         }
+
+        private void ButtonLogOut(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Hide();
+        }
     }
 }

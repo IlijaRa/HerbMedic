@@ -52,6 +52,9 @@
             <TextBox x:Name="Textbox5" Margin="170,154,10,165" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False" BorderBrush="#FFABADB3"/>
             <Button Width="120px" Height="40px" Margin="71,-50,192,357" Content="Night mode" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px"/>
             <Button Width="120px" Height="40px" Margin="221,-50,42,357" Content="Serbian lang" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px"/>
+            <Button HorizontalAlignment="Left" Height="30" Margin="36,-242,0,0" VerticalAlignment="Top" Width="39" Background="#2dadf6" BorderBrush="#FF00182D" Click="ButtonLogOut">
+                <Image Source="/images/details/logout.png" Width="27" Height="24"/>
+            </Button>
             <Label Content="JMBG:" HorizontalAlignment="Left" Margin="44,148,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
             <Label Content="Last name:" HorizontalAlignment="Left" Margin="44,112,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
             <Label Content="Username:" HorizontalAlignment="Left" Margin="44,12,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>

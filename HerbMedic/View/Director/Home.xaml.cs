@@ -87,5 +87,12 @@ namespace HerbMedic.View
             Textbox8.Text = user.email;
             Textbox9.Text = user.dateOfBirth.ToString("MM/dd/yyyy");
         }
+
+        private void ButtonLogOut(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Hide();
+        }
     }
 }
