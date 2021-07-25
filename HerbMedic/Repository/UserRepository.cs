@@ -11,36 +11,68 @@ namespace Classes.Repository
 {
     public class UserRepository
     {
-        public List<User> users = new List<User>();
-        public UserRepository(){
-            readUsersJson();
+        public List<Employee> employees = new List<Employee>();
+        public List<Patient> patients = new List<Patient>();
+        public UserRepository()
+        {
+            readEmployeeJson();
+            readPatientJson();
         }
-
-        public void readUsersJson()
+        public void readEmployeeJson()
         {
             // deserializuje renovation.json
-            if (!File.Exists("users.json"))
+            if (!File.Exists("employees.json"))
             {
-                File.Create("users.json").Close();
+                File.Create("employees.json").Close();
             }
 
-            using (StreamReader r = new StreamReader("users.json"))
+            using (StreamReader r = new StreamReader("employees.json"))
             {
                 string json = r.ReadToEnd();
                 if (json != "")
                 {
-                    users = JsonConvert.DeserializeObject<List<User>>(json);
+                    employees = JsonConvert.DeserializeObject<List<Employee>>(json);
                 }
             }
         }
+
+        public void readPatientJson()
+        {
+            // deserializuje renovation.json
+            if (!File.Exists("patients.json"))
+            {
+                File.Create("patients.json").Close();
+            }
+
+            using (StreamReader r = new StreamReader("patients.json"))
+            {
+                string json = r.ReadToEnd();
+                if (json != "")
+                {
+                    patients = JsonConvert.DeserializeObject<List<Patient>>(json);
+                }
+            }
+        }
+
         public bool CheckUserCredentials(string username, string password)
         {
             bool isCredentialsOK = false;
-            foreach(var user in users)
+            foreach(var e in employees)
             {
-                if (user.username == username && user.password == password)
+                if (e.user.username == username && e.user.password == password)
                 {
                     isCredentialsOK = true;
+                }
+            }
+
+            if (!isCredentialsOK)
+            {
+                foreach (var p in patients)
+                {
+                    if (p.user.username == username && p.user.password == password)
+                    {
+                        isCredentialsOK = true;
+                    }
                 }
             }
             return isCredentialsOK;
@@ -49,11 +81,24 @@ namespace Classes.Repository
         public User ReadUserByUsername(string username)
         {
             User transferUser = new User();
-            foreach(var user in users)
+            bool flag = false; // to see if transferUser found in employees, if not check in patients
+            foreach(var e in employees)
             {
-                if(user.username == username)
+                if(e.user.username == username)
                 {
-                    transferUser = user;
+                    transferUser= e.user;
+                    flag = true;
+                }
+            }
+            if (!flag)
+            {
+                foreach (var p in patients)
+                {
+                    if (p.user.username == username)
+                    {
+                        transferUser = p.user;
+                        flag = true;
+                    }
                 }
             }
             return transferUser;

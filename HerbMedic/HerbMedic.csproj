@@ -541,5 +541,8 @@
   <ItemGroup>
     <Resource Include="images\templates\MedicineDeclined.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\templates\ButtonTemplate.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

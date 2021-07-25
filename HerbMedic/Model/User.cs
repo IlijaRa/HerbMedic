@@ -15,7 +15,7 @@ namespace Classes.Model
         public string address { get; set; }
         public string email { get; set; }
         public DateTime dateOfBirth { get; set; }
-        public List<NotificationRefferal> notificationRefferal { get; set; }
+        public string positionInASystem { get; set; }
 
     }
 }

@@ -14,7 +14,7 @@
 		"user":{
 			"id": 3,
 			"username": "smokvica",
-			"password": "abra",
+			"password": "ftn",
 			"firstName": "Smokva",
 			"lastName": "Marusic",
 			"jmbg": "1805985780035",
@@ -23,7 +23,7 @@
 			"address": "Maksima Gorkog 16",
 			"email": "marusic.smokva@gmail.com",
 			"dateOfBirth": "1985-05-18T00:00:00",
-			"notificationRefferal": null
+			"positionInASystem": "Patient"
 		}
 	},
 	{
@@ -41,7 +41,7 @@
 		"user":{
 			"id": 4,
 			"username": "simonica",
-			"password": "abra",
+			"password": "ftn",
 			"firstName": "Simona",
 			"lastName": "Prokic",
 			"jmbg": "2211994780056",
@@ -50,7 +50,7 @@
 			"address": "Strazilovksa 44",
 			"email": "prokic.simona@gmail.com",
 			"dateOfBirth": "1994-11-22T00:00:00",
-			"notificationRefferal": null
+			"positionInASystem": "Patient"
 		}
 	},
 	{
@@ -68,7 +68,7 @@
 		"user":{
 			"id": 5,
 			"username": "margi111",
-			"password": "abra",
+			"password": "ftn",
 			"firstName": "Margarita",
 			"lastName": "Peric",
 			"jmbg": "1111993780045",
@@ -77,7 +77,7 @@
 			"address": "Futoska 77",
 			"email": "peric.margarita@gmail.com",
 			"dateOfBirth": "1993-11-11T00:00:00",
-			"notificationRefferal": null
+			"positionInASystem": "Patient"
 		}
 	}	
 ]

@@ -17,7 +17,7 @@
       "address": "Maksima Gorkog 15",
       "email": "zarkovic.zarko@gmail.com",
       "dateOfBirth": "1998-06-12T00:00:00",
-      "notificationRefferal": null
+      "positionInASystem": "Director"
     },
     "room": "EconomySector",
     "appointments": null,
@@ -41,7 +41,7 @@
       "address": "Boska Buhe 10",
       "email": "markovic.marko@gmail.com",
       "dateOfBirth": "1994-06-23T00:00:00",
-      "notificationRefferal": null
+      "positionInASystem": "Doctor"
     },
     "room": "801-RT",
     "appointments": [
@@ -110,7 +110,7 @@
     "AnnualVacation": 20,
     "role": "Doctor",
     "user": {
-      "id": 1,
+      "id": 14,
       "username": "dirak1",
       "password": "ftn",
       "firstName": "Andrija",
@@ -121,7 +121,7 @@
       "address": "Zeleznicka 45",
       "email": "dirakovic.andija@gmail.com",
       "dateOfBirth": "1976-08-25T00:00:00",
-      "notificationRefferal": null
+      "positionInASystem": "Doctor"
     },
     "room": "101-YT",
     "appointments": [],
@@ -141,5 +141,29 @@
         "reason": "alaaa seceraaa"
       }
     ]
+  },
+  {
+    "id": 111,
+    "salary": 45900,
+    "WorkingHoursPerWeek": 40,
+    "AnnualVacation": 15,
+    "role": "Secretary",
+    "user": {
+      "id": 16,
+      "username": "alex123",
+      "password": "ftn",
+      "firstName": "Aleksandra",
+      "lastName": "Aleksandric",
+      "jmbg": "4357135263154",
+      "phoneNumber": "06277624621",
+      "feedback": null,
+      "address": "Liman 1",
+      "email": "aleksandric.alex@gmail.com",
+      "dateOfBirth": "1967-12-22T00:00:00",
+      "positionInASystem": "Secretary"
+    },
+    "room": "SecretarySector",
+    "appointments": null,
+    "referralLetters": []
   }
 ]

@@ -5,6 +5,9 @@ using System.Windows.Media;
 using Classes.Controller;
 using Classes.Model;
 using HerbMedic.View;
+using HerbMedic.View.Doctor;
+using HerbMedic.View.Patient;
+using HerbMedic.View.Secretary;
 using ToastNotifications;
 using ToastNotifications.Lifetime;
 using ToastNotifications.Messages;
@@ -41,7 +44,7 @@ namespace HerbMedic
 
                     private void OnGotFocusTextbox(object sender, RoutedEventArgs e)
                     {
-                        var brush = SetRGBColor(32, 158, 103);
+                        var brush = SetRGBColor(44, 153, 215);
                         TextBox text = e.Source as TextBox;
                         text.Background = brush;
                     }
@@ -82,10 +85,41 @@ namespace HerbMedic
                 notifier.ShowError("Entered user doesnt exists!");
             else
             {
-                Home home = new Home();
-                home.Show();
-                home.TransferInfo(user);
-                this.Hide();
+                switch (user.positionInASystem)
+                {
+                    case "Director":
+                        {
+                            Home home = new Home();
+                            home.Show();
+                            home.TransferInfo(user);
+                            this.Hide();
+                        }
+                        break;
+                    case "Doctor":
+                        {
+                            HomeDoctor home = new HomeDoctor();
+                            home.Show();
+                            home.TransferInfoAboutUser(user);
+                            this.Hide();
+                        }
+                        break;
+                    case "Secretary":
+                        {
+                            HomeSecretary home = new HomeSecretary();
+                            home.Show();
+                            home.TransferInfoAboutUser(user);
+                            this.Hide();
+                        }
+                        break;
+                    case "Patient":
+                        {
+                            HomePatient home = new HomePatient();
+                            home.Show();
+                            home.TransferInfoAboutUser(user);
+                            this.Hide();
+                        }
+                        break;
+                }                
             }
         }
     }

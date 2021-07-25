@@ -27,7 +27,7 @@
         <PasswordBox x:Name="Passwordbox1" Grid.ColumnSpan="2" Grid.Column="1" GotFocus="OnGotFocusPasswordbox" LostFocus="OnLostFocusPasswordbox" HorizontalAlignment="Left" Height="29" Margin="95,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="191" FontSize="17px" Foreground="#FF00182D"/>
         <Label Content="Enter your username:" HorizontalAlignment="Left" Margin="81,20,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="17px" Foreground="#FF00182D" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Label Content="Enter your password:" HorizontalAlignment="Left" Margin="83,8,0,0" Grid.Row="4" VerticalAlignment="Top" FontSize="17px" Foreground="#FF00182D" Grid.ColumnSpan="2"/>
-        <Button Content="Log in" Grid.Column="1" HorizontalAlignment="Left" Margin="35,27,0,0" Grid.Row="5" VerticalAlignment="Top" Width="120" Height="40" FontSize="17px" Foreground="#FF00182D" Background="#FF209E67" Click="ButtonLogIn"/>
+        <Button Content="Log in" Grid.Column="1" HorizontalAlignment="Left" Margin="35,27,0,0" Grid.Row="5" VerticalAlignment="Top" Width="120" Height="40" FontSize="17px" Foreground="#FF00182D" Background="#f6252a" Click="ButtonLogIn"/>
         <Label Content="You don't have an account?" Grid.Column="1" HorizontalAlignment="Left" Margin="17,72,0,0" Grid.Row="5" VerticalAlignment="Top" Foreground="#FF00182D" FontStyle="Italic"/>
         <Label Content="Forgot a password?" Grid.Column="1" HorizontalAlignment="Left" Margin="35,98,0,0" Grid.Row="5" VerticalAlignment="Top" Foreground="#FF00182D" FontStyle="Italic" Width="120"/>
     </Grid>
