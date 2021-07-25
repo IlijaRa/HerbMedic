@@ -52,6 +52,11 @@ namespace Classes.Controller
             return employeeService.ReadEmployeesRoomByUsername(username);
         }
 
+        public List<Employee> ReadAllDoctors()
+        {
+            return employeeService.ReadAllDoctors();
+        }
+
         public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();

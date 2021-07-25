@@ -6,17 +6,20 @@ namespace Classes.Controller
 {
    public class ReferralLetterForSpecialistController
    {
-      public ReferralLetterForSpecialistController CreateReferralLetter(ReferralLetterForSpecialistController letter)
+      ReferralLetterForSpecialistService referralLetterForSpecialistService = new ReferralLetterForSpecialistService();
+      public string CreateReferralLetter(ReferralLetterForSpecialist letter)
       {
-         throw new NotImplementedException();
+         return referralLetterForSpecialistService.CreateReferralLetter(letter);
       }
-      
-      public ReferralLetterForSpecialistController ReadReferralLetter(int referralLetterId)
+
+        public int CheckNumberOfReferrals(string username)
+        {
+            return referralLetterForSpecialistService.CheckNumberOfReferrals(username);
+        }
+
+      public List<ReferralLetterForSpecialist> ReadAllReferralLetters(string username)
       {
-         throw new NotImplementedException();
+            return referralLetterForSpecialistService.ReadAllReferralLetters(username);
       }
-      
-      public Classes.Service.ReferralLetterForSpecialistService referralLetterForSpecialistService;
-   
    }
 }

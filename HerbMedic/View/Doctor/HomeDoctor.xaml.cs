@@ -12,16 +12,67 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ToastNotifications;
+using ToastNotifications.Lifetime;
+using ToastNotifications.Position;
+using Classes.Model;
+using Classes.Controller;
 
 namespace HerbMedic.View.Doctor
 {
     public partial class HomeDoctor : Window
     {
+        ReferralLetterForSpecialistController referralLetterForSpecialistController = new ReferralLetterForSpecialistController();
         public HomeDoctor()
         {
             InitializeComponent();
             Textbox1.Text = "makezza";
+            int numberOfReferrals = referralLetterForSpecialistController.CheckNumberOfReferrals(Textbox1.Text);
+            if (numberOfReferrals > 0)
+            {
+                btn_notifications.Background = SetRGBColor(244, 119, 117);
+            }
         }
+
+        /*----------------------------WPF PART--------------------------------*/
+
+                    /* Here is the implementation of toast notifications */
+                    Notifier notifier = new Notifier(cfg =>
+                    {
+                        cfg.PositionProvider = new WindowPositionProvider(
+                            parentWindow: Application.Current.MainWindow,
+                            corner: Corner.BottomCenter,
+                            offsetX: 10,
+                            offsetY: 10);
+
+                        cfg.LifetimeSupervisor = new TimeAndCountBasedLifetimeSupervisor(
+                            notificationLifetime: TimeSpan.FromSeconds(2),
+                            maximumNotificationCount: MaximumNotificationCount.FromCount(5));
+
+                        cfg.Dispatcher = Application.Current.Dispatcher;
+                    });
+                    /*-------------implementation ends here------------ */
+
+                    private void OnGotFocusTextbox(object sender, RoutedEventArgs e)
+                    {
+                        var brush = SetRGBColor(32, 158, 103);
+                        TextBox text = e.Source as TextBox;
+                        text.Background = brush;
+                    }
+                    private void OnLostFocusTextbox(object sender, RoutedEventArgs e)
+                    {
+                        TextBox text = e.Source as TextBox;
+                        text.Background = Brushes.White;
+                    }
+                    public Brush SetRGBColor(int red, int green, int blue)
+                    {
+                        int R = red;
+                        int G = green;
+                        int B = blue;
+                        var brush = new SolidColorBrush(Color.FromArgb(255, (byte)R, (byte)G, (byte)B));
+                        return brush;
+                    }
+        /*----------------------------FUNCTIONALITY PART--------------------------------*/
 
         private void ButtonAppointmentCRUD(object sender, RoutedEventArgs e)
         {
@@ -65,6 +116,14 @@ namespace HerbMedic.View.Doctor
             DoctorMedicine medicine = new DoctorMedicine();
             medicine.Show();
             medicine.TransferInfo(Textbox1.Text);
+            this.Hide();
+        }
+
+        private void ButtonReadNotifications(object sender, RoutedEventArgs e)
+        {
+            ReceiveReferralLetters receivedReferrals = new ReceiveReferralLetters();
+            receivedReferrals.Show();
+            receivedReferrals.TransferAndDisplayReferrals(Textbox1.Text);
             this.Hide();
         }
     }

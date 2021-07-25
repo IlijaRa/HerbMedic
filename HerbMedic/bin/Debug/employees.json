@@ -1,8 +1,7 @@
 [
   {
-    "appointments": null,
     "id": 1,
-    "salary": 90000,
+    "salary": 180000,
     "WorkingHoursPerWeek": 35,
     "AnnualVacation": 20,
     "role": "Director",
@@ -20,9 +19,31 @@
       "dateOfBirth": "1998-06-12T00:00:00",
       "notificationRefferal": null
     },
-    "room": "EconomySector"
+    "room": "EconomySector",
+    "appointments": null,
+    "referralLetters": []
   },
   {
+    "id": 2,
+    "salary": 90000,
+    "WorkingHoursPerWeek": 50,
+    "AnnualVacation": 14,
+    "role": "Doctor",
+    "user": {
+      "id": 2,
+      "username": "makezza",
+      "password": "ftn",
+      "firstName": "Marko",
+      "lastName": "Markovic",
+      "jmbg": "2306994780035",
+      "phoneNumber": "062316322",
+      "feedback": null,
+      "address": "Boska Buhe 10",
+      "email": "markovic.marko@gmail.com",
+      "dateOfBirth": "1994-06-23T00:00:00",
+      "notificationRefferal": null
+    },
+    "room": "801-RT",
     "appointments": [
       {
         "id": 1,
@@ -80,25 +101,45 @@
         "appointmentType": "Operation"
       }
     ],
-    "id": 2,
-    "salary": 90000,
-    "WorkingHoursPerWeek": 50,
-    "AnnualVacation": 14,
+    "referralLetters": []
+  },
+  {
+    "id": 3,
+    "salary": 92000,
+    "WorkingHoursPerWeek": 35,
+    "AnnualVacation": 20,
     "role": "Doctor",
     "user": {
-      "id": 2,
-      "username": "makezza",
+      "id": 1,
+      "username": "dirak1",
       "password": "ftn",
-      "firstName": "Marko",
-      "lastName": "Markovic",
-      "jmbg": "2306994780035",
-      "phoneNumber": "062316322",
+      "firstName": "Andrija",
+      "lastName": "Dirakovic",
+      "jmbg": "2345262357255",
+      "phoneNumber": "0691122333",
       "feedback": null,
-      "address": "Boska Buhe 10",
-      "email": "markovic.marko@gmail.com",
-      "dateOfBirth": "1994-06-23T00:00:00",
+      "address": "Zeleznicka 45",
+      "email": "dirakovic.andija@gmail.com",
+      "dateOfBirth": "1976-08-25T00:00:00",
       "notificationRefferal": null
     },
-    "room": "33-LG"
+    "room": "101-YT",
+    "appointments": [],
+    "referralLetters": [
+      {
+        "id": 518,
+        "doctorWhoSends": "Marko Markovic",
+        "doctorWhoReceives": "Andrija Dirakovic",
+        "patientName": "Smokva Marusic",
+        "reason": "mala je realno mnogo bolesna hahaha"
+      },
+      {
+        "id": 982,
+        "doctorWhoSends": "Marko Markovic",
+        "doctorWhoReceives": "Andrija Dirakovic",
+        "patientName": "Smokva Marusic",
+        "reason": "alaaa seceraaa"
+      }
+    ]
   }
 ]

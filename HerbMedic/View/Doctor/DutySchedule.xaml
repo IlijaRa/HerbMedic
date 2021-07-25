@@ -34,7 +34,8 @@
         <Label Content="Blood type:" HorizontalAlignment="Left" Margin="433,367,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Height:" HorizontalAlignment="Left" Margin="433,417,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         <Label Content="Weight:" HorizontalAlignment="Left" Margin="433,471,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Button Content="Medical record" HorizontalAlignment="Left" Background="#2dadf6" Margin="438,517,0,0" VerticalAlignment="Top" Width="306" Height="39" Foreground="#FF00182D" FontSize="17px" Click="ButtonMedicalRecord"/>
+        <Button Content="Medical record" HorizontalAlignment="Left" Background="#2dadf6" Margin="438,517,0,0" VerticalAlignment="Top" Width="150" Height="39" Foreground="#FF00182D" FontSize="17px" Click="ButtonMedicalRecord"/>
+        <Button Content="Referral letter" HorizontalAlignment="Left" Background="#2dadf6" Margin="596,517,0,0" VerticalAlignment="Top" Width="150" Height="39" Foreground="#FF00182D" FontSize="17px" Click="ButtonReferralLetter"/>
         <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Height="28" Margin="177,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
         <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Height="28" Margin="177,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
         <TextBox x:Name="Textbox3" HorizontalAlignment="Left" Height="28" Margin="177,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>

@@ -16,7 +16,9 @@ namespace Classes.Model
 
         //public List<MedicalRecord> medicalRecord;
 
-        public List<Appointment> appointments;
+        public List<Appointment> appointments { get; set; }
+
+        public List<ReferralLetterForSpecialist> referralLetters { get; set; }
 
     }
 }

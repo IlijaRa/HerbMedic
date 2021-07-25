@@ -30,7 +30,14 @@ namespace Classes.Repository
                 }
             }
         }
-      public List<Doctor> GetDoctorBySpecialization(string specialization)
+
+        public void writeInJson()
+        {
+            string json = JsonConvert.SerializeObject(employees, Formatting.Indented);
+            File.WriteAllText("employees.json", json);
+        }
+
+        public List<Doctor> GetDoctorBySpecialization(string specialization)
       {
          throw new NotImplementedException();
       }
@@ -98,6 +105,19 @@ namespace Classes.Repository
                     room = employee.room;
             }
             return room;
+        }
+
+        public List<Employee> ReadAllDoctors()
+        {
+            List<Employee> doctors = new List<Employee>();
+            foreach(var e in employees)
+            {
+                if(e.role == "Doctor")
+                {
+                    doctors.Add(e);
+                }
+            }
+            return doctors;
         }
 
         public Employee UpdateEmployee(Employee employee)

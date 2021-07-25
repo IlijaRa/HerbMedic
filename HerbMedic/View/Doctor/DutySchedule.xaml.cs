@@ -124,5 +124,21 @@ namespace HerbMedic.View.Doctor
                 notifier.ShowWarning("WARNING: You need to select a patient!");
             }
         }
+
+        private void ButtonReferralLetter(object sender, RoutedEventArgs e)
+        {
+            if (Textbox1.Text != "" && Textbox2.Text != "")
+            {
+                string fullName = Textbox1.Text + " " + Textbox2.Text;
+                ReferralLetterForSpecialistForm referral = new ReferralLetterForSpecialistForm();
+                referral.Show();
+                referral.TransferInfoForMedicalRecord(Textbox1.Text, Textbox2.Text, Textbox_username.Text);
+                this.Hide();
+            }
+            else
+            {
+                notifier.ShowWarning("WARNING: You need to select a patient!");
+            }
+        }
     }
 }

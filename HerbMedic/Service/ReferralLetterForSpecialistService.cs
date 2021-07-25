@@ -1,23 +1,26 @@
 using Classes.Model;
 using System.Collections.Generic;
 using System;
+using Classes.Repository;
 
 namespace Classes.Service
 {
    public class ReferralLetterForSpecialistService
    {
-      public Classes.Controller.ReferralLetterForSpecialistController CreateReferralLetter(Classes.Controller.ReferralLetterForSpecialistController letter)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Classes.Controller.ReferralLetterForSpecialistController ReadReferralLetter(int referralLetterId)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Classes.Repository.ReferralLetterForSpecialistRepository referralLetterForSpecialistRepository;
-      public IReferralFactory iReferralFactory;
-   
-   }
+        ReferralLetterForSpecialistRepository referralLetterForSpecialistRepository = new ReferralLetterForSpecialistRepository();
+        public string CreateReferralLetter(ReferralLetterForSpecialist letter)
+        {
+            return referralLetterForSpecialistRepository.CreateReferralLetter(letter);
+        }
+
+        public int CheckNumberOfReferrals(string username)
+        {
+            return referralLetterForSpecialistRepository.CheckNumberOfReferrals(username);
+        }
+
+        public List<ReferralLetterForSpecialist> ReadAllReferralLetters(string username)
+        {
+            return referralLetterForSpecialistRepository.ReadAllReferralLetters(username);
+        }
+    }
 }

@@ -53,6 +53,11 @@ namespace Classes.Service
             return employeeRepository.ReadEmployeesRoomByUsername(username);
         }
 
+        public List<Employee> ReadAllDoctors()
+        {
+            return employeeRepository.ReadAllDoctors();
+        }
+
         public Employee UpdateEmployee(Employee employee)
       {
          throw new NotImplementedException();

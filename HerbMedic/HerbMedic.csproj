@@ -288,6 +288,12 @@
     <Compile Include="View\Doctor\PrescriptionForm.xaml.cs">
       <DependentUpon>PrescriptionForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\ReceiveReferralLetters.xaml.cs">
+      <DependentUpon>ReceiveReferralLetters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\ReferralLetterForSpecialistForm.xaml.cs">
+      <DependentUpon>ReferralLetterForSpecialistForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MessageBoxes\AreYouSure.xaml.cs">
       <DependentUpon>AreYouSure.xaml</DependentUpon>
     </Compile>
@@ -411,6 +417,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Doctor\PrescriptionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\ReceiveReferralLetters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\ReferralLetterForSpecialistForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

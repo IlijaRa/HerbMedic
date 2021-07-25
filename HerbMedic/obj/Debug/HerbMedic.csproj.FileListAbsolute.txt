@@ -160,3 +160,7 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\DoctorMedicine.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\DoctorMedicine.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\MedicineDeclining.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\MedicineDeclining.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\ReferralLetterForSpecialistForm.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\ReferralLetterForSpecialistForm.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\ReceiveReferralLetters.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\ReceiveReferralLetters.baml
