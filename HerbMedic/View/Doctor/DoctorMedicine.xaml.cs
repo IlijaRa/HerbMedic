@@ -28,6 +28,13 @@ namespace HerbMedic.View.Doctor
         public DoctorMedicine()
         {
             InitializeComponent();
+            //List<Medicine> medicines = medicineController.ReadAllMedicines();
+            //ObservableCollection<Medicine> observableMedicines = new ObservableCollection<Medicine>();
+            //foreach (var medicine in medicines)
+            //{
+            //    observableMedicines.Add(medicine);
+            //}
+            //dg_medicines.ItemsSource = observableMedicines;
         }
 
         /*----------------------------WPF PART--------------------------------*/
@@ -112,8 +119,31 @@ namespace HerbMedic.View.Doctor
 
         private void ButtonUpdateMedicine(object sender, RoutedEventArgs e)
         {
-
+            if (Textbox1.Text != "" && Textbox2.Text != "" && Textbox3.Text != "" && Textbox4.Text != "")
+            {
+                Medicine medicine = new Medicine(Convert.ToInt32(Textbox1.Text),
+                                                Textbox2.Text,
+                                                Textbox3.Text,
+                                                Textbox4.Text,
+                                                null,
+                                                null,
+                                                null);
+                string message = medicineController.UpdateMedicine(medicine, "Doctor");
+                if(message == "SUCCEEDED")
+                {
+                    notifier.ShowSuccess("SUCCESS: Medicine is updated!");
+                }
+                else
+                {
+                    notifier.ShowError("ERROR: Error occured while updating!");
+                }
+            }
+            else
+            {
+                notifier.ShowWarning("WARNING: Blanks are poorly filled");
+            }
         }
+
         private void ButtonReadAll(object sender, RoutedEventArgs e)
         {
             List<Medicine> medicines = medicineController.ReadAllMedicines();
@@ -123,6 +153,15 @@ namespace HerbMedic.View.Doctor
                 observableMedicines.Add(medicine);
             }
             dg_medicines.ItemsSource = observableMedicines;
+            
+            //-----------------------------------------------------------------
+            List<Medicine> medicines1 = medicineController.ReadAllMedicines();
+            ObservableCollection<Medicine> observableMedicines1 = new ObservableCollection<Medicine>();
+            foreach (var medicine in medicines1)
+            {
+                observableMedicines1.Add(medicine);
+            }
+            dg_medicines.ItemsSource = observableMedicines1;
         }
 
         private void dg_ingredients_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -138,6 +177,17 @@ namespace HerbMedic.View.Doctor
         public void TransferInfo(string username)
         {
             Textbox_username.Text = username;
+        }
+
+        private void dg_medicines_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Medicine selectedMedicine = (Medicine)dg_medicines.SelectedItem;
+            List<Ingredient> ingredients = medicineController.ReadMedicineIngredients(selectedMedicine.name);
+            List<Alternative> alternatives = medicineController.ReadMedicineAlternatives(selectedMedicine.name);
+            dg_ingredients.ItemsSource = ingredients;
+            dg_alternatives.ItemsSource = alternatives;
+            //Textbox5.Text = "";
+            //Textbox6.Text = "";
         }
     }
 }

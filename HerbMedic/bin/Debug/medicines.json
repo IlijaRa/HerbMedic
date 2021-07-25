@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "name": "aspirin",
+    "name": "aspirin11",
     "status": "VALIDATED",
-    "description": "weg",
+    "description": "weg11",
     "ingredients": [],
     "alternatives": [],
     "reason": null
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "lanosprazol",
-    "status": "WAITING",
+    "status": "VALIDATED",
     "description": "This medicine can be used anytime",
     "ingredients": [],
     "alternatives": [],
@@ -20,11 +20,11 @@
   {
     "id": 3,
     "name": "menilotonin",
-    "status": "VALIDATED",
+    "status": "DECLINED",
     "description": "slobodna upotreba",
     "ingredients": [],
     "alternatives": [],
-    "reason": null
+    "reason": "avaaaa"
   },
   {
     "id": 4,
@@ -49,14 +49,36 @@
     "name": "mediokroksin",
     "status": "VALIDATED",
     "description": "izuzetno opasan lek za samostalno koricenje",
-    "ingredients": [],
-    "alternatives": [],
+    "ingredients": [
+      {
+        "medicineName": "mediokroksin",
+        "ingredientId": 115,
+        "ingredientName": "2345234235"
+      },
+      {
+        "medicineName": "mediokroksin",
+        "ingredientId": 34,
+        "ingredientName": "fffffwww3r324"
+      }
+    ],
+    "alternatives": [
+      {
+        "medicineName": "mediokroksin",
+        "alternativeId": 298,
+        "alternativeName": "fffffff"
+      },
+      {
+        "medicineName": "mediokroksin",
+        "alternativeId": 434,
+        "alternativeName": "aaaaaaaa"
+      }
+    ],
     "reason": "Ime nije dobro napisano, i za alternativu dodati da postoji i vitamin C"
   },
   {
     "id": 7,
     "name": "probica",
-    "status": "VALIDATED",
+    "status": "DECLINED",
     "description": "wef",
     "ingredients": [
       {
@@ -102,6 +124,6 @@
         "alternativeName": ""
       }
     ],
-    "reason": null
+    "reason": "araaa"
   }
 ]

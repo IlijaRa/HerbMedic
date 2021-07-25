@@ -39,9 +39,9 @@ namespace Classes.Service
             return medicineRepository.ReadMedicineAlternatives(medicineName);
         }
 
-        public string UpdateMedicine(Medicine medicine)
+        public string UpdateMedicine(Medicine medicine, string role)
       {
-         return medicineRepository.UpdateMedicine(medicine);
+         return medicineRepository.UpdateMedicine(medicine, role);
       }
       
       public string DeleteMedicine(int medicineId)

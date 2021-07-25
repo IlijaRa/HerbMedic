@@ -147,7 +147,7 @@ namespace HerbMedic.View
                                                     realIngred,
                                                     realAlter,
                                                     null);
-                    string message = medicineController.UpdateMedicine(medicine);
+                    string message = medicineController.UpdateMedicine(medicine, "Director");
 
                 if (message == "SUCCEEDED")
                 {

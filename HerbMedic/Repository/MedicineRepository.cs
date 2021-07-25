@@ -99,13 +99,24 @@ namespace Classes.Repository
             return alternatives;
         }
 
-        public string UpdateMedicine(Medicine medicine)
+      public string UpdateMedicine(Medicine medicine, string role)
       {
-            string message;
-            int index = medicines.FindIndex(obj => obj.id == medicine.id);
-            medicines[index] = medicine;
-            writeInJson();
-            message = "SUCCEEDED";
+            string message= "NOT SUCCEEDED";
+            if (role == "Director")
+            {
+                int index = medicines.FindIndex(obj => obj.id == medicine.id);
+                medicines[index] = medicine;
+                writeInJson();
+                message = "SUCCEEDED";
+            }
+            else if(role == "Doctor")
+            {
+                int index = medicines.FindIndex(obj => obj.id == medicine.id);
+                medicines[index].name = medicine.name;
+                medicines[index].description = medicine.description;
+                writeInJson();
+                message = "SUCCEEDED";
+            }
             return message;
         }
       
@@ -152,6 +163,5 @@ namespace Classes.Repository
         }
 
         public string path;
-   
    }
 }

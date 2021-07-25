@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="/images/templates/HomeDoctor.png"/>
     </Window.Background>
     <Grid>
-        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_medicines" HorizontalAlignment="Left" Height="184" Margin="76,248,0,0" VerticalAlignment="Top" Width="669" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#BEFBFF">
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_medicines" HorizontalAlignment="Left" Height="184" Margin="76,248,0,0" VerticalAlignment="Top" Width="669" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#BEFBFF" SelectionChanged="dg_medicines_SelectionChanged">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#2dadf6"/>
