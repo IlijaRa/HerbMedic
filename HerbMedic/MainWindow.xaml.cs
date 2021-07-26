@@ -122,5 +122,10 @@ namespace HerbMedic
                 }                
             }
         }
+
+        private void ButtonExit(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

@@ -30,5 +30,8 @@
         <Button Content="Log in" Grid.Column="1" HorizontalAlignment="Left" Margin="35,27,0,0" Grid.Row="5" VerticalAlignment="Top" Width="120" Height="40" FontSize="17px" Foreground="#FF00182D" Background="#f6252a" Click="ButtonLogIn"/>
         <Label Content="You don't have an account?" Grid.Column="1" HorizontalAlignment="Left" Margin="17,72,0,0" Grid.Row="5" VerticalAlignment="Top" Foreground="#FF00182D" FontStyle="Italic"/>
         <Label Content="Forgot a password?" Grid.Column="1" HorizontalAlignment="Left" Margin="35,98,0,0" Grid.Row="5" VerticalAlignment="Top" Foreground="#FF00182D" FontStyle="Italic" Width="120"/>
+        <Button HorizontalAlignment="Left" Height="30" Margin="108,6,0,0" VerticalAlignment="Top" Width="39" Background="#ffc300" BorderBrush="#FF00182D" Click="ButtonExit" Grid.Column="2" Grid.RowSpan="2">
+            <Image Source="/images/details/Xicon.png" Width="35" Height="26"/>
+        </Button>
     </Grid>
 </Window>
