@@ -220,6 +220,7 @@ namespace HerbMedic.View.Doctor
             HomeDoctor home = new HomeDoctor();
             home.Show();
             home.TransferInfoAboutUser(user);
+            home.CheckNotifications(Textbox_username.Text);
             this.Hide();
         }
     }

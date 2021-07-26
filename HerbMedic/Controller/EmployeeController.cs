@@ -32,6 +32,11 @@ namespace Classes.Controller
             return employeeService.ReadAppointmentsByUsername(username);
         }
 
+        public Employee ReadSecretary()
+        {
+            return employeeService.ReadSecretary();
+        }
+
         public List<Appointment> ReadOperationsByUsername(string username)
         {
             return employeeService.ReadOperationsByUsername(username);

@@ -29,14 +29,9 @@
             <Button x:Name="btn_notifications" Content="Read notifications" Height="35px" Margin="26,9,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px" Click="ButtonReadNotifications"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="2">
-            <Button Content="Static equipment management" Height="35px" Margin="26,5,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px"></Button>
-            <Button Content="Advanced renovation" Height="35px" Margin="26,6,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px"></Button>
-            <Button Content="Basic renovation" Height="35px" Margin="26,6,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px"></Button>
-            <Button Margin="26,7,5,5" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px">
-                <Image HorizontalAlignment="Left" Height="184" Margin="0,0,0,0" Width="242" Source="/images/details/hospitalScheme.png"/>
-            </Button>
-        </StackPanel>
+        <Button Margin="26,146,5,14" Background="#2dadf6" Foreground="#FF00182D" FontSize="17px" Grid.Column="1" Grid.Row="2">
+            <Image HorizontalAlignment="Left" Height="184" Margin="0,0,0,0" Width="242" Source="/images/details/hospitalScheme.png"/>
+        </Button>
 
         <Grid Grid.Column="0" Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -46,7 +41,7 @@
             <TextBox x:Name="Textbox9" Margin="170,289,10,30" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
             <TextBox x:Name="Textbox7" Margin="170,220,10,99" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
             <TextBox x:Name="Textbox2" Margin="170,51,10,268" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
-            <TextBox x:Name="Textbox1" Margin="170,17,10,302" Height="28px" Foreground="#FF00182D" FontSize="17px"/>
+            <TextBox x:Name="Textbox1" Margin="170,17,10,302" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
             <TextBox x:Name="Textbox4" Margin="170,118,10,201" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
             <TextBox x:Name="Textbox3" Margin="170,84,10,235" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
             <TextBox x:Name="Textbox5" Margin="170,154,10,165" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False" BorderBrush="#FFABADB3"/>

@@ -164,3 +164,7 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\ReferralLetterForSp
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\ReferralLetterForSpecialistForm.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\ReceiveReferralLetters.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\ReceiveReferralLetters.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\PatientCRUD.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\PatientCRUD.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\Nightmode\Secretary\HomeSecretaryNightMode.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\Nightmode\Secretary\HomeSecretaryNightMode.baml

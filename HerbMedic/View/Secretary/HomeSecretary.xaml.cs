@@ -1,4 +1,5 @@
 ﻿using Classes.Model;
+using HerbMedic.Nightmode.Secretary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,6 +85,20 @@ namespace HerbMedic.View.Secretary
         private void ButtonMinimized(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
+        }
+
+        private void ButtonPatientCRUD(object sender, RoutedEventArgs e)
+        {
+            PatientCRUD patient = new PatientCRUD();
+            patient.Show();
+            this.Hide();
+        }
+
+        private void ButtonNightmode(object sender, RoutedEventArgs e)
+        {
+            HomeSecretaryNightMode home = new HomeSecretaryNightMode();
+            home.Show();
+            this.Hide();
         }
     }
 }

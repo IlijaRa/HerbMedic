@@ -68,6 +68,17 @@ namespace Classes.Repository
             return appoints;
         }
 
+        public Employee ReadSecretary()
+        {
+            Employee secretary = new Employee();
+            foreach(var e in employees)
+            {
+                if (e.role == "Secretary")
+                    secretary = e;
+            }
+            return secretary;
+        }
+
         public List<Appointment> ReadOperationsByUsername(string username)
         {
             List<Appointment> appoints = new List<Appointment>();

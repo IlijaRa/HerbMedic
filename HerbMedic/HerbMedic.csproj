@@ -151,6 +151,9 @@
     <Compile Include="Model\TransferEquipment.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\Warehouse.cs" />
+    <Compile Include="Nightmode\Secretary\HomeSecretaryNightMode.xaml.cs">
+      <DependentUpon>HomeSecretaryNightMode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Repository\AllergenRepository.cs" />
     <Compile Include="Repository\AllergenWarningRepository.cs" />
     <Compile Include="Repository\AnamnesisRepository.cs" />
@@ -312,6 +315,9 @@
     <Compile Include="View\Secretary\HomeSecretary.xaml.cs">
       <DependentUpon>HomeSecretary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Secretary\PatientCRUD.xaml.cs">
+      <DependentUpon>PatientCRUD.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -324,6 +330,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Nightmode\Secretary\HomeSecretaryNightMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Director\AdvancedRenovation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -452,6 +462,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Secretary\PatientCRUD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -552,6 +566,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\details\minimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\templates\HomeNightMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\users\nurseNightmode.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

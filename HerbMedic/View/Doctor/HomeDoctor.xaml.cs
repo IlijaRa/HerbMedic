@@ -16,12 +16,6 @@ namespace HerbMedic.View.Doctor
         public HomeDoctor()
         {
             InitializeComponent();
-            Textbox1.Text = "makezza";
-            int numberOfReferrals = referralLetterForSpecialistController.CheckNumberOfReferrals(Textbox1.Text);
-            if (numberOfReferrals > 0)
-            {
-                btn_notifications.Background = SetRGBColor(244, 119, 117);
-            }
         }
 
         /*----------------------------WPF PART--------------------------------*/
@@ -127,6 +121,15 @@ namespace HerbMedic.View.Doctor
         private void ButtonMinimized(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
+        }
+
+        public void CheckNotifications(string username)
+        {
+            int numberOfReferrals = referralLetterForSpecialistController.CheckNumberOfReferrals(username);
+            if (numberOfReferrals > 0)
+            {
+                btn_notifications.Background = SetRGBColor(244, 119, 117);
+            }
         }
     }
 }

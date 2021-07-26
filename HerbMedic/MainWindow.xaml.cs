@@ -100,6 +100,7 @@ namespace HerbMedic
                             HomeDoctor home = new HomeDoctor();
                             home.Show();
                             home.TransferInfoAboutUser(user);
+                            home.CheckNotifications(user.username);
                             this.Hide();
                         }
                         break;
