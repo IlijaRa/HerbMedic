@@ -127,5 +127,10 @@ namespace HerbMedic
         {
             Application.Current.Shutdown();
         }
+
+        private void ButtonMinimized(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }

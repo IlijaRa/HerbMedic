@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <Image Grid.Column="0" Grid.Row="1" Source="/images/users/teacher2.png" Margin="70,19,42,58"/>
         <StackPanel Grid.Column="1" Grid.Row="1">
-            
+
             <Button Content="Room CRUD" Height="35px" Margin="26,6,5,7" Background="#209e67" Foreground="#FF00182D" FontSize="17px" Click="ButtonRoomCRUD"></Button>
             <Button Content="Medicine CRUD" Height="35px" Margin="26,7,5,5" Background="#209e67" Foreground="#FF00182D" FontSize="17px" Click="ButtonMedicineCRUD"></Button>
             <Button Content="Static equipment CRUD" Height="35px" Margin="26,7,5,5" Background="#209e67" Foreground="#FF00182D" FontSize="17px" Click="ButtonStaticEquipmentCRUD"></Button>
@@ -52,6 +52,9 @@
             <Button HorizontalAlignment="Left" Height="30" Margin="36,-242,0,0" VerticalAlignment="Top" Width="39" Background="#FF209E67" BorderBrush="#FF00182D" Click="ButtonLogOut">
                 <Image Source="/images/details/logout.png" Width="27" Height="24"/>
             </Button>
+            <Button HorizontalAlignment="Left" Height="30" Margin="77,-242,0,0" VerticalAlignment="Top" Width="39" Background="#FF209E67" BorderBrush="#FF00182D" Click="ButtonMinimized">
+                <Image Source="/images/details/minimized.png" Width="29" Height="26"/>
+            </Button>
             <Button Width="120px" Height="40px" Margin="71,-50,192,357" Content="Night mode" Background="#209e67" Foreground="#FF00182D" FontSize="17px"/>
             <Button Width="120px" Height="40px" Margin="221,-50,42,357" Content="Serbian lang" Background="#209e67" Foreground="#FF00182D" FontSize="17px"/>
             <Label Content="JMBG:" HorizontalAlignment="Left" Margin="44,148,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
@@ -65,6 +68,6 @@
             <TextBox x:Name="Textbox6" Margin="170,187,10,132" Height="28px" Foreground="#FF00182D" FontSize="17px" IsEnabled="False" BorderBrush="#FFABADB3"/>
             <Label Content="Phone number:" HorizontalAlignment="Left" Margin="44,181,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
         </Grid>
-        
+
     </Grid>
 </Window>

@@ -94,5 +94,10 @@ namespace HerbMedic.View
             main.Show();
             this.Hide();
         }
+
+        private void ButtonMinimized(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }

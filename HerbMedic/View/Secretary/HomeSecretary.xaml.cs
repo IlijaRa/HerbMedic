@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace HerbMedic.View.Secretary
 {
-    /// <summary>
-    /// Interaction logic for HomeSecretary.xaml
-    /// </summary>
     public partial class HomeSecretary : Window
     {
         public HomeSecretary()
@@ -82,6 +79,11 @@ namespace HerbMedic.View.Secretary
             MainWindow main = new MainWindow();
             main.Show();
             this.Hide();
+        }
+
+        private void ButtonMinimized(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace HerbMedic.View.Patient
 {
-    /// <summary>
-    /// Interaction logic for HomePatient.xaml
-    /// </summary>
     public partial class HomePatient : Window
     {
         public HomePatient()
@@ -82,6 +79,11 @@ namespace HerbMedic.View.Patient
             MainWindow main = new MainWindow();
             main.Show();
             this.Hide();
+        }
+
+        private void ButtonMinimized(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

@@ -55,6 +55,9 @@
             <Button HorizontalAlignment="Left" Height="30" Margin="36,-242,0,0" VerticalAlignment="Top" Width="39" Background="#2dadf6" BorderBrush="#FF00182D" Click="ButtonLogOut">
                 <Image Source="/images/details/logout.png" Width="27" Height="24"/>
             </Button>
+            <Button HorizontalAlignment="Left" Height="30" Margin="77,-242,0,0" VerticalAlignment="Top" Width="39" Background="#2dadf6" BorderBrush="#FF00182D" Click="ButtonMinimized">
+                <Image Source="/images/details/minimized.png" Width="29" Height="26"/>
+            </Button>
             <Label Content="JMBG:" HorizontalAlignment="Left" Margin="44,148,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
             <Label Content="Last name:" HorizontalAlignment="Left" Margin="44,112,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
             <Label Content="Username:" HorizontalAlignment="Left" Margin="44,12,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
