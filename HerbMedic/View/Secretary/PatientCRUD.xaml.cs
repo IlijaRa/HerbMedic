@@ -75,5 +75,25 @@ namespace HerbMedic.View.Secretary
             home.TransferInfoAboutUser(employee.user);
             this.Hide();
         }
+
+        private void ButtonCreate(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonUpdate(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDelete(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonReadAll(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

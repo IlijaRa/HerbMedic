@@ -10,27 +10,47 @@
         <ImageBrush ImageSource="/images/templates/HomeSecretary.png"/>
     </Window.Background>
     <Grid>
-        <Label Content="Health insurance number:" HorizontalAlignment="Left" Margin="71,380,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Blood type:" HorizontalAlignment="Left" Margin="71,498,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Heigth:" HorizontalAlignment="Left" Margin="71,420,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Weight:" HorizontalAlignment="Left" Margin="71,458,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="End time:" HorizontalAlignment="Left" Margin="71,213,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="Type:" HorizontalAlignment="Left" Margin="71,251,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="71,290,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="71,330,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="274,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="HIN:" HorizontalAlignment="Left" Margin="451,130,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Blood type:" HorizontalAlignment="Left" Margin="451,246,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Heigth:" HorizontalAlignment="Left" Margin="451,168,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="451,207,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Identificator:" HorizontalAlignment="Left" Margin="71,130,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="71,168,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="71,207,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="First name:" HorizontalAlignment="Left" Margin="71,246,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="568,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
 
 
         <Label Content="PATIENTS:" HorizontalAlignment="Center" Margin="350,-2,322,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="120"/>
         <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#f6252a" BorderBrush="#FF00182D" Click="ButtonGoBack">
             <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
         </Button>
-        <TextBox x:Name="Textbox1_Copy3" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="274,420,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1_Copy4" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="274,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1_Copy5" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="274,504,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1_Copy6" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="274,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1_Copy7" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="274,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1_Copy8" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="274,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
-        <TextBox x:Name="Textbox1_Copy9" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="274,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy3" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="568,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy4" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="568,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy5" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="568,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy6" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <TextBox x:Name="Textbox1_Copy7" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy8" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy9" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Last name:" HorizontalAlignment="Left" Margin="71,286,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="JMBG:" HorizontalAlignment="Left" Margin="71,327,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Phone number:" HorizontalAlignment="Left" Margin="71,365,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Address:" HorizontalAlignment="Left" Margin="71,404,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="E-mail:" HorizontalAlignment="Left" Margin="71,444,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy1" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy2" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy10" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,406,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy11" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Date of birth:" HorizontalAlignment="Left" Margin="71,486,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1_Copy12" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="208,488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="THESE FIELDS ARE REQUIRED:" HorizontalAlignment="Left" Margin="52,61,0,0" VerticalAlignment="Top" Foreground="#f6252a" FontSize="25px"/>
+        <Border BorderBrush="#f6252a" BorderThickness="2" HorizontalAlignment="Left" Height="438" Margin="52,104,0,0" VerticalAlignment="Top" Width="339"/>
+        <Label Content="THESE FIELDS ARE OPTIONAL:" HorizontalAlignment="Left" Margin="416,61,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px"/>
+        <Border BorderBrush="#FF00182D" BorderThickness="2" HorizontalAlignment="Left" Height="201" Margin="418,104,0,0" VerticalAlignment="Top" Width="339"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="418,325,0,0" VerticalAlignment="Top" Width="339" Height="39" Foreground="#FF00182D" Background="#f6252a" FontSize="17px" Click="ButtonCreate"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="418,384,0,0" VerticalAlignment="Top" Width="339" Height="39" Foreground="#FF00182D" Background="#f6252a" FontSize="17px" Click="ButtonUpdate"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="418,444,0,0" VerticalAlignment="Top" Width="339" Height="39" Foreground="#FF00182D" Background="#f6252a" FontSize="17px" Click="ButtonDelete"/>
+        <Button Content="Read all" HorizontalAlignment="Left" Margin="418,503,0,0" VerticalAlignment="Top" Width="339" Height="39" Foreground="#FF00182D" Background="#f6252a" FontSize="17px" Click="ButtonReadAll"/>
     </Grid>
 </Window>
