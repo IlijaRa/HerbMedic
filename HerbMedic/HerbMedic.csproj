@@ -309,6 +309,9 @@
     <Compile Include="View\MessageBoxes\MedicalRecordDoesntExists.xaml.cs">
       <DependentUpon>MedicalRecordDoesntExists.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Patient\ExaminationCRUD.xaml.cs">
+      <DependentUpon>ExaminationCRUD.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Patient\HomePatient.xaml.cs">
       <DependentUpon>HomePatient.xaml</DependentUpon>
     </Compile>
@@ -451,6 +454,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MessageBoxes\MedicalRecordDoesntExists.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Patient\ExaminationCRUD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -59,6 +59,34 @@ namespace Classes.Repository
             return patient;
         }
 
+        public Patient ReadPatientByUsername(string username)
+        {
+            Patient patient = new Patient();
+            foreach (var p in patients)
+            {
+                if (p.user.username.Equals(username))
+                {
+                    patient = p;
+                    break;
+                }
+            }
+            return patient;
+        }
+
+        public List<Appointment> ReadExaminationsByUsername(string username)
+        {
+            List<Appointment> examinations = new List<Appointment>();
+            foreach (var p in patients)
+            {
+                if (p.user.username.Equals(username))
+                {
+                    examinations = p.examinations;
+                    break;
+                }
+            }
+            return examinations;
+        }
+
         public Patient UpdatePatient(Patient patient)
       {
          throw new NotImplementedException();

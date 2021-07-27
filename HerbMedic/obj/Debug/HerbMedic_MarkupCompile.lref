@@ -1,6 +1,7 @@
 ﻿
 FD:\GitRepositories\HerbMedic\HerbMedic\App.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\MainWindow.xaml;;
+FD:\GitRepositories\HerbMedic\HerbMedic\Nightmode\Secretary\HomeSecretaryNightMode.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Director\AdvancedRenovation.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Director\BasicRenovation.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Director\DocumentationAboutDoneExports.xaml;;
@@ -34,5 +35,5 @@ FD:\GitRepositories\HerbMedic\HerbMedic\View\MessageBoxes\MedicalRecordDoesntExi
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Patient\HomePatient.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Secretary\HomeSecretary.xaml;;
 FD:\GitRepositories\HerbMedic\HerbMedic\View\Secretary\PatientCRUD.xaml;;
-FD:\GitRepositories\HerbMedic\HerbMedic\Nightmode\Secretary\HomeSecretaryNightMode.xaml;;
+FD:\GitRepositories\HerbMedic\HerbMedic\View\Patient\ExaminationCRUD.xaml;;
 

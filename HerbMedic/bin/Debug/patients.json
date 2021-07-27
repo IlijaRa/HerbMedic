@@ -12,7 +12,7 @@
 		"surveys": null,
 		"hospitalTreatments": null,
 		"user":{
-			"id": 3,
+			"id": 32,
 			"username": "smokvica",
 			"password": "ftn",
 			"firstName": "Smokva",
@@ -24,7 +24,64 @@
 			"email": "marusic.smokva@gmail.com",
 			"dateOfBirth": "1985-05-18T00:00:00",
 			"positionInASystem": "Patient"
-		}
+		},
+		"examinations": [
+			{
+			"id": 1,
+			"isEmergency": false,
+			"patient": "Smokva Marusic",
+			"employeeUsername": "makezza",
+			"date": "2021-07-15T00:00:00",
+			"startTime": "2021-07-14T11:00:00",
+			"endTime": "2021-07-14T12:00:00",
+			"roomName": "33-LG",
+			"appointmentType": "Examination"
+		  },
+		  {
+			"id": 2,
+			"isEmergency": false,
+			"patient": "Smokva Marusic",
+			"employeeUsername": "makezza",
+			"date": "2021-07-19T00:00:00",
+			"startTime": "2021-07-14T18:00:00",
+			"endTime": "2021-07-14T19:00:00",
+			"roomName": "33-LG",
+			"appointmentType": "Operation"
+		  },
+		  {
+			"id": 7,
+			"isEmergency": false,
+			"patient": "Smokva Marusic",
+			"employeeUsername": "makezza",
+			"date": "2021-07-26T00:00:00",
+			"startTime": "2021-07-26T13:00:00",
+			"endTime": "2021-07-26T16:00:00",
+			"roomName": "801-RT",
+			"appointmentType": "Examination"
+		  },
+		  {
+			"id": 941,
+			"isEmergency": false,
+			"patient": "Smokva Marusic",
+			"employeeUsername": "dirak1",
+			"date": "2021-07-15T00:00:00",
+			"startTime": "2021-07-14T11:00:00",
+			"endTime": "2021-07-14T12:00:00",
+			"roomName": "33-LG",
+			"appointmentType": "Operation"
+		  },
+		  {
+			"id": 537,
+			"isEmergency": false,
+			"patient": "Smokva Marusic",
+			"employeeUsername": "dirak1",
+			"date": "2021-07-21T00:00:00",
+			"startTime": "2021-07-20T15:00:00",
+			"endTime": "2021-07-20T16:00:00",
+			"roomName": "104-YO",
+			"appointmentType": "Operation"
+		  }
+		]
 	},
 	{
 		"healthInsuranceNumber": 14236,
@@ -39,7 +96,7 @@
 		"surveys": null,
 		"hospitalTreatments": null,
 		"user":{
-			"id": 4,
+			"id": 43,
 			"username": "simonica",
 			"password": "ftn",
 			"firstName": "Simona",
@@ -51,7 +108,8 @@
 			"email": "prokic.simona@gmail.com",
 			"dateOfBirth": "1994-11-22T00:00:00",
 			"positionInASystem": "Patient"
-		}
+		},
+		"examinations": []
 	},
 	{
 		"healthInsuranceNumber": 12345,
@@ -66,7 +124,7 @@
 		"surveys": null,
 		"hospitalTreatments": null,
 		"user":{
-			"id": 5,
+			"id": 51,
 			"username": "margi111",
 			"password": "ftn",
 			"firstName": "Margarita",
@@ -78,6 +136,7 @@
 			"email": "peric.margarita@gmail.com",
 			"dateOfBirth": "1993-11-11T00:00:00",
 			"positionInASystem": "Patient"
-		}
+		},
+		"examinations": []
 	}	
 ]

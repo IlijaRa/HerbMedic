@@ -23,9 +23,22 @@ namespace Classes.Controller
             return patientService.ReadPatientByNameSurname(nameSurname);
         }
 
-        
+        public Patient ReadPatientByUsername(string username)
+        {
+            return patientService.ReadPatientByUsername(username);
+        }
 
-        public Patient UpdatePatient(Patient patient)
+        public List<Appointment> ReadExaminationsByUsername(string username)
+        {
+            return patientService.ReadExaminationsByUsername(username);
+        }
+
+        public bool isTimeOK(DateTime date, string time1, string time2)
+        {
+            return patientService.isTimeOK(date, time1, time2);
+        }
+
+      public Patient UpdatePatient(Patient patient)
       {
          throw new NotImplementedException();
       }

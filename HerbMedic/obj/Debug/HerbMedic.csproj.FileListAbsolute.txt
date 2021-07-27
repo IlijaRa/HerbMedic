@@ -168,3 +168,5 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\PatientCRUD.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Secretary\PatientCRUD.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\Nightmode\Secretary\HomeSecretaryNightMode.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\Nightmode\Secretary\HomeSecretaryNightMode.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\ExaminationCRUD.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\ExaminationCRUD.baml

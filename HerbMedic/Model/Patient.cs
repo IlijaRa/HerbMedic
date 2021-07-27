@@ -17,5 +17,6 @@ namespace Classes.Model
         public List<Survey> surveys { get; set; }
         public List<HospitalTreatment> hospitalTreatments { get; set; }
         public User user { get; set; }
+        public List<Appointment> examinations { get; set; }
     }
 }

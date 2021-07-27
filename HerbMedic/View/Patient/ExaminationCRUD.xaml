@@ -1,0 +1,43 @@
+﻿<Window x:Class="HerbMedic.View.Patient.ExaminationCRUD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HerbMedic.View.Patient"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Title="ExaminationCRUD" Height="600" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/images/templates/HomePatient.png"/>
+    </Window.Background>
+    <Grid>
+        <Label Content="EXAMINATIONS:" HorizontalAlignment="Center" Margin="311,-2,282,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="25px" Width="199"/>
+        <TextBox x:Name="Textbox_username" HorizontalAlignment="Left" Height="23" Margin="625,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF00182D" FontSize="17" IsEnabled="False"/>
+        <Image HorizontalAlignment="Left" Height="23" Margin="595,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/users/patient.png" IsEnabled="False"/>
+        <Button HorizontalAlignment="Left" Height="30" Margin="35,0,0,0" VerticalAlignment="Top" Width="39" Background="#ffc300" BorderBrush="#FF00182D" Click="ButtonGoBack">
+            <Image Source="/images/details/backarrowBlue.png" Width="26"></Image>
+        </Button>
+
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dg_examinations" HorizontalAlignment="Left" Height="263" Margin="74,40,0,0" VerticalAlignment="Top" Width="672" AutoGenerateColumns="True" Foreground="#FF00182D" Background="#fffaa1">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#ffc300"/>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="Identificator:" HorizontalAlignment="Left" Margin="66,354,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Start time:" HorizontalAlignment="Left" Margin="66,473,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Doctor:" HorizontalAlignment="Left" Margin="66,394,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="Date:" HorizontalAlignment="Left" Margin="66,433,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="End time:" HorizontalAlignment="Left" Margin="66,513,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="485,473,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <Label Content="(HH:mm)" HorizontalAlignment="Left" Margin="485,513,0,0" VerticalAlignment="Top" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox1" Text="{Binding SelectedItem.id, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px" IsEnabled="False"/>
+        <ComboBox x:Name="Combobox1" Text="{Binding SelectedItem.patient, ElementName=dg_appointments, Mode=OneWay}" HorizontalAlignment="Left" Height="28" Margin="178,396,0,0" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
+        <DatePicker x:Name="Datepicker1" Text="{Binding SelectedItem.date, ElementName=dg_appointments, Mode=OneWay}" HorizontalAlignment="Left" Height="28" Margin="178,436,0,0" VerticalAlignment="Top" Width="384" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox2" Text="{Binding SelectedItem.startTime, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,475,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" Foreground="#FF00182D" FontSize="17px"/>
+        <TextBox x:Name="Textbox3" Text="{Binding SelectedItem.endTime, ElementName=dg_appointments, Mode=OneWay}" GotFocus="OnGotFocusTextbox" LostFocus="OnLostFocusTextbox" HorizontalAlignment="Left" Height="28" Margin="178,515,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" Foreground="#FF00182D" FontSize="17px"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="592,358,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#ffc300" FontSize="17px" Click="ButtonCreate"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="592,411,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#ffc300" FontSize="17px" Click="ButtonUpdate"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="592,465,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#ffc300" FontSize="17px" Click="ButtonDelete"/>
+        <Button Content="Read all" HorizontalAlignment="Left" Margin="592,517,0,0" VerticalAlignment="Top" Width="154" Height="28" Foreground="#FF00182D" Background="#ffc300" FontSize="17px" Click="ButtonReadAll"/>
+    </Grid>
+</Window>

@@ -20,6 +20,7 @@ namespace HerbMedic.View.Patient
         public HomePatient()
         {
             InitializeComponent();
+            Textbox1.Text = "smokvica";
         }
 
         private void ButtonRoomCRUD(object sender, RoutedEventArgs e)
@@ -84,6 +85,14 @@ namespace HerbMedic.View.Patient
         private void ButtonMinimized(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
+        }
+
+        private void ButtonExaminationCRUD(object sender, RoutedEventArgs e)
+        {
+            ExaminationCRUD examination = new ExaminationCRUD();
+            examination.Show();
+            examination.TransferAndDisplayExaminations(Textbox1.Text);
+            this.Hide();
         }
     }
 }
