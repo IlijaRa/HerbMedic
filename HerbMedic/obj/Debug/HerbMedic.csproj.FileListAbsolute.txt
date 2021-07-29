@@ -170,3 +170,7 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\Nightmode\Secretary\HomeSecreta
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\Nightmode\Secretary\HomeSecretaryNightMode.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\ExaminationCRUD.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\ExaminationCRUD.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\Allergens.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\Allergens.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\PatientIsAllergic.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\PatientIsAllergic.baml

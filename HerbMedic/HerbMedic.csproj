@@ -264,6 +264,9 @@
     <Compile Include="View\Director\StaticEquipmentManagement.xaml.cs">
       <DependentUpon>StaticEquipmentManagement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Doctor\Allergens.xaml.cs">
+      <DependentUpon>Allergens.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Doctor\Anamnesis.xaml.cs">
       <DependentUpon>Anamnesis.xaml</DependentUpon>
     </Compile>
@@ -308,6 +311,9 @@
     </Compile>
     <Compile Include="View\MessageBoxes\MedicalRecordDoesntExists.xaml.cs">
       <DependentUpon>MedicalRecordDoesntExists.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageBoxes\PatientIsAllergic.xaml.cs">
+      <DependentUpon>PatientIsAllergic.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Patient\ExaminationCRUD.xaml.cs">
       <DependentUpon>ExaminationCRUD.xaml</DependentUpon>
@@ -397,6 +403,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Doctor\Allergens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Doctor\Anamnesis.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -454,6 +464,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MessageBoxes\MedicalRecordDoesntExists.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MessageBoxes\PatientIsAllergic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -579,6 +593,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\users\nurseNightmode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\details\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\details\minus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

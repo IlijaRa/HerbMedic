@@ -54,7 +54,10 @@ namespace HerbMedic.View.Doctor
 
         private void ButtonAllergens(object sender, RoutedEventArgs e)
         {
-
+            Allergens allergens = new Allergens();
+            allergens.Show();
+            allergens.TransferInfo(Textbox1.Text, Textbox2.Text, Textbox_username.Text);
+            this.Hide();
         }
     }
 }

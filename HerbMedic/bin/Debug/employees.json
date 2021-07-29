@@ -125,22 +125,7 @@
     },
     "room": "101-YT",
     "appointments": [],
-    "referralLetters": [
-      {
-        "id": 518,
-        "doctorWhoSends": "Marko Markovic",
-        "doctorWhoReceives": "Andrija Dirakovic",
-        "patientName": "Smokva Marusic",
-        "reason": "mala je realno mnogo bolesna hahaha"
-      },
-      {
-        "id": 982,
-        "doctorWhoSends": "Marko Markovic",
-        "doctorWhoReceives": "Andrija Dirakovic",
-        "patientName": "Smokva Marusic",
-        "reason": "alaaa seceraaa"
-      }
-    ]
+    "referralLetters": []
   },
   {
     "id": 111,

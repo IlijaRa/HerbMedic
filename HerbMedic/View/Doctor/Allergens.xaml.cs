@@ -1,24 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
-using Classes.Controller;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using ToastNotifications;
 using ToastNotifications.Lifetime;
 using ToastNotifications.Position;
+using Classes.Model;
+using Classes.Controller;
 using ToastNotifications.Messages;
-using System.Collections.ObjectModel;
 
 namespace HerbMedic.View.Doctor
 {
-    public partial class Anamnesis : Window
+    public partial class Allergens : Window
     {
-        AnamnesisController anamnesisController = new AnamnesisController();
-        public Anamnesis()
+        AllergenController allergenController = new AllergenController();
+        public Allergens()
         {
             InitializeComponent();
-            
         }
 
         /*----------------------------WPF PART--------------------------------*/
@@ -61,7 +69,6 @@ namespace HerbMedic.View.Doctor
                     }
         /*----------------------------FUNCTIONALITY PART--------------------------------*/
 
-
         public void TransferInfo(string name, string surname, string username)
         {
             Textbox1.Text = name;
@@ -77,68 +84,75 @@ namespace HerbMedic.View.Doctor
             this.Hide();
         }
 
-        private void ButtonCreate(object sender, RoutedEventArgs e)
+        private void AddAllergen(object sender, RoutedEventArgs e)
         {
-            Random random = new Random();
-            string fullName = Textbox1.Text + " " + Textbox2.Text;
-            if (Textbox4.Text != "" && Textbox5.Text != "" && Datepicker1.Text != "") 
+            if(Textbox3.Text != "")
             {
-                Classes.Model.Anamnesis anamnesis = new Classes.Model.Anamnesis(random.Next(1000), 
-                                                                                fullName,
-                                                                                Textbox4.Text, 
-                                                                                Textbox5.Text, 
-                                                                                Convert.ToDateTime(Datepicker1.Text));
-                string message = anamnesisController.CreateAnamnesis(anamnesis);
-                if(message == "SUCCEEDED")
-                {
-                    notifier.ShowSuccess("SUCCESS: Anamnesis is succesfully added to a medical record");
-                }
-            }
-            else
-            {
-                notifier.ShowWarning("WARNING: You need to fill all blanks!");
-            }
-        }
+                Allergen allergen = new Allergen(Textbox3.Text);
 
-        private void ButtonUpdate(object sender, RoutedEventArgs e)
-        {
-            string fullName = Textbox1.Text + " " + Textbox2.Text;
-            if (Textbox4.Text != "" && Textbox5.Text != "" && Datepicker1.Text != "")
-            {
-                Classes.Model.Anamnesis anamnesis = new Classes.Model.Anamnesis(Convert.ToInt32(Textbox3.Text),
-                                                                                fullName,
-                                                                                Textbox4.Text,
-                                                                                Textbox5.Text,
-                                                                                Convert.ToDateTime(Datepicker1.Text));
-                string message = anamnesisController.UpdateAnamnesis(anamnesis);
+                string message = allergenController.CreateAllergen(Textbox1.Text + " " + Textbox2.Text, allergen);
                 if (message == "SUCCEEDED")
                 {
-                    notifier.ShowSuccess("SUCCESS: Anamnesis is succesfully added to a medical record");
+                    notifier.ShowSuccess("SUCCESS: Allergen is added");
+                    string fullName = Textbox1.Text + " " + Textbox2.Text;
+                    List<Allergen> allergens = allergenController.ReadAllergenByNameSurname(fullName);
+                    ObservableCollection<Allergen> observableAllergens = new ObservableCollection<Allergen>();
+                    foreach (var a in allergens)
+                    {
+                        observableAllergens.Add(a);
+                    }
+                    dg_allergens.ItemsSource = observableAllergens;
+                }
+                else
+                {
+                    notifier.ShowError("ERROR: Error occured while adding!");
                 }
             }
             else
             {
-                notifier.ShowWarning("WARNING: You need to fill all blanks!");
+                notifier.ShowWarning("WARNING: You need to enter name for new allergen!");
             }
         }
 
-        private void ButtonReadAll(object sender, RoutedEventArgs e)
+        private void DeleteAllergen(object sender, RoutedEventArgs e)
+        {
+            if (dg_allergens.SelectedItems.Count < 1)
+            {
+                notifier.ShowWarning("WARNING: You need to select an allergen!"); 
+            }
+            else
+            {
+                Allergen allergen = (Allergen)dg_allergens.SelectedItem;
+                string message = allergenController.DeleteAllergen(Textbox1.Text + " " + Textbox2.Text, allergen);
+                if (message == "SUCCEEDED")
+                {
+                    notifier.ShowSuccess("SUCCESS: Allergen is deleted");
+                    string fullName = Textbox1.Text + " " + Textbox2.Text;
+                    List<Allergen> allergens = allergenController.ReadAllergenByNameSurname(fullName);
+                    ObservableCollection<Allergen> observableAllergens = new ObservableCollection<Allergen>();
+                    foreach (var a in allergens)
+                    {
+                        observableAllergens.Add(a);
+                    }
+                    dg_allergens.ItemsSource = observableAllergens;
+                }
+                else
+                {
+                    notifier.ShowError("ERROR: Error occured while adding!");
+                }
+            }
+        }
+
+        private void ReadAllAllergens(object sender, RoutedEventArgs e)
         {
             string fullName = Textbox1.Text + " " + Textbox2.Text;
-            List<Classes.Model.Anamnesis> anamneses = anamnesisController.ReadAnamnesisByNameSurname(fullName);
-            ObservableCollection<Classes.Model.Anamnesis> observableAnamnesis = new ObservableCollection<Classes.Model.Anamnesis>();
-            foreach (var a in anamneses)
+            List<Allergen> allergens = allergenController.ReadAllergenByNameSurname(fullName);
+            ObservableCollection<Allergen> observableAllergens = new ObservableCollection<Allergen>();
+            foreach (var a in allergens)
             {
-                observableAnamnesis.Add(a);
+                observableAllergens.Add(a);
             }
-            dg_anamnesis.ItemsSource = observableAnamnesis;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Textbox3.Clear();
-            Textbox4.Clear();
-            Textbox5.Clear();
+            dg_allergens.ItemsSource = observableAllergens;
         }
     }
 }

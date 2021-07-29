@@ -1,17 +1,30 @@
 using System;
 using Classes.Model;
 using System.Collections.Generic;
+using Classes.Repository;
 
 namespace Classes.Service
 {
    public class AllergenService
    {
-      public Classes.Model.Allergen AddNewAllergen(string name, DateTime date)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Classes.Model.Allergen UpdateAllergen(string name, DateTime date)
+        AllergenRepository allergenRepository = new AllergenRepository();
+
+        public string CreateAllergen(string patientName, Allergen allergenName)
+        {
+            return allergenRepository.CreateAllergen(patientName, allergenName);
+        }
+
+        public string DeleteAllergen(string patientName, Allergen allergenName)
+        {
+            return allergenRepository.DeleteAllergen(patientName, allergenName);
+        }
+
+        public List<Allergen> ReadAllergenByNameSurname(string fullName)
+        {
+            return allergenRepository.ReadAllergenByNameSurname(fullName);
+        }
+
+        public Allergen UpdateAllergen(string name, DateTime date)
       {
          throw new NotImplementedException();
       }
@@ -20,8 +33,5 @@ namespace Classes.Service
       {
          throw new NotImplementedException();
       }
-      
-      public Classes.Repository.AllergenRepository allergenRepository;
-   
    }
 }

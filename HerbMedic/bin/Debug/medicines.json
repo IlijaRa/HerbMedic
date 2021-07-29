@@ -11,11 +11,11 @@
   {
     "id": 2,
     "name": "lanosprazol",
-    "status": "VALIDATED",
+    "status": "DECLINED",
     "description": "This medicine can be used anytime",
     "ingredients": [],
     "alternatives": [],
-    "reason": null
+    "reason": "ingredients arent good"
   },
   {
     "id": 3,
@@ -53,12 +53,12 @@
       {
         "medicineName": "mediokroksin",
         "ingredientId": 115,
-        "ingredientName": "2345234235"
+        "ingredientName": "Natural rubber latex"
       },
       {
         "medicineName": "mediokroksin",
         "ingredientId": 34,
-        "ingredientName": "fffffwww3r324"
+        "ingredientName": "Fungal spores"
       }
     ],
     "alternatives": [
@@ -77,27 +77,27 @@
   },
   {
     "id": 7,
-    "name": "probica",
-    "status": "DECLINED",
+    "name": "cardiopirin",
+    "status": "VALIDATED",
     "description": "wef",
     "ingredients": [
       {
-        "medicineName": "probica",
+        "medicineName": "cardiopirin",
         "ingredientId": 435,
-        "ingredientName": "aha"
+        "ingredientName": "Insect bites and stings"
       },
       {
-        "medicineName": "probica",
+        "medicineName": "cardiopirin",
         "ingredientId": 164,
-        "ingredientName": "fwefg"
+        "ingredientName": "Dust"
       },
       {
-        "medicineName": "probica",
+        "medicineName": "cardiopirin",
         "ingredientId": 589,
         "ingredientName": "wfwef"
       },
       {
-        "medicineName": "probica",
+        "medicineName": "cardiopirin",
         "ingredientId": 804,
         "ingredientName": ""
       }
@@ -124,6 +124,6 @@
         "alternativeName": ""
       }
     ],
-    "reason": "araaa"
+    "reason": null
   }
 ]

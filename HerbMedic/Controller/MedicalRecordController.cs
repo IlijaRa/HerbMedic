@@ -18,6 +18,11 @@ namespace Classes.Controller
             return medicalRecordService.CheckIfPatientHasMedicalRecord(nameSurname);
         }
 
+        public bool CheckIfPatientIsAllergic(string patientsNameSurname, string medicineName)
+        {
+            return medicalRecordService.CheckIfPatientIsAllergic(patientsNameSurname, medicineName);
+        }
+
         public MedicalRecord UpdateMedicalRecord(MedicalRecord medicalRecord)
       {
          throw new NotImplementedException();

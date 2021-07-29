@@ -16,6 +16,7 @@ namespace HerbMedic.View.Doctor
         public HomeDoctor()
         {
             InitializeComponent();
+            Textbox1.Text = "makezza";
         }
 
         /*----------------------------WPF PART--------------------------------*/

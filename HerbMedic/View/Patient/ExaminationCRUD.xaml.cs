@@ -82,22 +82,24 @@ namespace HerbMedic.View.Patient
 
         private void ButtonCreate(object sender, RoutedEventArgs e)
         {
-            if (!patientController.isTimeOK(Convert.ToDateTime(Datepicker1.Text), Textbox2.Text, Textbox3.Text))
+
+            if (Textbox2.Text != "" && Textbox3.Text != "" && Combobox1.Text != "" && Datepicker1.Text != "")
             {
-                notifier.ShowSuccess("datum i vreme su dobri!");
+                bool IsTimeOK = patientController.isTimeOK(Convert.ToDateTime(Datepicker1.Text), Textbox2.Text, Textbox3.Text);
+                if (IsTimeOK)
+                {
+                    bool IsDoctorAvailable= doctorController
+                    notifier.ShowSuccess("datum i vreme su dobri!");
+                }
+                else
+                {
+                    notifier.ShowError("datum i vreme nisu dobri!");
+                }
             }
             else
             {
-                notifier.ShowError("greska u unosu!");
+                notifier.ShowWarning("WARNING: You need to fill all fields!");
             }
-            //if (Textbox2.Text != "" && Textbox3.Text != "" && Combobox1.Text != "" && Datepicker1.Text != "")
-            //{
-                
-            //}
-            //else
-            //{
-            //    notifier.ShowWarning("WARNING: You need to fill all fields!");
-            //}
         }
 
         private void ButtonUpdate(object sender, RoutedEventArgs e)

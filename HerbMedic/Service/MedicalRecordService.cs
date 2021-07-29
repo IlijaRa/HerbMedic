@@ -8,8 +8,10 @@ namespace Classes.Service
    public class MedicalRecordService
    {
         MedicalRecordRepository medicalRecordRepository = new MedicalRecordRepository();
+        MedicineRepository medicineRepository = new MedicineRepository();
+        AllergenRepository allergenRepository = new AllergenRepository();
 
-      public bool CreateMedicalRecord(MedicalRecord medicalRecord)
+        public bool CreateMedicalRecord(MedicalRecord medicalRecord)
       {
            return medicalRecordRepository.CreateMedicalRecord(medicalRecord);
       }
@@ -24,6 +26,22 @@ namespace Classes.Service
                     isExist = true;
             }
             return isExist;
+        }
+
+        public bool CheckIfPatientIsAllergic(string patientsNameSurname, string medicineName)
+        {
+            bool isAllergic = false;
+            List<Ingredient> ingredients = medicineRepository.ReadMedicineIngredients(medicineName);
+            List<Allergen> allergens = allergenRepository.ReadAllergenByNameSurname(patientsNameSurname);
+            foreach (var i in ingredients)
+            {
+                foreach(var a in allergens)
+                {
+                    if (i.ingredientName == a.name)
+                        isAllergic = true;
+                }  
+            }
+            return isAllergic;
         }
 
         public MedicalRecord UpdateMedicalRecord(MedicalRecord medicalRecord)

@@ -6,12 +6,24 @@ namespace Classes.Controller
 {
    public class AllergenController
    {
-      public Allergen AddNewAllergen(string name, DateTime date)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Allergen UpdateAllergen(string name, DateTime date)
+        AllergenService allergenService = new AllergenService();
+
+        public string CreateAllergen(string patientName, Allergen allergenName)
+        {
+            return allergenService.CreateAllergen(patientName, allergenName);
+        }
+
+        public string DeleteAllergen(string patientName, Allergen allergenName)
+        {
+            return allergenService.DeleteAllergen(patientName, allergenName);
+        }
+
+        public List<Allergen> ReadAllergenByNameSurname(string fullName)
+        {
+            return allergenService.ReadAllergenByNameSurname(fullName);
+        }
+
+        public Allergen UpdateAllergen(string name, DateTime date)
       {
          throw new NotImplementedException();
       }

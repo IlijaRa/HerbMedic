@@ -39,10 +39,10 @@ namespace Classes.Service
             bool itIsOK = false;
             DateTime firstTime = Convert.ToDateTime(time1);
             DateTime secondTime = Convert.ToDateTime(time2);
-            if (firstTime.Hour < secondTime.Hour)
+            DateTime currentDate = DateTime.Now;
+            if (date.Date >= currentDate.Date && firstTime.Hour < secondTime.Hour)
                 itIsOK = true;
-            if (DateTime.Now < date)
-                itIsOK = true;
+
             return itIsOK;
         }
 

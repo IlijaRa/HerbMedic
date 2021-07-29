@@ -52,12 +52,53 @@
         "medicineName": "digoxicor",
         "quantity": "1 table",
         "usageInstruction": "bbbbbbbbbbbbb"
+      },
+      {
+        "id": 423,
+        "patientName": "Smokva Marusic",
+        "medicineName": "digoxicor",
+        "quantity": "1/2 table",
+        "usageInstruction": "wegwerg"
       }
     ],
-    "allergens": []
+    "allergens": [
+      {
+        "name": "Pollen"
+      },
+      {
+        "name": "Natural rubber latex"
+      },
+      {
+        "name": "Dust"
+      }
+    ]
   },
   {
     "patient": "Simona Prokic",
+    "anamnesis": [],
+    "prescriptions": [
+      {
+        "id": 627,
+        "patientName": "Simona Prokic",
+        "medicineName": "mediokroksin",
+        "quantity": "3 table",
+        "usageInstruction": "vsdbsdb"
+      }
+    ],
+    "allergens": [
+      {
+        "name": "Insect bites and stings"
+      },
+      {
+        "name": "Fungal spores"
+      },
+      {
+        "name": "Animal proteins"
+      }
+    ]
+  },
+  {
+    "patient": "Margarita Peric",
     "anamnesis": [],
     "prescriptions": [],
     "allergens": []

@@ -1,16 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using ToastNotifications;
 using ToastNotifications.Lifetime;
 using ToastNotifications.Position;
@@ -18,6 +10,7 @@ using Classes.Controller;
 using Classes.Model;
 using ToastNotifications.Messages;
 using System.Collections.ObjectModel;
+using HerbMedic.View.MessageBoxes;
 
 namespace HerbMedic.View.Doctor
 {
@@ -25,7 +18,8 @@ namespace HerbMedic.View.Doctor
     {
         PrescriptionController prescriptionController = new PrescriptionController();
         MedicineController medicineController = new MedicineController();
-
+        AllergenController allergenController = new AllergenController();
+        MedicalRecordController medicalRecordController = new MedicalRecordController();
         public PrescriptionForm()
         {
             InitializeComponent();
@@ -33,7 +27,8 @@ namespace HerbMedic.View.Doctor
             List<string> mediciny = new List<string>();
             foreach(var medicine in medicines)
             {
-                mediciny.Add(medicine.name);
+                if(medicine.status == "VALIDATED")
+                    mediciny.Add(medicine.name);
             }
             Combobox1.ItemsSource = mediciny;
         }
@@ -97,25 +92,36 @@ namespace HerbMedic.View.Doctor
         {
             if(Combobox1.Text != "" && Combobox2.Text != "" && Textbox5.Text != "")
             {
-                Random random = new Random();
+                bool isAllergic = medicalRecordController.CheckIfPatientIsAllergic(Textbox1.Text + " " + Textbox2.Text, Combobox1.Text);
                 
-                string fullName=Textbox1.Text + " " + Textbox2.Text;
-
-                Prescription prescription = new Prescription(random.Next(1000),
-                                                            fullName,
-                                                            Combobox1.Text,
-                                                            Combobox2.Text,
-                                                            Textbox5.Text);
-
-                string message = prescriptionController.CreatePrescription(prescription);
-                if (message == "SUCCEEDED")
-                    notifier.ShowSuccess("SUCCEESS: Prescription successfully created!");
+                if (isAllergic)
+                {
+                    PatientIsAllergic allergic = new PatientIsAllergic();
+                    allergic.Show();
+                }
                 else
-                    notifier.ShowError("ERROR: Error occured while creating!");
+                {
+                    Random random = new Random();
+
+                    string fullName = Textbox1.Text + " " + Textbox2.Text;
+
+                    Prescription prescription = new Prescription(random.Next(1000),
+                                                                fullName,
+                                                                Combobox1.Text,
+                                                                Combobox2.Text,
+                                                                Textbox5.Text);
+
+                    string message = prescriptionController.CreatePrescription(prescription);
+                    if (message == "SUCCEEDED")
+                        notifier.ShowSuccess("SUCCEESS: Prescription successfully created!");
+                    else
+                        notifier.ShowError("ERROR: Error occured while creating!");
+                }
+                
             }
             else
             {
-                notifier.ShowWarning("WARNING: You need to fill all blanks!");
+                notifier.ShowWarning("WARNING: You need to fill all fields!");
             }
         }
 
