@@ -50,7 +50,7 @@
         "isEmergency": false,
         "patient": "Simona Prokic",
         "employeeUsername": "makezza",
-        "date": "2021-07-15T00:00:00",
+        "date": "2021-07-30T00:00:00",
         "startTime": "2021-07-14T11:00:00",
         "endTime": "2021-07-14T12:00:00",
         "roomName": "33-LG",
@@ -61,7 +61,7 @@
         "isEmergency": false,
         "patient": "Margarita Peric",
         "employeeUsername": "makezza",
-        "date": "2021-07-19T00:00:00",
+        "date": "2021-07-30T00:00:00",
         "startTime": "2021-07-14T18:00:00",
         "endTime": "2021-07-14T19:00:00",
         "roomName": "33-LG",
@@ -72,33 +72,33 @@
         "isEmergency": false,
         "patient": "Smokva Marusic",
         "employeeUsername": "makezza",
-        "date": "2021-07-26T00:00:00",
+        "date": "2021-07-31T00:00:00",
         "startTime": "2021-07-26T13:00:00",
         "endTime": "2021-07-26T16:00:00",
         "roomName": "801-RT",
         "appointmentType": "Examination"
       },
       {
-        "id": 941,
+        "id": 509,
         "isEmergency": false,
-        "patient": "Margarita Peric",
+        "patient": "Smokva Marusic",
         "employeeUsername": "makezza",
-        "date": "2021-07-15T00:00:00",
-        "startTime": "2021-07-14T11:00:00",
-        "endTime": "2021-07-14T12:00:00",
-        "roomName": "33-LG",
-        "appointmentType": "Operation"
+        "date": "2021-08-04T00:00:00",
+        "startTime": "2021-07-30T13:00:00",
+        "endTime": "2021-07-30T15:00:00",
+        "roomName": "801-RT",
+        "appointmentType": "Examination"
       },
       {
-        "id": 537,
+        "id": 26,
         "isEmergency": false,
-        "patient": "Simona Prokic",
+        "patient": "Smokva Marusic",
         "employeeUsername": "makezza",
-        "date": "2021-07-21T00:00:00",
-        "startTime": "2021-07-20T15:00:00",
-        "endTime": "2021-07-20T16:00:00",
-        "roomName": "104-YO",
-        "appointmentType": "Operation"
+        "date": "2021-09-24T00:00:00",
+        "startTime": "2021-07-30T14:00:00",
+        "endTime": "2021-07-30T16:00:00",
+        "roomName": "801-RT",
+        "appointmentType": "Examination"
       }
     ],
     "referralLetters": []
@@ -124,7 +124,19 @@
       "positionInASystem": "Doctor"
     },
     "room": "101-YT",
-    "appointments": [],
+    "appointments": [
+      {
+        "id": 412,
+        "isEmergency": false,
+        "patient": "Smokva Marusic",
+        "employeeUsername": "dirak1",
+        "date": "2021-08-02T00:00:00",
+        "startTime": "2021-07-30T14:00:00",
+        "endTime": "2021-07-30T15:00:00",
+        "roomName": "101-YT",
+        "appointmentType": "Examination"
+      }
+    ],
     "referralLetters": []
   },
   {

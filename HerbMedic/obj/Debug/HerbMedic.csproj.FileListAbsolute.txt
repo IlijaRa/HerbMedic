@@ -174,3 +174,5 @@ D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\Allergens.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Doctor\Allergens.baml
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\PatientIsAllergic.g.cs
 D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\MessageBoxes\PatientIsAllergic.baml
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\SelectedDoctorTerms.g.cs
+D:\GitRepositories\HerbMedic\HerbMedic\obj\Debug\View\Patient\SelectedDoctorTerms.baml

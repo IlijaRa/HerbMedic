@@ -22,6 +22,11 @@ namespace Classes.Controller
          throw new NotImplementedException();
       }
       
+        public bool CheckIfDoctorIsAvailable(Appointment appointment)
+        {
+            return employeeService.CheckIfDoctorIsAvailable(appointment);
+        }
+
       public Employee ReadEmployee(int employeeId)
       {
          throw new NotImplementedException();
@@ -30,6 +35,11 @@ namespace Classes.Controller
         public List<Appointment> ReadAppointmentsByUsername(string username)
         {
             return employeeService.ReadAppointmentsByUsername(username);
+        }
+
+        public List<Appointment> ReadTermsOfDoctorByNameSurname(string doctorsNameSurname)
+        {
+            return employeeService.ReadTermsOfDoctorByNameSurname(doctorsNameSurname);
         }
 
         public Employee ReadSecretary()
@@ -50,6 +60,11 @@ namespace Classes.Controller
         public User ReadEmployeeUserByUsername(string username)
         {
             return employeeService.ReadEmployeeUserByUsername(username);
+        }
+
+        public Employee ReadEmployeeByNameSurname(string nameSurname)
+        {
+            return employeeService.ReadEmployeeByNameSurname(nameSurname);
         }
 
         public string ReadEmployeesRoomByUsername(string username)

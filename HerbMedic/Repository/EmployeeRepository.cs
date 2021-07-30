@@ -15,7 +15,7 @@ namespace Classes.Repository
         }
         public void readEmployeeJson()
         {
-            // deserializuje renovation.json
+            // deserializuje employees.json
             if (!File.Exists("employees.json"))
             {
                 File.Create("employees.json").Close();
@@ -54,8 +54,8 @@ namespace Classes.Repository
       {
          throw new NotImplementedException();
       }
-      
-      public Employee ReadEmployee(int employeeId)
+
+        public Employee ReadEmployee(int employeeId)
       {
          throw new NotImplementedException();
       }
@@ -66,6 +66,21 @@ namespace Classes.Repository
             var employee = employees.Find(obj => obj.user.username == username);
             appoints = employee.appointments.FindAll(obj => obj.appointmentType == "Examination");
             return appoints;
+        }
+
+        public List<Appointment> ReadTermsOfDoctorByNameSurname(string doctorsNameSurname)
+        {
+            List<Appointment> appointments = new List<Appointment>();
+            foreach(var e in employees)
+            {
+                string fullName = e.user.firstName + " " + e.user.lastName;
+                if(fullName == doctorsNameSurname)
+                {
+                    appointments = e.appointments;
+                    break;
+                }
+            }
+            return appointments;
         }
 
         public Employee ReadSecretary()
@@ -105,6 +120,21 @@ namespace Classes.Repository
             }
 
             return user;
+        }
+
+        public Employee ReadEmployeeByNameSurname(string nameSurname)
+        {
+            Employee employee = new Employee();
+            foreach (var e in employees)
+            {
+                string fullName = e.user.firstName + " " + e.user.lastName;
+                if (fullName == nameSurname)
+                {
+                    employee = e;
+                    break;
+                }
+            }
+            return employee;
         }
 
         public string ReadEmployeesRoomByUsername(string username)

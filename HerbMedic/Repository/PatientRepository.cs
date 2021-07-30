@@ -32,13 +32,34 @@ namespace Classes.Repository
             }
         }
 
+        public void writeInJson()
+        {
+            string json = JsonConvert.SerializeObject(patients, Formatting.Indented);
+            File.WriteAllText("patients.json", json);
+        }
 
         public Patient CreatePatient(Patient patient)
       {
          throw new NotImplementedException();
       }
-      
-      public Patient ReadPatient(int patientId)
+
+        public string CreateExamination(Appointment appointment)
+        {
+            string message = "NOT SUCCEEDED";
+            foreach (var p in patients)
+            {
+                string fullName = p.user.firstName + " " + p.user.lastName;
+                if (fullName == appointment.patient)
+                {
+                    p.examinations.Add(appointment);
+                    writeInJson();
+                    message = "SUCCEEDED";
+                }
+            }
+            return message;
+        }
+
+        public Patient ReadPatient(int patientId)
       {
          throw new NotImplementedException();
       }

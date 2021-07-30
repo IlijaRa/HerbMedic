@@ -17,6 +17,8 @@ namespace HerbMedic.View.Patient
     {
         EmployeeController employeeController = new EmployeeController();
         PatientController patientController = new PatientController();
+        AppointmentController appointmentController = new AppointmentController();
+
         public ExaminationCRUD()
         {
             InitializeComponent();
@@ -88,12 +90,38 @@ namespace HerbMedic.View.Patient
                 bool IsTimeOK = patientController.isTimeOK(Convert.ToDateTime(Datepicker1.Text), Textbox2.Text, Textbox3.Text);
                 if (IsTimeOK)
                 {
-                    bool IsDoctorAvailable= doctorController
-                    notifier.ShowSuccess("datum i vreme su dobri!");
+                    Random random = new Random();
+                    Classes.Model.Patient patient = patientController.ReadPatientByUsername(Textbox_username.Text);
+                    Employee doctor = employeeController.ReadEmployeeByNameSurname(Combobox1.Text);
+                    
+                    Appointment appointment = new Appointment(random.Next(1000),
+                                                              false,
+                                                              patient.user.firstName + " " + patient.user.lastName,
+                                                              doctor.user.username,
+                                                              Convert.ToDateTime(Datepicker1.Text),
+                                                              Convert.ToDateTime(Textbox2.Text),
+                                                              Convert.ToDateTime(Textbox3.Text),
+                                                              doctor.room,
+                                                              "Examination");
+
+                    bool isDoctorAvailable = employeeController.CheckIfDoctorIsAvailable(appointment);
+                    if (isDoctorAvailable)
+                    {
+                        string message = appointmentController.CreateAppointment(appointment);
+                        string message1 = patientController.CreateExamination(appointment);
+                        if(message == "SUCCEEDED" && message1 == "SUCCEEDED")
+                            notifier.ShowSuccess("SUCCESS: Appointment is created!");
+                        else
+                            notifier.ShowError("ERROR: Error occured while creating, check your date&time inputs!");
+                    }
+                    else
+                    {
+                        notifier.ShowError("ERROR: Doctor is not available at that term!");
+                    }
                 }
                 else
                 {
-                    notifier.ShowError("datum i vreme nisu dobri!");
+                    notifier.ShowError("WARNING: Date or time are not good!");
                 }
             }
             else
@@ -104,7 +132,7 @@ namespace HerbMedic.View.Patient
 
         private void ButtonUpdate(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void ButtonDelete(object sender, RoutedEventArgs e)
@@ -114,7 +142,13 @@ namespace HerbMedic.View.Patient
 
         private void ButtonReadAll(object sender, RoutedEventArgs e)
         {
-
+            List<Appointment> examinations = patientController.ReadExaminationsByUsername(Textbox_username.Text);
+            ObservableCollection<Appointment> observableExaminations = new ObservableCollection<Appointment>();
+            foreach (var ex in examinations)
+            {
+                observableExaminations.Add(ex);
+            }
+            dg_examinations.ItemsSource = observableExaminations;
         }
 
         public void TransferAndDisplayExaminations(string username)
@@ -127,6 +161,14 @@ namespace HerbMedic.View.Patient
                 observableExaminations.Add(ex);
             }
             dg_examinations.ItemsSource = observableExaminations;
+        }
+
+        private void Combobox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string doctor = (string)Combobox1.SelectedItem;
+            SelectedDoctorTerms terms = new SelectedDoctorTerms();
+            terms.Show();
+            terms.TransferAndDisplayTerms(doctor);
         }
     }
 }

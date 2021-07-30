@@ -18,12 +18,41 @@ namespace Classes.Service
             return employeeRepository.FindEmployeeByUsername(username);
         }
 
-        public Employee CreateEmployee(Employee employee)
+      public Employee CreateEmployee(Employee employee)
       {
          throw new NotImplementedException();
       }
-      
-      public Employee ReadEmployee(int employeeId)
+
+        public bool CheckIfDoctorIsAvailable(Appointment appointment)
+        {
+            bool isAvailable = true;
+            string start = appointment.startTime.ToString("HH:mm");
+            string end = appointment.endTime.ToString("HH:mm");
+            string enteredDate = appointment.date.ToString("M/dd/yyyy");
+
+            List<Employee> doctors = employeeRepository.ReadAllDoctors();
+            foreach (var d in doctors)
+            {
+                if (d.user.username == appointment.employeeUsername)
+                {
+                    foreach (var a in d.appointments)
+                    {
+                        string appDate = a.date.ToString("M/dd/yyyy");
+                        if (appDate.Equals(enteredDate))
+                        {
+                            string appStart = a.startTime.ToString("HH:mm");
+                            if (appStart.Equals(start))
+                            {
+                                isAvailable = false;
+                            }   
+                        }
+                    }
+                }
+            }
+            return isAvailable;
+        }
+
+        public Employee ReadEmployee(int employeeId)
       {
          throw new NotImplementedException();
       }
@@ -31,6 +60,11 @@ namespace Classes.Service
         public List<Appointment> ReadAppointmentsByUsername(string username)
         {
             return employeeRepository.ReadAppointmentsByUsername(username);
+        }
+
+        public List<Appointment> ReadTermsOfDoctorByNameSurname(string doctorsNameSurname)
+        {
+            return employeeRepository.ReadTermsOfDoctorByNameSurname(doctorsNameSurname);
         }
 
         public Employee ReadSecretary()
@@ -51,6 +85,11 @@ namespace Classes.Service
         public User ReadEmployeeUserByUsername(string username)
         {
             return employeeRepository.ReadEmployeeUserByUsername(username);
+        }
+
+        public Employee ReadEmployeeByNameSurname(string nameSurname)
+        {
+            return employeeRepository.ReadEmployeeByNameSurname(nameSurname);
         }
 
         public string ReadEmployeesRoomByUsername(string username)

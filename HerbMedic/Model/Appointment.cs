@@ -26,10 +26,5 @@ namespace Classes.Model
             this.roomName = roomName;
             this.appointmentType = appointmentType;
         }
-
-        public Appointment()
-        {
-
-        }
     }
 }

@@ -2,6 +2,7 @@ using Classes.Model;
 using System.Collections.Generic;
 using System;
 using Classes.Service;
+
 namespace Classes.Controller
 {
    public class PatientController
@@ -12,8 +13,14 @@ namespace Classes.Controller
       {
          throw new NotImplementedException();
       }
-      
-      public Patient ReadPatient(int patientId)
+
+        public string CreateExamination(Appointment appointment)
+        {
+            return patientService.CreateExamination(appointment);
+        }
+
+
+        public Patient ReadPatient(int patientId)
       {
          throw new NotImplementedException();
       }

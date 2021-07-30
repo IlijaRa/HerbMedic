@@ -62,9 +62,9 @@ namespace Classes.Repository
             employee.appointments[appo] = appointment;
             writeInJson();
             message = "SUCCEEDED";
-            
+
             return message;
-      }
+        }
 
         public string DeleteAppointment(int appointmentId, string username)
         {

@@ -321,6 +321,9 @@
     <Compile Include="View\Patient\HomePatient.xaml.cs">
       <DependentUpon>HomePatient.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Patient\SelectedDoctorTerms.xaml.cs">
+      <DependentUpon>SelectedDoctorTerms.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Secretary\HomeSecretary.xaml.cs">
       <DependentUpon>HomeSecretary.xaml</DependentUpon>
     </Compile>
@@ -479,6 +482,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Patient\SelectedDoctorTerms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Secretary\HomeSecretary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -599,6 +606,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\details\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\templates\SelectedDoctorTerms.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
